@@ -1,6 +1,9 @@
-require('dotenv').config()
+require('dotenv').config();
+var HDWalletProvider = require("truffle-hdwallet-provider");
 
 var Web3 = require('web3');
+
+var mnemonic ="escape away review tower exchange vocal nut exhaust vibrant silver trial estate";
 
 
 module.exports = {
@@ -18,6 +21,23 @@ module.exports = {
       gasPrice: 2000000000,
       gas: 6721975,
       from: process.env.DEVELOPMENT_ACCOUNT,
+    },
+    hd: {
+      provider: () =>{ 
+        return new HDWalletProvider(mnemonic, "http://"+process.env.DEVELOPMENT_HOST+":"+ process.env.DEVELOPMENT_PORT);     
+      },
+      gasPrice: 0,
+      network_id: '*',
+    },
+    ahd: {
+      provider: () =>{
+        var hdprovider =new HDWalletProvider(mnemonic, "http://127.0.0.1:22000"); 
+
+        
+        return    hdprovider; 
+      },
+      gasPrice: 0,
+      network_id: '*',
     },
     alastria: {
       provider: () => {
