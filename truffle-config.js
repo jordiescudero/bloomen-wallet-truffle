@@ -31,9 +31,17 @@ module.exports = {
     },
     ahd: {
       provider: () =>{
-        var hdprovider =new HDWalletProvider(mnemonic, "http://127.0.0.1:22000"); 
+        var hdprovider =new HDWalletProvider(mnemonic, process.env.ALASTRIA_URL); 
+        Web3.providers.HttpProvider.prototype.sendAsync = Web3.providers.HttpProvider.prototype.send;
+        const _user = process.env.ALASTRIA_USER;
+        const _password = process.env.ALASTRIA_PASSWORD;
+        const _auth = 'Basic ' + Buffer.from(_user + ':' + _password).toString('base64');
+        const _headers = [{name: 'Authorization', value: _auth}];
+        const _provider = new Web3.providers.HttpProvider(process.env.ALASTRIA_URL, {timeout: 0, headers: _headers });
 
-        
+        hdprovider.engine.stop()
+        hdprovider.engine._providers[2].provider=_provider
+        hdprovider.engine.start()
         return    hdprovider; 
       },
       gasPrice: 0,
