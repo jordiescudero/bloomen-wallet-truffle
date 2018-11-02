@@ -18,8 +18,6 @@ dist/
 ormconfig.json
 tsconfig.build.json
 # Generated source-code #
-src/**/*.js
-src/**/*.js.map
 !src/public/**/*
 test/**/*.js
 test/**/*.js.map
