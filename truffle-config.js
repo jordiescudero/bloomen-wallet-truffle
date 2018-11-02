@@ -3,7 +3,7 @@ var HDWalletProvider = require("truffle-hdwallet-provider");
 
 var Web3 = require('web3');
 
-var mnemonic ="escape away review tower exchange vocal nut exhaust vibrant silver trial estate";
+
 
 
 module.exports = {
@@ -24,14 +24,14 @@ module.exports = {
     },
     hd: {
       provider: () =>{ 
-        return new HDWalletProvider(mnemonic, "http://"+process.env.DEVELOPMENT_HOST+":"+ process.env.DEVELOPMENT_PORT);     
+        return new HDWalletProvider(process.env.DEVELOPMENT_MNEMONIC, "http://"+process.env.DEVELOPMENT_HOST+":"+ process.env.DEVELOPMENT_PORT);     
       },
       gasPrice: 0,
       network_id: '*',
     },
     ahd: {
       provider: () =>{
-        var hdprovider =new HDWalletProvider(mnemonic, process.env.ALASTRIA_URL); 
+        var hdprovider =new HDWalletProvider(process.env.ALASTRIA_MNEMONIC, process.env.ALASTRIA_URL); 
         Web3.providers.HttpProvider.prototype.sendAsync = Web3.providers.HttpProvider.prototype.send;
         const _user = process.env.ALASTRIA_USER;
         const _password = process.env.ALASTRIA_PASSWORD;
