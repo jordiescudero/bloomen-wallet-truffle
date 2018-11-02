@@ -7,15 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "truffle test",
-    "console": "truffle console",
-    "wclean": "rd /s /q build",
-    "development": "truffle migrate",
-    "alastria": "truffle migrate --network  alastria",
-    "hd": "truffle migrate --network  ahd",
-    "ganache": "ganache-cli -g 0",
-    "coffee-cli": "node src/coffeeCli.js o",
-    "contract-cli": "node src/contractUtils.js"
+    "start": "nps",
+    "test": "nps test"
   },
   "author": "",
   "license": "ISC",
@@ -29,5 +22,8 @@
     "truffle": "^4.1.14",
     "truffle-hdwallet-provider": "0.0.6",
     "web3": "^1.0.0-beta.36"
+  },
+  "devDependencies": {
+    "nps": "^5.9.3"
   }
 }
