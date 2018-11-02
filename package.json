@@ -1,0 +1,31 @@
+{
+  "name": "bloomen-wallet-truffle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test",
+    "console": "truffle console",
+    "wclean": "rd /s /q build",
+    "development": "truffle migrate",
+    "alastria": "truffle migrate --network  alastria",
+    "ganache": "ganache-cli -g 0",
+    "coffee-cli": "node src/coffeeCli.js o",
+    "contract-cli": "node src/contractUtils.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.2.1",
+    "commander": "^2.15.1",
+    "dotenv": "^6.0.0",
+    "ganache-cli": "^6.1.8",
+    "inquirer": "^5.2.0",
+    "pad": "^2.0.3",
+    "truffle": "^4.1.14",
+    "web3": "^1.0.0-beta.36"
+  }
+}
