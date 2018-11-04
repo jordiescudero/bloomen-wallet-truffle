@@ -25,3 +25,7 @@ coverage/
 !test/preprocessor.js
 build/
 bin/
+
+#data
+ganache_db/*
+!ganache_db/.ignoreme

@@ -8,8 +8,8 @@ module.exports = {
     wclean: 'rd /s /q build',
     development: 'truffle migrate',
     alastria: 'truffle migrate --network  alastria',
-    hd: 'truffle migrate --network  ahd',
-    ganache: 'ganache-cli -g 0 -m "'+ process.env.DEVELOPMENT_MNEMONIC + '"',
+    hd: 'truffle migrate --network  hd',
+    ganache: 'ganache-cli -g 0 --db ganache_db -i 123456 -m "'+ process.env.DEVELOPMENT_MNEMONIC + '"',
     coffeeCli: 'node src/coffeeCli.js o',
     contractCli: 'node src/contractUtils.js'
   }
