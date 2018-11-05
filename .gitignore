@@ -13,6 +13,7 @@ Thumbs.db
 /logs
 *.log
 *.log*
+nohup.out
 # Dist #
 dist/
 ormconfig.json

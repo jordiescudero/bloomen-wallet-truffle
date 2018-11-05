@@ -9,8 +9,10 @@ module.exports = {
     development: 'truffle migrate',
     alastria: 'truffle migrate --network  alastria',
     hd: 'truffle migrate --network  hd',
-    ganache: 'ganache-cli -g 0 --db ganache_db -i 123456 -m "'+ process.env.DEVELOPMENT_MNEMONIC + '"',
+    ganache: 'ganache-cli -g 0 --db ganache_db  -i 123456 -m "'+ process.env.DEVELOPMENT_MNEMONIC + '" ',
+    nohupGanache: 'xnohup nps ganache',
     coffeeCli: 'node src/coffeeCli.js o',
-    contractCli: 'node src/contractUtils.js'
+    contractCli: 'node src/contractUtils.js',
+    qr: 'node src/qrTest.js'
   }
 };
