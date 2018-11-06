@@ -12,7 +12,8 @@
     "ws:coffeeCli": "nps coffeeCli",
     "ws:ganache": "nps nohupGanache",
     "go": "npm-run-all -p ws:*",
-    "postgo": "node src/fkillTest.js"
+    "postgo": "node src/fkillTest.js",
+    "truffle":"truffle"
   },
   "author": "",
   "license": "ISC",
