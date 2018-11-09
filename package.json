@@ -13,11 +13,12 @@
     "ws:ganache": "nps nohupGanache",
     "go": "npm-run-all -p ws:*",
     "postgo": "node src/fkillTest.js",
-    "truffle":"truffle"
+    "truffle": "truffle"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bip39": "^2.5.0",
     "colors": "^1.2.1",
     "commander": "^2.15.1",
     "dotenv": "^6.0.0",

@@ -14,15 +14,7 @@ module.exports = {
     }
   },
   networks: {
-   development: {
-      host: process.env.DEVELOPMENT_HOST,
-      port: process.env.DEVELOPMENT_PORT, 
-      network_id: "*", 
-      gasPrice: 2000000000,
-      gas: 6721975,
-      from: process.env.DEVELOPMENT_ACCOUNT,
-    },
-    hd: {
+    development: {
       provider: () =>{ 
         return new HDWalletProvider(process.env.DEVELOPMENT_MNEMONIC, "http://"+process.env.DEVELOPMENT_HOST+":"+ process.env.DEVELOPMENT_PORT);     
       },

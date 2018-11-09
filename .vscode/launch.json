@@ -12,6 +12,15 @@
             "args": [
                 "migrate","--network","ahd"
             ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Contract",
+            "program": "${workspaceFolder}/src/contractUtils.js",
+            "args": [
+                "get"
+            ]
         }
     ]
 }

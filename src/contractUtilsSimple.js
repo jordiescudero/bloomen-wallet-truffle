@@ -17,6 +17,7 @@ const _auth = 'Basic ' + Buffer.from(_user + ':' + _password).toString('base64')
 const _headers = [{name: 'Authorization', value: _auth}];
 const _provider = new Web3.providers.HttpProvider(process.env.ALASTRIA_URL, {timeout: 0, headers: _headers });
 
+
 var hdprovider =new HDWalletProvider(mnemonic, process.env.ALASTRIA_URL); 
 hdprovider.engine.stop();
 hdprovider.engine._providers[2].provider=_provider
@@ -30,7 +31,7 @@ const transactionObject = {
     gasPrice: 0
   };
 
-const contractInstance = new web3.eth.Contract(contractJSON.abi, contractJSON.networks[process.env.ALASTRIA_NETWORKID].address);
+  const contractInstance = new web3.eth.Contract(contractJSON.abi, contractJSON.networks[process.env.ALASTRIA_NETWORKID].address);
 
 function doStuff() {
     switch(process.argv[2]){
@@ -48,7 +49,10 @@ function doStuff() {
 }
 
 function get(){
-    contractInstance.methods.get().call(transactionObject).then((result) => console.log('GET:',result));
+    contractInstance.methods.get().call(transactionObject).then(
+        (result) => {
+        console.log('GET:',result)
+        });
 }
 
 function set(value){
