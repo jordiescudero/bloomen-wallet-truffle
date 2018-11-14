@@ -8,6 +8,9 @@ import "../../../node_modules/openzeppelin-solidity/contracts/utils/Address.sol"
 
 import "./ERC223ReceivingContract.sol";
 
+//https://gist.github.com/wadeAlexC/42c9b8e061d4b0afb850e52c802bb115
+//https://medium.com/@hayeah/how-to-decipher-a-smart-contract-method-call-8ee980311603
+
 contract ERC223 is ERC20Detailed, ERC20Mintable, ERC20Burnable {
   constructor (string _name, string _symbol, uint8 _decimals) public ERC20Detailed(_name, _symbol, _decimals){}
 
