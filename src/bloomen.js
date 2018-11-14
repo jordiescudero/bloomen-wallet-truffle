@@ -3,6 +3,8 @@ var bip39 = require('bip39');
 
 var HDWalletProvider = require("truffle-hdwallet-provider");
 
+//const packedArgs = web3.eth.abi.encodeParameters(['uint256', 'string'], ['123', 'Hello world']);`
+
 
 var fs = require('fs');
 var contractJSON = JSON.parse(fs.readFileSync('./build/contracts/Bloomen.json', 'utf8'));

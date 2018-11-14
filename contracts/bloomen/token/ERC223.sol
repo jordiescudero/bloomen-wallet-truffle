@@ -4,6 +4,7 @@ pragma solidity ^0.4.23;
 import "../../../node_modules/openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
 import "../../../node_modules/openzeppelin-solidity/contracts/token/ERC20/ERC20Mintable.sol";
 import "../../../node_modules/openzeppelin-solidity/contracts/token/ERC20/ERC20Burnable.sol";
+import "../../../node_modules/openzeppelin-solidity/contracts/utils/Address.sol";
 
 import "./ERC223ReceivingContract.sol";
 
@@ -15,7 +16,7 @@ contract ERC223 is ERC20Detailed, ERC20Mintable, ERC20Burnable {
 
     super.transfer(_to,_value);
 
-    if(isContract(_to)) {
+    if(Address.isContract(_to)) {
       ERC223ReceivingContract receiver = ERC223ReceivingContract(_to);
       receiver.tokenFallback(msg.sender, _value, _data);
     }
@@ -26,13 +27,5 @@ contract ERC223 is ERC20Detailed, ERC20Mintable, ERC20Burnable {
   function transfer(address _to, uint _value) public returns (bool) {
     bytes memory empty;
     this.transfer(_to, _value, empty);
-  }
-
-  function isContract(address _addr) private view returns (bool){
-    uint32 size;
-    assembly {
-      size := extcodesize(_addr)
-    }
-    return (size > 0);
   }
 }
