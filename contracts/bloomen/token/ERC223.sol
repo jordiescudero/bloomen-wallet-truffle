@@ -1,0 +1,38 @@
+pragma solidity ^0.4.23;
+
+
+import "../../../node_modules/openzeppelin-solidity/contracts/token/ERC20/ERC20Detailed.sol";
+import "../../../node_modules/openzeppelin-solidity/contracts/token/ERC20/ERC20Mintable.sol";
+import "../../../node_modules/openzeppelin-solidity/contracts/token/ERC20/ERC20Burnable.sol";
+
+import "./ERC223ReceivingContract.sol";
+
+contract ERC223 is ERC20Detailed, ERC20Mintable, ERC20Burnable {
+  constructor (string _name, string _symbol, uint8 _decimals) public ERC20Detailed(_name, _symbol, _decimals){}
+
+    // Overridden transfer method with _data param for transaction data
+  function transfer(address _to, uint _value, bytes _data) public {
+
+    super.transfer(_to,_value);
+
+    if(isContract(_to)) {
+      ERC223ReceivingContract receiver = ERC223ReceivingContract(_to);
+      receiver.tokenFallback(msg.sender, _value, _data);
+    }
+    emit Transfer(msg.sender, _to, _value);
+  }
+
+    // Overridden Backwards compatible transfer method without _data param
+  function transfer(address _to, uint _value) public returns (bool) {
+    bytes memory empty;
+    this.transfer(_to, _value, empty);
+  }
+
+  function isContract(address _addr) private view returns (bool){
+    uint32 size;
+    assembly {
+      size := extcodesize(_addr)
+    }
+    return (size > 0);
+  }
+}

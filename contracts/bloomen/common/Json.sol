@@ -14,7 +14,7 @@ contract Json  {
     return data_;
   }
 
-  function addPathData(string _path, string  _data) {
+  function addPathData(string _path, string  _data) public {
     PathValue memory result = PathValue(_path, _data);
     data_.push(result);
   }
