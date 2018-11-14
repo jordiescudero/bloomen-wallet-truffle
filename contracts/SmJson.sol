@@ -1,16 +1,20 @@
 // File: `./contracts/SimpleStorage.sol`
 
-pragma solidity ^0.4.17;
+pragma solidity ^0.4.24;
 pragma experimental ABIEncoderV2;
 
+import "./lib/Strings.sol";
+
 contract SmJson {
+
+  using Strings for *;
 
   struct PathValue{
     string path;
     string value;
   }
 
-  mapping (bytes32 => uint) private hashIndexMap_;
+  mapping (bytes32 => uint[]) private hashIndexMap_;
 
   PathValue[] private data_;
 
@@ -18,23 +22,51 @@ contract SmJson {
     return data_;
   }
 
-  function addPathData(string _path, string _value) public {
+  function addPath(string _path, string _value) public {
+    bytes32 pathHash = keccak256(bytes(_path));
+    uint[] memory indexArray = hashIndexMap_[pathHash];
+    if (indexArray.length > 0) {
+      for (uint i = 0; i < indexArray.length; i++) {
+        string memory storedPath = data_[indexArray[i]].path;
+        require(!storedPath.toSlice().equals(_path.toSlice()));
+      }
+    }
     PathValue memory pathValue = PathValue(_path, _value);
+    for (i = 0; i < data_.length; i++) {
+      if (data_[i].path.toSlice().empty()) {
+        data_[i] = pathValue;
+        hashIndexMap_[pathHash].push(i);
+        return;
+      }
+    }
     data_.push(pathValue);
-    bytes32 pathHash = keccak256(_path);
-    hashIndexMap_[pathHash] = data_.length - 1;
+    hashIndexMap_[pathHash].push(data_.length - 1); 
   }
 
   function deletePath(string _path) public {
-    bytes32 pathHash = keccak256(_path);
-    uint index = hashIndexMap_[pathHash];
-    delete data_[index];
+    bytes32 pathHash = keccak256(bytes(_path));
+    uint[] memory indexArray = hashIndexMap_[pathHash];
+    require(indexArray.length > 0);
+    for (uint i = 0; i < indexArray.length; i++) {
+      string memory storedPath = data_[indexArray[i]].path;
+      if (storedPath.toSlice().equals(_path.toSlice())) {
+        delete data_[indexArray[i]];
+        delete hashIndexMap_[pathHash];
+      }
+    }
   }
 
-  function modify(string _path, string _value) public {
-    bytes32 pathHash = keccak256(_path);
-    uint index = hashIndexMap_[pathHash];
-    data_[index] = PathValue(_path, _value);
+  function modifyPath(string _path, string _value) public {
+    bytes32 pathHash = keccak256(bytes(_path));
+    uint[] memory indexArray = hashIndexMap_[pathHash];
+    require(indexArray.length > 0);
+    for (uint i = 0; i < indexArray.length; i++) {
+      string memory storedPath = data_[indexArray[i]].path;
+      if (storedPath.toSlice().equals(_path.toSlice())) {
+        data_[indexArray[i]] = PathValue(_path, _value);
+        return;
+      }
+    }
   }
 
 }

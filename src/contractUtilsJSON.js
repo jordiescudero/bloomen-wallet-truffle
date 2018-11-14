@@ -6,6 +6,8 @@ var HDWalletProvider = require("truffle-hdwallet-provider");
 var mnemonic = bip39.generateMnemonic();
 
 var fs = require('fs');
+var jsonPath = require('json-path-value');
+
 var contractJSON = JSON.parse(fs.readFileSync('./build/contracts/SmJson.json', 'utf8'));
 const GAS = 500000;
 
@@ -45,10 +47,10 @@ function doStuff() {
 }
 
 async function set() {
-    await contractInstance.methods.addPathData("a.b.c.@type", "Asset").send(transactionObject);
-    await contractInstance.methods.addPathData("a.b.c.name", "My new Song").send(transactionObject);
-    await contractInstance.methods.addPathData("a.b.c.author", "My new Song").send(transactionObject);
-    await contractInstance.methods.addPathData("a.b.c.lyrics", "Nulla facilisi. Nullam risus dui, egestas sit amet consectetur quis, suscipit vitae sapien.").send(transactionObject);
+    await contractInstance.methods.addPath("a.b.c.@type", "Asset").send(transactionObject);
+    await contractInstance.methods.addPath("a.b.c.title", "My new Song").send(transactionObject);
+    await contractInstance.methods.addPath("a.b.c.author", "My new Song").send(transactionObject);
+    await contractInstance.methods.addPath("a.b.c.lyrics", "Nulla facilisi. Nullam risus dui, egestas sit amet consectetur quis, suscipit vitae sapien.").send(transactionObject);
     console.log("Done.");
 }
 
@@ -65,7 +67,7 @@ async function del() {
 }
 
 async function mod() {
-    await contractInstance.methods.modify("a.b.c.author", "Adri").send(transactionObject);
+    await contractInstance.methods.modifyPath("a.b.c.author", "Adri").send(transactionObject);
     console.log("Done");
 }
 
