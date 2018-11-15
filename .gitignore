@@ -18,7 +18,7 @@ nohup.out
 dist/
 ormconfig.json
 tsconfig.build.json
-# package-lock.json
+package-lock.json
 # Generated source-code #
 !src/public/**/*
 test/**/*.js
