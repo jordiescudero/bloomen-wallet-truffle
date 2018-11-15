@@ -18,13 +18,14 @@ nohup.out
 dist/
 ormconfig.json
 tsconfig.build.json
+# package-lock.json
 # Generated source-code #
 !src/public/**/*
 test/**/*.js
 test/**/*.js.map
 coverage/
 !test/preprocessor.js
-build/
+# build/
 bin/
 
 #data
