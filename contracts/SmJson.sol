@@ -12,6 +12,7 @@ contract SmJson {
   struct PathValue{
     string path;
     string value;
+    string valueType;
   }
 
   mapping (bytes32 => uint[]) private hashIndexMap_;
@@ -22,7 +23,7 @@ contract SmJson {
     return data_;
   }
 
-  function addPath(string _path, string _value) public {
+  function addPath(string _path, string _value, string _valueType) public {
     bytes32 pathHash = keccak256(bytes(_path));
     uint[] memory indexArray = hashIndexMap_[pathHash];
     if (indexArray.length > 0) {
@@ -31,7 +32,7 @@ contract SmJson {
         require(!storedPath.toSlice().equals(_path.toSlice()));
       }
     }
-    PathValue memory pathValue = PathValue(_path, _value);
+    PathValue memory pathValue = PathValue(_path, _value, _valueType);
     for (i = 0; i < data_.length; i++) {
       if (data_[i].path.toSlice().empty()) {
         data_[i] = pathValue;
@@ -56,14 +57,14 @@ contract SmJson {
     }
   }
 
-  function modifyPath(string _path, string _value) public {
+  function modifyPath(string _path, string _value, string _valueType) public {
     bytes32 pathHash = keccak256(bytes(_path));
     uint[] memory indexArray = hashIndexMap_[pathHash];
     require(indexArray.length > 0);
     for (uint i = 0; i < indexArray.length; i++) {
       string memory storedPath = data_[indexArray[i]].path;
       if (storedPath.toSlice().equals(_path.toSlice())) {
-        data_[indexArray[i]] = PathValue(_path, _value);
+        data_[indexArray[i]] = PathValue(_path, _value, _valueType);
         return;
       }
     }
