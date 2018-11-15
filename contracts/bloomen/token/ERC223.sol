@@ -31,4 +31,6 @@ contract ERC223 is ERC20Detailed, ERC20Mintable, ERC20Burnable {
     bytes memory empty;
     this.transfer(_to, _value, empty);
   }
+
+
 }

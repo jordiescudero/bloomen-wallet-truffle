@@ -31,6 +31,8 @@
     "pad": "^2.0.3",
     "pid-from-port": "^1.1.3",
     "qrcode-terminal": "^0.12.0",
+    "rlp": "^2.1.0",
+    "solidity-rlp": "^1.1.0",
     "truffle": "^4.1.14",
     "truffle-hdwallet-provider": "0.0.6",
     "web3": "^1.0.0-beta.36"

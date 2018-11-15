@@ -1,13 +1,17 @@
 require('dotenv').config();
-var bip39 = require('bip39');
+
+var RLP = require('rlp');
 
 var HDWalletProvider = require("truffle-hdwallet-provider");
 
 //const packedArgs = web3.eth.abi.encodeParameters(['uint256', 'string'], ['123', 'Hello world']);`
-
+var _dappAddr ="0x969996355A2aCAe843DaC3CdDc7D96aa3A515765";
 
 var fs = require('fs');
 var contractJSON = JSON.parse(fs.readFileSync('./build/contracts/Bloomen.json', 'utf8'));
+var contractDAPP = JSON.parse(fs.readFileSync('./build/contracts/DAPP.json', 'utf8'));
+
+
 const GAS = 500000;
 
 const Web3 = require('web3');
@@ -22,12 +26,16 @@ const transactionObject = {
     gasPrice: 0
   };
 
-const contractInstance = new web3.eth.Contract(contractJSON.abi, contractJSON.networks[process.env.DEVELOPMENT_NETWORKID].address);
+  const contractInstance = new web3.eth.Contract(contractJSON.abi, contractJSON.networks[process.env.DEVELOPMENT_NETWORKID].address);
+  const contractInstanceDAPP = new web3.eth.Contract(contractDAPP.abi, _dappAddr);
 
 function doStuff() {
     switch(process.argv[2]){
         case 'get':
             get();
+            break;
+        case 'decode':
+            decode();
             break;
         default:
             console.log('no command... get')
@@ -40,6 +48,19 @@ function get(){
     contractInstance.methods.dapps(1).call(transactionObject).then(
         (result) => {
         console.log('GET:',result)
+        });
+}
+
+function decode(){
+
+    var testArray =[123 ,'This function takes in a data, convert it to buffer if not, and a length for recursion']
+    
+    var encoded = RLP.encode(testArray);
+    
+    console.log(encoded);
+    contractInstanceDAPP.methods.decode(encoded).call(transactionObject).then(
+        (result) => {
+        console.log('DECODE:',result)
         });
 }
 
