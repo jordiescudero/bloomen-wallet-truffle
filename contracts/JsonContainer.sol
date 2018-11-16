@@ -1,19 +1,12 @@
-// File: `./contracts/SimpleStorage.sol`
-
 pragma solidity ^0.4.24;
 pragma experimental ABIEncoderV2;
 
 import "./lib/Strings.sol";
+import "./lib/Structs.sol";
 
-contract SmJson {
+contract JsonContainer is Structs {
 
   using Strings for *;
-
-  struct PathValue{
-    string path;
-    string value;
-    string valueType;
-  }
 
   mapping (bytes32 => uint[]) private hashIndexMap_;
 
@@ -23,7 +16,34 @@ contract SmJson {
     return data_;
   }
 
-  function addPath(string _path, string _value, string _valueType) public {
+  function initialize(PathValue[] _data) public {
+    for (uint i = 0;i < _data.length; i++) {
+      PathValue memory pathValue = _data[i];
+      _addPath(pathValue.path, pathValue.value, pathValue.valueType);
+    }
+  }
+
+  function add(string[] _paths, string[] _values, string[] _types) public {
+    require(_paths.length == _values.length && _paths.length == _types.length);
+    for (uint i = 0; i < _paths.length; i++) {
+      _addPath(_paths[i], _values[i], _types[i]);
+    }
+  }
+  
+  function del(string[] _paths) public {
+    for (uint i = 0; i < _paths.length; i++) {
+      _deletePath(_paths[i]);
+    }
+  }
+
+  function modify(string[] _paths, string[] _values, string[] _types) public {
+    require(_paths.length == _values.length && _paths.length == _types.length);
+    for (uint i = 0; i < _paths.length; i++) {
+      _modifyPath(_paths[i], _values[i], _types[i]);
+    }
+  }
+
+  function _addPath(string _path, string _value, string _valueType) internal {
     bytes32 pathHash = keccak256(bytes(_path));
     uint[] memory indexArray = hashIndexMap_[pathHash];
     if (indexArray.length > 0) {
@@ -44,7 +64,7 @@ contract SmJson {
     hashIndexMap_[pathHash].push(data_.length - 1); 
   }
 
-  function deletePath(string _path) public {
+  function _deletePath(string _path) internal {
     bytes32 pathHash = keccak256(bytes(_path));
     uint[] memory indexArray = hashIndexMap_[pathHash];
     require(indexArray.length > 0);
@@ -57,7 +77,7 @@ contract SmJson {
     }
   }
 
-  function modifyPath(string _path, string _value, string _valueType) public {
+  function _modifyPath(string _path, string _value, string _valueType) internal {
     bytes32 pathHash = keccak256(bytes(_path));
     uint[] memory indexArray = hashIndexMap_[pathHash];
     require(indexArray.length > 0);
