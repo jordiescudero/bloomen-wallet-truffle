@@ -6,10 +6,12 @@ var HDWalletProvider = require("truffle-hdwallet-provider");
 
 //const packedArgs = web3.eth.abi.encodeParameters(['uint256', 'string'], ['123', 'Hello world']);`
 var _dappAddr ="0x969996355A2aCAe843DaC3CdDc7D96aa3A515765";
+var _pcmAddr ="0x50E52DCb3CF7726Feea68efa297dAADE563a58c5";
 
 var fs = require('fs');
 var contractJSON = JSON.parse(fs.readFileSync('./build/contracts/Bloomen.json', 'utf8'));
 var contractDAPP = JSON.parse(fs.readFileSync('./build/contracts/DAPP.json', 'utf8'));
+var contractPCM = JSON.parse(fs.readFileSync('./build/contracts/PrepaidCardManager.json', 'utf8'));
 
 
 const GAS = 500000;
@@ -28,6 +30,7 @@ const transactionObject = {
 
   const contractInstance = new web3.eth.Contract(contractJSON.abi, contractJSON.networks[process.env.DEVELOPMENT_NETWORKID].address);
   const contractInstanceDAPP = new web3.eth.Contract(contractDAPP.abi, _dappAddr);
+  const contractInstancePCM = new web3.eth.Contract(contractPCM.abi, _pcmAddr);
 
 function doStuff() {
     switch(process.argv[2]){
@@ -36,6 +39,9 @@ function doStuff() {
             break;
         case 'decode':
             decode();
+            break;
+        case 'card':
+            card();
             break;
         default:
             console.log('no command... get')
@@ -46,7 +52,8 @@ function doStuff() {
 
 function get(){
     contractInstance.methods.dapps(1).call(transactionObject).then(
-        (result) => {
+    //contractInstance.methods.prepaidCardManager().call(transactionObject).then(
+            (result) => {
         console.log('GET:',result)
         });
 }
@@ -64,6 +71,16 @@ function decode(){
         });
 }
 
+function card(){
+    
+    contractInstancePCM.methods.addCard(2,1,web3.utils.keccak256('my secret key2')).send(transactionObject).then(
+        (result) => {
+        console.log('DECODE:',result)
+        },
+        (err) => {
+            console.log('ERROR:',err)
+        });
+}
 
 
 doStuff();

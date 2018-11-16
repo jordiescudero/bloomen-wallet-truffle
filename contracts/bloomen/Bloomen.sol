@@ -19,6 +19,7 @@ contract Bloomen {
   constructor() public {
     erc223 = new ERC223("BloomenCoin","BLO",2);
     prepaidCardManager = new PrepaidCardManager(erc223);
+    erc223.addMinter(prepaidCardManager);
     devices = new Devices();
     assets = new Assets();
 
