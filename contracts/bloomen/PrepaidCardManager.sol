@@ -24,8 +24,8 @@ contract PrepaidCardManager  {
   mapping (uint256 => Card) private cards_;
 
   ERC223 public erc223;
-  constructor(ERC223 _erc223) public {
-    erc223 = _erc223;
+  constructor(address _erc223Addr) public {
+    erc223 = ERC223(_erc223Addr);
   }
 
   function getCard(uint256 _cardId) public view returns(uint256 cardId, address owner, uint256 tokens, bool active){

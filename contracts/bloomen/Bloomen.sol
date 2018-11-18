@@ -16,10 +16,9 @@ contract Bloomen {
   ERC223 public erc223;
   DAPP[] public dapps;
 
-  constructor() public {
-    erc223 = new ERC223("BloomenCoin","BLO",2);
-    prepaidCardManager = new PrepaidCardManager(erc223);
-    erc223.addMinter(prepaidCardManager);
+  constructor(address _erc223Addr, address _prepaidCardManagerAddr) public {
+    erc223 = ERC223(_erc223Addr);
+    prepaidCardManager = PrepaidCardManager(_prepaidCardManagerAddr);
     devices = new Devices();
     assets = new Assets();
 
