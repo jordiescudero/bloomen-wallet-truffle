@@ -43,7 +43,7 @@ async function doStuff() {
             updateContainer(JSON.parse(fs.readFileSync(process.argv[3], 'utf8')), process.argv[4]);
             break;
         default:
-            console.log('no command ...');
+            console.log('no command ...\nUse:\nnew-container [json path file] [name]\ncontainers\nget-data [container address]\nupdate [json file path] [container address]');
     }
 
     hdprovider.engine.stop();
@@ -75,7 +75,12 @@ async function get(address) {
     var i;
     for (i = 0; i < result.length; i++) {
         var jsonPathValue = result[i];
-        storedJsonPathPairs.push(new jsonPathLibrary.JsonPathPair(jsonPathValue[0], jsonPathValue[1], jsonPathValue[2], ''));
+        var type = jsonPathValue[2];
+        var value = jsonPathValue[1];
+        if ('Array' == type) {
+            value = JSON.parse(jsonPathValue[1]);
+        }
+        storedJsonPathPairs.push(new jsonPathLibrary.JsonPathPair(jsonPathValue[0], value, type, ''));
     }
     return storedJsonPathPairs;
 }
@@ -92,50 +97,45 @@ async function updateContainer(json, address) {
         var difference = differences[i];
         var diff = difference.diff;
         switch (diff) {
-            case 'Modified':
+            case jsonPath.DIFF_ADDED:
+                additions.paths.push(difference.path);
+                if (difference.type == jsonPath.TYPE_STRING) {
+                    additions.values.push(difference.value);
+                } else {
+                    additions.values.push(JSON.stringify(difference.value));
+                }
+                additions.types.push(difference.type);
+                break;
+            case jsonPath.DIFF_DELETED:
+                deletions.paths.push(difference.path);
+                break;
+            case jsonPath.DIFF_MODIFIED:
                 modifications.paths.push(difference.path);
-                modifications.values.push(JSON.stringify(difference.value));
+                if (difference.type == jsonPath.TYPE_STRING) {
+                    modifications.values.push(difference.value);
+                } else {
+                    modifications.values.push(JSON.stringify(difference.value));
+                }
                 modifications.types.push(difference.type);
                 break;
         }
     }
     if (additions.paths.length > 0) {
         console.log("Adding ...");
-        await jsonContainerInstance.methods.add(modifications.paths, modifications.values, modifications.types).send(transactionObject);
+        console.log(additions);
+        await jsonContainerInstance.methods.add(additions.paths, additions.values, additions.types).send(transactionObject);
     }
     if (deletions.paths.length > 0) {
         console.log("Deleting ...");
-        await jsonContainerInstance.methods.del(modifications.paths).send(transactionObject);
+        console.log(deletions);
+        await jsonContainerInstance.methods.del(deletions.paths).send(transactionObject);
     }
     if (modifications.paths.length > 0) {
         console.log("Modifying ...");
+        console.log(modifications);
         await jsonContainerInstance.methods.modify(modifications.paths, modifications.values, modifications.types).send(transactionObject);
     }
     console.log("Done.");
-}
-
-async function storeJson(json) {
-    var result = await jsonContainerFactoryInstance.methods.getNodes().call(transactionObject);
-    if (result.length != 0) {
-        console.log("Data already stored.");
-    } else {
-        var jsonPathPairs = jsonPath.marshall(json, "", []);
-        for (i = 0; i < jsonPathPairs.length; i++) {
-            const jsonPathPair = jsonPathPairs[i];
-            await jsonContainerFactoryInstance.methods.addPath(jsonPathPair.getPath(), jsonPathPair.getValue(), jsonPathPair.getType()).send(transactionObject);
-        }
-        console.log("Done.");
-    }
-}
-
-async function del() {
-    await jsonContainerFactoryInstance.methods.deletePath("a.b.c.name").send(transactionObject);
-    console.log("Done.");
-}
-
-async function mod() {
-    await jsonContainerFactoryInstance.methods.modifyPath("a.b.c.author", "Adri").send(transactionObject);
-    console.log("Done");
 }
 
 doStuff();
