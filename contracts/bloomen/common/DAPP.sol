@@ -13,8 +13,8 @@ contract DAPP is Json {
   using RLPReader for uint;
   using RLPReader for RLPReader.RLPItem;
   
-  constructor(ERC223 _erc223) public {
-    erc223 = _erc223;
+  constructor(address _erc223Addr) public {
+    erc223 = ERC223(_erc223Addr);
     addPathData("@type","DAPP");
   }
 

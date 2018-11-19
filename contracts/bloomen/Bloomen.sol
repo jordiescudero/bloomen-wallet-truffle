@@ -14,7 +14,7 @@ contract Bloomen {
   Devices public devices;
   Assets public assets;
   ERC223 public erc223;
-  DAPP[] public dapps;
+  address[] public dapps;
 
   constructor(address _erc223Addr, address _prepaidCardManagerAddr, address _assetsAddr, address _devicesAddr) public {
     erc223 = ERC223(_erc223Addr);
@@ -22,9 +22,12 @@ contract Bloomen {
     devices = Devices(_devicesAddr);
     assets = Assets(_assetsAddr);
 
-    dapps.push(new ANT1DAPP(erc223));
-    dapps.push(new DemoDAPP(erc223));
+   // dapps.push(new ANT1DAPP(erc223));
+   // dapps.push(new DemoDAPP(erc223));
 
   }
 
+  function addDapp(address _dappAddress) public {
+    dapps.push(_dappAddress);
+  }
 }
