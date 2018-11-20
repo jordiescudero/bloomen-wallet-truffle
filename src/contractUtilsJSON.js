@@ -5,12 +5,12 @@ var HDWalletProvider = require("truffle-hdwallet-provider");
 
 var mnemonic = bip39.generateMnemonic();
 
-var fs = require('fs');
-var jsonPathLibrary = require('json-path-value');
-var jsonPath = new jsonPathLibrary.JsonPath();
+const fs = require('fs');
+const jsonPathLibrary = require('json-path-value');
+const jsonPath = new jsonPathLibrary.JsonPath();
 
-var jsonContainerFactoryJSON = JSON.parse(fs.readFileSync('./build/contracts/JsonContainerFactory.json', 'utf8'));
-var jsonContainerAbi = JSON.parse(fs.readFileSync('./build/contracts/JsonContainer.json', 'utf8')).abi; 
+const jsonContainerFactoryJSON = JSON.parse(fs.readFileSync('./build/contracts/JsonContainerFactory.json', 'utf8'));
+const jsonContainerAbi = JSON.parse(fs.readFileSync('./build/contracts/JsonContainer.json', 'utf8')).abi;
 const GAS = 5000000;
 
 const Web3 = require('web3');
@@ -27,34 +27,12 @@ const transactionObject = {
 
 const jsonContainerFactoryInstance = new web3.eth.Contract(jsonContainerFactoryJSON.abi, jsonContainerFactoryJSON.networks[process.env.DEVELOPMENT_NETWORKID].address);
 
-async function doStuff() {
-    switch (process.argv[2]) {
-        case 'containers':
-            console.log(await getContainers());
-            break;
-        case 'new-container':
-            let json = JSON.parse(fs.readFileSync(process.argv[3], 'utf8'));
-            createContainer(json, process.argv[4]);
-            break;
-        case 'get-data':
-            console.log(JSON.stringify(jsonPath.unMarshall(await get(process.argv[3]))));
-            break;
-        case 'update':
-            updateContainer(JSON.parse(fs.readFileSync(process.argv[3], 'utf8')), process.argv[4]);
-            break;
-        default:
-            console.log('no command ...\nUse:\nnew-container [json path file] [name]\ncontainers\nget-data [container address]\nupdate [json file path] [container address]');
-    }
-
-    hdprovider.engine.stop();
+async function _getContainers() {
+    var data = await jsonContainerFactoryInstance.methods.getContainers().call(transactionObject);
+    return data;
 }
 
-async function getContainers() {
-    return await jsonContainerFactoryInstance.methods.getContainers().call(transactionObject);
-}
-
-async function createContainer(json, name) {
-    console.log(name);
+async function _createContainer(json, name) {
     var jsonPathPairs = jsonPath.marshall(json, "", []);
     var paths = [];
     var values = [];
@@ -65,10 +43,9 @@ async function createContainer(json, name) {
         types.push(jsonPathPairs[i].getType());
     }
     await jsonContainerFactoryInstance.methods.createContainer(paths, values, types, name).send(transactionObject);
-    console.log("Done.");
 }
 
-async function get(address) {
+async function _get(address) {
     var jsonContainerInstance = new web3.eth.Contract(jsonContainerAbi, address);
     var result = await jsonContainerInstance.methods.getNodes().call(transactionObject);
     var storedJsonPathPairs = [];
@@ -85,14 +62,14 @@ async function get(address) {
     return storedJsonPathPairs;
 }
 
-async function updateContainer(json, address) {
+async function _updateContainer(json, address) {
     var jsonContainerInstance = new web3.eth.Contract(jsonContainerAbi, address);
-    var unmarshalledStorage = jsonPath.unMarshall(await get(address));
+    var unmarshalledStorage = jsonPath.unMarshall(await _get(address));
     var differences = jsonPath.compareJsonPath(unmarshalledStorage, json);
     var i;
-    var additions = {'paths' : [], 'values' : [], 'types' : []};
-    var deletions = {'paths' : []};
-    var modifications = {'paths' : [], 'values' : [], 'types' : []};
+    var additions = { 'paths': [], 'values': [], 'types': [] };
+    var deletions = { 'paths': [] };
+    var modifications = { 'paths': [], 'values': [], 'types': [] };
     for (i = 0; i < differences.length; i++) {
         var difference = differences[i];
         var diff = difference.diff;
@@ -135,7 +112,14 @@ async function updateContainer(json, address) {
         console.log(modifications);
         await jsonContainerInstance.methods.modify(modifications.paths, modifications.values, modifications.types).send(transactionObject);
     }
-    console.log("Done.");
 }
 
-doStuff();
+module.exports = (function () {
+    hdprovider.engine.stop();
+    return {
+        getContainers: _getContainers,
+        get: _get,
+        createContainer: _createContainer,
+        updateContainer: _updateContainer
+    }
+});
