@@ -70,7 +70,7 @@ program
         console.log('Container updated.');
     });
 
-figlet.text('Bloomen', {
+figlet.text('JSON warehouse', {
     font: 'slant'
 }, function (err, data) {
     if (err) {
