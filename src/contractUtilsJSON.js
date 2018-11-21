@@ -98,18 +98,12 @@ async function _updateContainer(json, address) {
         }
     }
     if (additions.paths.length > 0) {
-        console.log("Adding ...");
-        console.log(additions);
         await jsonContainerInstance.methods.add(additions.paths, additions.values, additions.types).send(transactionObject);
     }
     if (deletions.paths.length > 0) {
-        console.log("Deleting ...");
-        console.log(deletions);
         await jsonContainerInstance.methods.del(deletions.paths).send(transactionObject);
     }
     if (modifications.paths.length > 0) {
-        console.log("Modifying ...");
-        console.log(modifications);
         await jsonContainerInstance.methods.modify(modifications.paths, modifications.values, modifications.types).send(transactionObject);
     }
 }

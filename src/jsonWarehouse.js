@@ -7,6 +7,11 @@ const figlet = require('figlet');
 const utils = require('./contractUtilsJSON');
 const jsonPathLibrary = require('json-path-value');
 const jsonPath = new jsonPathLibrary.JsonPath();
+const prettyJson = require('prettyjson');
+
+const jsonPrintOptions = {
+    noColor: false
+};
 
 async function newContainer() {
     var files = fs.readdirSync('./src/json/');
@@ -28,12 +33,16 @@ async function getData() {
     for (i = 0; i < containers.length; i++) {
         containersMetadata.push({ name: containers[i].name, value: containers[i].add });
     }
+    if (containersMetadata.length == 0) {
+        console.log("There are no containers.");
+        return;
+    }
     var questions = [
         { type: 'list', name: 'container', message: 'Choose a container', choices: containersMetadata }
     ];
     console.log('Get data from a container');
     var answer = await inquirer.prompt(questions);
-    console.log(JSON.stringify(jsonPath.unMarshall(await utils().get(answer.container))));
+    console.log(prettyJson.render(jsonPath.unMarshall(await utils().get(answer.container)), jsonPrintOptions));
 }
 
 async function update() {
@@ -42,6 +51,10 @@ async function update() {
     var i;
     for (i = 0; i < containers.length; i++) {
         containersMetadata.push({ name: containers[i].name, value: containers[i].add });
+    }
+    if (containersMetadata.length == 0) {
+        console.log("There are no containers.");
+        return;
     }
     var files = fs.readdirSync('./src/json/');
     var questions = [
@@ -52,6 +65,7 @@ async function update() {
     var answer = await inquirer.prompt(questions);
     var json = JSON.parse(fs.readFileSync('./src/json/' + answer.file, 'utf8'));
     await utils().updateContainer(json, answer.container);
+    console.log('Result:\n' + prettyJson.render(jsonPath.unMarshall(await utils().get(answer.container)), jsonPrintOptions));
     console.log('Container updated.');
 }
 
@@ -88,12 +102,12 @@ figlet.text('JSON warehouse', {
     program.parse(process.argv);
     if (program.args.length == 0) {
         var menuOptions = [
-            {name: "Create a new container", value: newContainer},
-            {name: "Get data from a container", value: getData},
-            {name: "Update container data", value: update}
+            { name: "Create a new container", value: newContainer },
+            { name: "Get data from a container", value: getData },
+            { name: "Update container data", value: update }
         ];
         var questions = [
-            {type: "list", name: "menu", message: "What do you want to do?", choices: menuOptions}
+            { type: "list", name: "menu", message: "What do you want to do?", choices: menuOptions }
         ];
         var answer = await inquirer.prompt(questions);
         answer.menu();
