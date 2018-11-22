@@ -17,11 +17,16 @@ async function newContainer() {
     var files = fs.readdirSync('./src/json/');
     var questions = [
         { type: 'input', name: 'name', message: 'Give a name' },
-        { type: 'list', name: 'file', message: 'Choose a file', choices: files }
+        { type: 'list', name: 'folder', message: 'Select a data type', choices: files }
     ];
     console.log('Create a new JSON container.');
     var answer = await inquirer.prompt(questions);
-    var json = JSON.parse(fs.readFileSync('./src/json/' + answer.file, 'utf8'));
+    files = fs.readdirSync('./src/json/' + answer.folder);
+    questions = [
+        { type: 'list', name: 'file', message: 'Select a file', choices: files }
+    ];
+    var answerFile = await inquirer.prompt(questions);
+    var json = JSON.parse(fs.readFileSync('./src/json/' + answer.folder + '/' + answerFile.file, 'utf8'));
     await utils().createContainer(json, answer.name);
     console.log(answer.name + ' container crated.');
 }
@@ -59,11 +64,16 @@ async function update() {
     var files = fs.readdirSync('./src/json/');
     var questions = [
         { type: 'list', name: 'container', message: 'Choose a container', choices: containersMetadata },
-        { type: 'list', name: 'file', message: 'Choose a file', choices: files }
+        { type: 'list', name: 'folder', message: 'Select a data type', choices: files }
     ];
     console.log('Update data of a JSON container');
     var answer = await inquirer.prompt(questions);
-    var json = JSON.parse(fs.readFileSync('./src/json/' + answer.file, 'utf8'));
+    files = fs.readdirSync('./src/json/' + answer.folder);
+    questions = [
+        { type: 'list', name: 'file', message: 'Select a file', choices: files }
+    ];
+    var answerFile = await inquirer.prompt(questions);
+    var json = JSON.parse(fs.readFileSync('./src/json/' + answer.folder + '/' + answerFile.file, 'utf8'));
     await utils().updateContainer(json, answer.container);
     console.log('Result:\n' + prettyJson.render(jsonPath.unMarshall(await utils().get(answer.container)), jsonPrintOptions));
     console.log('Container updated.');

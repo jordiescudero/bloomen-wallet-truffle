@@ -11,7 +11,7 @@ const jsonPath = new jsonPathLibrary.JsonPath();
 
 const jsonContainerFactoryJSON = JSON.parse(fs.readFileSync('./build/contracts/JsonContainerFactory.json', 'utf8'));
 const jsonContainerAbi = JSON.parse(fs.readFileSync('./build/contracts/JsonContainer.json', 'utf8')).abi;
-const GAS = 5000000;
+const GAS = 1000000000000;
 
 const Web3 = require('web3');
 var RLP = require('rlp');
