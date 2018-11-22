@@ -90,7 +90,7 @@ program
 
     .action(update);
 
-figlet.text('JSON warehouse', {
+figlet.text('JSON Warehouse', {
     font: 'slant'
 }, async function (err, data) {
     if (err) {

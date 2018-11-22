@@ -11,14 +11,14 @@
     "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/lib/Structs.sol",
     "exportedSymbols": {
       "Structs": [
-        2358
+        2407
       ]
     },
-    "id": 2359,
+    "id": 2408,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2345,
+        "id": 2394,
         "literals": [
           "solidity",
           "^",
@@ -34,23 +34,23 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2358,
+        "id": 2407,
         "linearizedBaseContracts": [
-          2358
+          2407
         ],
         "name": "Structs",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Structs.PathValue",
-            "id": 2352,
+            "id": 2401,
             "members": [
               {
                 "constant": false,
-                "id": 2347,
+                "id": 2396,
                 "name": "path",
                 "nodeType": "VariableDeclaration",
-                "scope": 2352,
+                "scope": 2401,
                 "src": "86:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -59,7 +59,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 2346,
+                  "id": 2395,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "86:6:4",
@@ -73,10 +73,10 @@
               },
               {
                 "constant": false,
-                "id": 2349,
+                "id": 2398,
                 "name": "value",
                 "nodeType": "VariableDeclaration",
-                "scope": 2352,
+                "scope": 2401,
                 "src": "108:12:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -85,7 +85,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 2348,
+                  "id": 2397,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "108:6:4",
@@ -99,10 +99,10 @@
               },
               {
                 "constant": false,
-                "id": 2351,
+                "id": 2400,
                 "name": "valueType",
                 "nodeType": "VariableDeclaration",
-                "scope": 2352,
+                "scope": 2401,
                 "src": "131:16:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -111,7 +111,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 2350,
+                  "id": 2399,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "131:6:4",
@@ -126,20 +126,20 @@
             ],
             "name": "PathValue",
             "nodeType": "StructDefinition",
-            "scope": 2358,
+            "scope": 2407,
             "src": "58:97:4",
             "visibility": "public"
           },
           {
             "canonicalName": "Structs.Container",
-            "id": 2357,
+            "id": 2406,
             "members": [
               {
                 "constant": false,
-                "id": 2354,
+                "id": 2403,
                 "name": "add",
                 "nodeType": "VariableDeclaration",
-                "scope": 2357,
+                "scope": 2406,
                 "src": "189:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -148,7 +148,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 2353,
+                  "id": 2402,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "189:7:4",
@@ -162,10 +162,10 @@
               },
               {
                 "constant": false,
-                "id": 2356,
+                "id": 2405,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 2357,
+                "scope": 2406,
                 "src": "209:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -174,7 +174,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 2355,
+                  "id": 2404,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "209:6:4",
@@ -189,12 +189,12 @@
             ],
             "name": "Container",
             "nodeType": "StructDefinition",
-            "scope": 2358,
+            "scope": 2407,
             "src": "163:65:4",
             "visibility": "public"
           }
         ],
-        "scope": 2359,
+        "scope": 2408,
         "src": "32:207:4"
       }
     ],
@@ -204,14 +204,14 @@
     "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/lib/Structs.sol",
     "exportedSymbols": {
       "Structs": [
-        2358
+        2407
       ]
     },
-    "id": 2359,
+    "id": 2408,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2345,
+        "id": 2394,
         "literals": [
           "solidity",
           "^",
@@ -227,23 +227,23 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2358,
+        "id": 2407,
         "linearizedBaseContracts": [
-          2358
+          2407
         ],
         "name": "Structs",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Structs.PathValue",
-            "id": 2352,
+            "id": 2401,
             "members": [
               {
                 "constant": false,
-                "id": 2347,
+                "id": 2396,
                 "name": "path",
                 "nodeType": "VariableDeclaration",
-                "scope": 2352,
+                "scope": 2401,
                 "src": "86:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -252,7 +252,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 2346,
+                  "id": 2395,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "86:6:4",
@@ -266,10 +266,10 @@
               },
               {
                 "constant": false,
-                "id": 2349,
+                "id": 2398,
                 "name": "value",
                 "nodeType": "VariableDeclaration",
-                "scope": 2352,
+                "scope": 2401,
                 "src": "108:12:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -278,7 +278,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 2348,
+                  "id": 2397,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "108:6:4",
@@ -292,10 +292,10 @@
               },
               {
                 "constant": false,
-                "id": 2351,
+                "id": 2400,
                 "name": "valueType",
                 "nodeType": "VariableDeclaration",
-                "scope": 2352,
+                "scope": 2401,
                 "src": "131:16:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -304,7 +304,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 2350,
+                  "id": 2399,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "131:6:4",
@@ -319,20 +319,20 @@
             ],
             "name": "PathValue",
             "nodeType": "StructDefinition",
-            "scope": 2358,
+            "scope": 2407,
             "src": "58:97:4",
             "visibility": "public"
           },
           {
             "canonicalName": "Structs.Container",
-            "id": 2357,
+            "id": 2406,
             "members": [
               {
                 "constant": false,
-                "id": 2354,
+                "id": 2403,
                 "name": "add",
                 "nodeType": "VariableDeclaration",
-                "scope": 2357,
+                "scope": 2406,
                 "src": "189:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -341,7 +341,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 2353,
+                  "id": 2402,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "189:7:4",
@@ -355,10 +355,10 @@
               },
               {
                 "constant": false,
-                "id": 2356,
+                "id": 2405,
                 "name": "name",
                 "nodeType": "VariableDeclaration",
-                "scope": 2357,
+                "scope": 2406,
                 "src": "209:11:4",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -367,7 +367,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 2355,
+                  "id": 2404,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "209:6:4",
@@ -382,12 +382,12 @@
             ],
             "name": "Container",
             "nodeType": "StructDefinition",
-            "scope": 2358,
+            "scope": 2407,
             "src": "163:65:4",
             "visibility": "public"
           }
         ],
-        "scope": 2359,
+        "scope": 2408,
         "src": "32:207:4"
       }
     ],
@@ -399,5 +399,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-11-21T11:29:34.381Z"
+  "updatedAt": "2018-11-22T10:33:02.332Z"
 }

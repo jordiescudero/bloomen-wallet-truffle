@@ -3,16 +3,20 @@ pragma experimental ABIEncoderV2;
 
 import "./lib/Strings.sol";
 import "./lib/Structs.sol";
+import "../node_modules/solidity-rlp/contracts/RLPReader.sol";
 
 contract JsonContainer is Structs {
 
   using Strings for *;
+  using RLPReader for bytes;
+  using RLPReader for uint;
+  using RLPReader for RLPReader.RLPItem;
 
   mapping (bytes32 => uint[]) private hashIndexMap_;
 
   PathValue[] private data_;
 
-  function getNodes() public view returns (PathValue[]){    
+  function getData() public view returns (PathValue[]) {
     return data_;
   }
 
@@ -23,23 +27,18 @@ contract JsonContainer is Structs {
     }
   }
 
-  function add(string[] _paths, string[] _values, string[] _types) public {
-    require(_paths.length == _values.length && _paths.length == _types.length);
-    for (uint i = 0; i < _paths.length; i++) {
-      _addPath(_paths[i], _values[i], _types[i]);
-    }
-  }
-  
-  function del(string[] _paths) public {
-    for (uint i = 0; i < _paths.length; i++) {
-      _deletePath(_paths[i]);
-    }
-  }
-
-  function modify(string[] _paths, string[] _values, string[] _types) public {
-    require(_paths.length == _values.length && _paths.length == _types.length);
-    for (uint i = 0; i < _paths.length; i++) {
-      _modifyPath(_paths[i], _values[i], _types[i]);
+  function update(bytes memory _in) public {
+    RLPReader.RLPItem memory item = _in.toRlpItem();
+    RLPReader.RLPItem[] memory itemList = item.toList();
+    for (uint i = 0; i < itemList.length; i++) {
+      uint difference = itemList[i].toList()[3].toUint();
+      if (difference == 0) { //addition
+        _addPath(string(itemList[i].toList()[0].toBytes()), string(itemList[i].toList()[1].toBytes()), string(itemList[i].toList()[2].toBytes()));
+      } else if (difference == 1) { //deletion
+        _deletePath(string(itemList[i].toList()[0].toBytes()));
+      } else { //modification
+        _modifyPath(string(itemList[i].toList()[0].toBytes()), string(itemList[i].toList()[1].toBytes()), string(itemList[i].toList()[2].toBytes()));
+      }
     }
   }
 
