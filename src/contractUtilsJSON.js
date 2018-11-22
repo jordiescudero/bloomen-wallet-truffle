@@ -61,7 +61,7 @@ async function _get(address) {
         } else {
             value = jsonPathValue[1];
         }
-        storedJsonPathPairs.push(new jsonPathLibrary.JsonPathPair(jsonPathValue[0], value, type, ''));
+        storedJsonPathPairs.push(new jsonPathLibrary.JsonPathPair(jsonPathValue[0], value, type, -1));
     }
     return storedJsonPathPairs;
 }
@@ -74,60 +74,19 @@ async function _updateContainer(json, address) {
     var changes = [];
     for (i = 0; i < differences.length; i++) {
         var pathValueDiff = [];
-        pathValueDiff.push(differences.path);
+        var difference = differences[i];
+        pathValueDiff.push(difference.path);
         if (difference.type == jsonPath.TYPE_STRING) {
             pathValueDiff.push(difference.value);
         } else {
-            pathValueDiff.push(JSON.stringify(differences.values));
+            pathValueDiff.push(JSON.stringify(difference.value));
         }
-        pathValueDiff.push(differences.type);
-        pathValueDiff.push(differences.diff);
+        pathValueDiff.push(difference.type);
+        pathValueDiff.push(difference.diff);
         changes.push(pathValueDiff);
     }
     var encodedDataUpdate = RLP.encode(changes);
     await jsonContainerInstance.methods.update(encodedDataUpdate).send(transactionObject);
-
-    // var additions = { 'paths': [], 'values': [], 'types': [] };
-    // var deletions = { 'paths': [] };
-    // var modifications = { 'paths': [], 'values': [], 'types': [] };
-    // for (i = 0; i < differences.length; i++) {
-    //     var difference = differences[i];
-    //     var diff = difference.diff;
-    //     switch (diff) {
-    //         case jsonPath.DIFF_ADDED:
-    //             additions.paths.push(difference.path);
-    //             if (difference.type == jsonPath.TYPE_STRING) {
-    //                 additions.values.push(difference.value);
-    //             } else {
-    //                 additions.values.push(JSON.stringify(difference.value));
-    //             }
-    //             additions.types.push(difference.type);
-    //             break;
-    //         case jsonPath.DIFF_DELETED:
-    //             deletions.paths.push(difference.path);
-    //             break;
-    //         case jsonPath.DIFF_MODIFIED:
-    //             modifications.paths.push(difference.path);
-    //             if (difference.type == jsonPath.TYPE_STRING) {
-    //                 modifications.values.push(difference.value);
-    //             } else {
-    //                 modifications.values.push(JSON.stringify(difference.value));
-    //             }
-    //             modifications.types.push(difference.type);
-    //             break;
-    //     }
-    // }
-    // if (additions.paths.length > 0) {
-    //     var encodedDataAdd = RLP.encode([additions.paths, additions.values, additions.types]);
-    //     await jsonContainerInstance.methods.add(encodedDataAdd).send(transactionObject);
-    // }
-    // if (deletions.paths.length > 0) {
-    //     await jsonContainerInstance.methods.del(deletions.paths).send(transactionObject);
-    // }
-    // if (modifications.paths.length > 0) {
-    //     var encodedDataMod = RLP.encode([modifications.paths, modifications.values, modifications.types]);
-    //     await jsonContainerInstance.methods.modify(encodedDataMod).send(transactionObject);
-    // }
 }
 
 module.exports = (function () {
