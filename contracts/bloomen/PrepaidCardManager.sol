@@ -64,5 +64,4 @@ contract PrepaidCardManager is SignerRole, Ownable {
     delete cards_[_cardId];
   }
 
-
 }
