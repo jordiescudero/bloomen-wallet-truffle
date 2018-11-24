@@ -4,6 +4,7 @@ var fs = require('fs');
 const Web3 = require('web3');
 
 var contractPCM = JSON.parse(fs.readFileSync('./build/contracts/PrepaidCardManager.json', 'utf8'));
+var contractERC223 = JSON.parse(fs.readFileSync('./build/contracts/ERC223.json', 'utf8'));
 
 var vendorMnemonic = 'addict boil just alien picture quantum crumble avocado cargo glide laundry pumpkin';
 var finalUserMnemonic = 'wing clog sketch scrub type volcano exotic nerve immense resist say youth';
@@ -17,11 +18,30 @@ const vendorWeb3 = new Web3(vendorHDPprovider);
 const finalUserWeb3 = new Web3(finalUserHDPprovider);
 
 const ownerContractInstancePCM = new ownerWeb3.eth.Contract(contractPCM.abi, contractPCM.networks[process.env.DEVELOPMENT_NETWORKID].address);
+const ownerContractInstanceERC223 = new ownerWeb3.eth.Contract(contractERC223.abi, contractERC223.networks[process.env.DEVELOPMENT_NETWORKID].address);
+
+
 const vendorContractInstancePCM = new vendorWeb3.eth.Contract(contractPCM.abi, contractPCM.networks[process.env.DEVELOPMENT_NETWORKID].address);
 const finalUserContractInstancePCM = new finalUserWeb3.eth.Contract(contractPCM.abi, contractPCM.networks[process.env.DEVELOPMENT_NETWORKID].address);
 
+console.log('owner:',ownerHDPprovider.getAddress(0));
+console.log('vendor:',vendorHDPprovider.getAddress(0));
+console.log('final:',finalUserHDPprovider.getAddress(0));
+
 const ownerTransactionObject = {
     from: ownerHDPprovider.getAddress(0),
+    gas: 4000000,
+    gasPrice: 0
+  };
+
+  const vendorTransactionObject = {
+    from: vendorHDPprovider.getAddress(0),
+    gas: 4000000,
+    gasPrice: 0
+  };
+
+  const finalUserTransactionObject = {
+    from: finalUserHDPprovider.getAddress(0),
     gas: 4000000,
     gasPrice: 0
   };
@@ -30,15 +50,52 @@ const ownerTransactionObject = {
 
 
 async function addCard(){
-    return ownerContractInstancePCM.methods.addCard(2,1,ownerWeb3.utils.keccak256('my secret key2')).send(ownerTransactionObject);
+    const _cardId=287;
+    const _secretKey = 'my secret key2';
+    await ownerContractInstancePCM.methods.addCard(_cardId,1,ownerWeb3.utils.keccak256(_secretKey)).send(ownerTransactionObject);
+    console.log('addCard');
+
+    //ownerContractInstanceERC223.methods.mint(finalUserHDPprovider.getAddress(0),100).send(ownerTransactionObject);
+    //console.log('mint');
+
+
+    //let balancePCM = await ownerContractInstanceERC223.methods.balanceOf(finalUserHDPprovider.getAddress(0)).call();
+    //console.log('balancePCM',balancePCM);
+
+    let isSigner = await ownerContractInstancePCM.methods.isSigner(vendorHDPprovider.getAddress(0)).call();
+    console.log('isSigner',isSigner);
+    if (!isSigner) {
+        await ownerContractInstancePCM.methods.addSigner(vendorHDPprovider.getAddress(0)).send(ownerTransactionObject);
+        console.log('addSigner');
+    }
+    await vendorContractInstancePCM.methods.activateCard(_cardId).send(vendorTransactionObject);
+    console.log('activateCard');
+
+   // let card = await ownerContractInstancePCM.methods.getCard(_cardId).call();
+   // console.log('getCard',card);
+
+    await finalUserContractInstancePCM.methods.validateCard(_cardId, finalUserWeb3.utils.fromAscii(_secretKey)).send(finalUserTransactionObject);
+    console.log('validateCard');
+
+    return 'done';
+    
+}
+
+addCard().then((result)=> {
+    final();
+    console.log(result);
+}, (err)=> {      
+    final();
+    console.log(err);
+});
+
+function final() {
+    ownerHDPprovider.engine.stop();
+    vendorHDPprovider.engine.stop();
+    finalUserHDPprovider.engine.stop();
 }
 
 
-addCard().then((result)=> console.log(result));
 
-console.log("stop");
-ownerHDPprovider.engine.stop();
-vendorHDPprovider.engine.stop();
-finalUserHDPprovider.engine.stop();
 
 
