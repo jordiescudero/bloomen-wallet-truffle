@@ -22,12 +22,10 @@ contract Bloomen {
     devices = Devices(_devicesAddr);
     assets = Assets(_assetsAddr);
 
-   // dapps.push(new ANT1DAPP(erc223));
-   // dapps.push(new DemoDAPP(erc223));
-
   }
 
   function addDapp(address _dappAddress) public {
+    // TODO: Only owner protection
     dapps.push(_dappAddress);
   }
 }

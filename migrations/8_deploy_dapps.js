@@ -16,7 +16,6 @@ module.exports = function(deployer) {
   }).then( function(instance){
     return _bloomen.addDapp(instance.address);
   }).then( function(instance){
-    console.log("1f");
     return deployer.deploy(DemoDAPP, _erc223.address);
   }).then( function(instance){
     return _bloomen.addDapp(instance.address);
