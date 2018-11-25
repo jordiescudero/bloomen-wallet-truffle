@@ -50,9 +50,9 @@ const ownerTransactionObject = {
 
 
 async function addCard(){
-    const _cardId=287;
+    const _cardId=2744;
     const _secretKey = 'my secret key2';
-    await ownerContractInstancePCM.methods.addCard(_cardId,1,ownerWeb3.utils.keccak256(_secretKey)).send(ownerTransactionObject);
+    await ownerContractInstancePCM.methods.addCard(_cardId,100,ownerWeb3.utils.keccak256(_secretKey)).send(ownerTransactionObject);
     console.log('addCard');
 
     //ownerContractInstanceERC223.methods.mint(finalUserHDPprovider.getAddress(0),100).send(ownerTransactionObject);
@@ -71,12 +71,14 @@ async function addCard(){
     await vendorContractInstancePCM.methods.activateCard(_cardId).send(vendorTransactionObject);
     console.log('activateCard');
 
-   // let card = await ownerContractInstancePCM.methods.getCard(_cardId).call();
-   // console.log('getCard',card);
-
-    await finalUserContractInstancePCM.methods.validateCard(_cardId, finalUserWeb3.utils.fromAscii(_secretKey)).send(finalUserTransactionObject);
+    //let card = await ownerContractInstancePCM.methods.getCard(_cardId).call();
+    //console.log('getCard',card);
+    //let balancePCM = await ownerContractInstanceERC223.methods.balanceOf(finalUserHDPprovider.getAddress(0)).call();
+    //console.log('balancePRE',balancePCM);
+    await finalUserContractInstancePCM.methods.validateCard( finalUserWeb3.utils.fromAscii(_secretKey)).send(finalUserTransactionObject);
     console.log('validateCard');
-
+    //balancePCM = await ownerContractInstanceERC223.methods.balanceOf(finalUserHDPprovider.getAddress(0)).call();
+    //console.log('balancePOST',balancePCM);
     return 'done';
     
 }

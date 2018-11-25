@@ -25,11 +25,17 @@ contract PrepaidCardManager is SignerRole, Ownable {
   }
 
   mapping (uint256 => Card) private cards_;
+  mapping (bytes32 => uint256) private activeCards_;
 
   ERC223 public erc223;
 
   modifier cardExists(uint256 _cardId) {
     require(cards_[_cardId].initialized > 0, "not_exist");
+    _;
+  }
+
+  modifier validExists(uint256 _cardId) {
+    require(_cardId > 0, "valid_card_id");
     _;
   }
 
@@ -41,7 +47,7 @@ contract PrepaidCardManager is SignerRole, Ownable {
     return (cards_[_cardId].cardId, cards_[_cardId].owner, cards_[_cardId].tokens, cards_[_cardId].active);
   }
 
-  function addCard(uint256 _cardId, uint256 _tokens, bytes32 _hash) onlyOwner public {
+  function addCard(uint256 _cardId, uint256 _tokens, bytes32 _hash) validExists(_cardId) onlyOwner public {
     require(_tokens > 0, "empty_tokens");
     require(cards_[_cardId].initialized == 0, "card_exist");
     erc223.mint(this,_tokens);
@@ -52,16 +58,21 @@ contract PrepaidCardManager is SignerRole, Ownable {
   function activateCard(uint256 _cardId) cardExists(_cardId) onlySigner public {
     require(cards_[_cardId].active == false, "not_activatable");
     cards_[_cardId].active=true;    
+    activeCards_[cards_[_cardId].hash]=_cardId;
   }
 
-  function validateCard(uint256 _cardId, bytes _secret) cardExists(_cardId) public {
-    require(cards_[_cardId].active == true, "not_active");
-    require(cards_[_cardId].hash ==  keccak256(_secret), "wrong_secret");
+  function validateCard(bytes _secret) public {
+    bytes32 hash = keccak256(_secret);
+    uint256 cardId = activeCards_[hash];
+    require(cardId > 0, "not_active");
+    require(cards_[cardId].active == true, "not_active");
+    require(cards_[cardId].hash ==  hash, "wrong_secret");
   
-    erc223.transfer(msg.sender,cards_[_cardId].tokens);
-    emit CardValidated(cards_[_cardId].owner, cards_[_cardId].cardId, msg.sender);
+    erc223.transfer(msg.sender,cards_[cardId].tokens);
+    emit CardValidated(cards_[cardId].owner, cards_[cardId].cardId, msg.sender);
   
-    delete cards_[_cardId];
+    delete activeCards_[hash];
+    delete cards_[cardId];
   }
 
 }
