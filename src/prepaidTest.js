@@ -13,6 +13,8 @@ var ownerHDPprovider =new HDWalletProvider(process.env.DEVELOPMENT_MNEMONIC, "ht
 var vendorHDPprovider =new HDWalletProvider(vendorMnemonic, "http://"+process.env.DEVELOPMENT_HOST+":"+ process.env.DEVELOPMENT_PORT);  
 var finalUserHDPprovider =new HDWalletProvider(finalUserMnemonic, "http://"+process.env.DEVELOPMENT_HOST+":"+ process.env.DEVELOPMENT_PORT);  
 
+final(); // si hacemos esto evitamos el blocktracker que no creo que nos sea de utilidad...
+
 const ownerWeb3 = new Web3(ownerHDPprovider);
 const vendorWeb3 = new Web3(vendorHDPprovider);
 const finalUserWeb3 = new Web3(finalUserHDPprovider);
@@ -50,7 +52,7 @@ const ownerTransactionObject = {
 
 
 async function addCard(){
-    const _cardId=2744;
+    const _cardId=2948;
     const _secretKey = 'my secret key2';
     await ownerContractInstancePCM.methods.addCard(_cardId,100,ownerWeb3.utils.keccak256(_secretKey)).send(ownerTransactionObject);
     console.log('addCard');
