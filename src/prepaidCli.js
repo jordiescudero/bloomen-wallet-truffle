@@ -124,14 +124,14 @@ async function cardActivationMenu() {
     ];
     console.log('Activate prepaid card');
     let answer = await inquirer.prompt(questions);
-    console.log(answer);
-    // await vendorContractInstancePCM.methods.activateCard(_cardId).send(vendorTransactionObject);
+    await vendorContractInstancePCM.methods.activateCard(answer.id).send(vendorTransactionObject);
+    console.log('Done.');
 }
 
 async function userMenu() {
     let options = [
         { name: 'Get prepaid card QR', value: getCardQr },
-        { name: 'Reedem card code', value: redeem }
+        { name: 'Redeem card code', value: redeem }
     ];
     let questions = [
         { type: 'list', name: 'operation', message: 'Select an operation', choices: options }
@@ -151,12 +151,12 @@ async function getCardQr() {
 
 async function redeem() {
     let questions = [
-        { type: 'input', name: 'id', message: 'Specify prepaid card id:' }
+        { type: 'input', name: 'secret', message: 'Redemption code:' }
     ];
-    console.log('Reedem card code');
+    console.log('Redeem card code');
     let answer = await inquirer.prompt(questions);
-    console.log(answer);
-    // await finalUserContractInstancePCM.methods.validateCard(finalUserWeb3.utils.fromAscii(_secretKey)).send(finalUserTransactionObject);
+    await finalUserContractInstancePCM.methods.validateCard(finalUserWeb3.utils.fromAscii(answer.secret)).send(finalUserTransactionObject);
+    console.log('Done.');
 }
 
 async function addCard() {
