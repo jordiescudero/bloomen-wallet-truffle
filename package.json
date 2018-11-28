@@ -36,7 +36,8 @@
     "truffle-hdwallet-provider": "0.0.6",
     "web3": "^1.0.0-beta.36",
     "json-warehouse": "0.0.1-beta3",
-    "figlet": "^1.2.1"
+    "figlet": "^1.2.1",
+    "prettyjson": "^1.2.1"
   },
   "devDependencies": {
     "nps": "^5.9.3"

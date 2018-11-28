@@ -4,6 +4,8 @@ const fs = require('fs');
 const Web3 = require('web3');
 const figlet = require('figlet');
 const inquirer = require('inquirer');
+const qrcode = require('qrcode-terminal');
+const prettyJson = require('prettyjson');
 
 const contractPCM = JSON.parse(fs.readFileSync('./build/contracts/PrepaidCardManager.json', 'utf8'));
 const contractERC223 = JSON.parse(fs.readFileSync('./build/contracts/ERC223.json', 'utf8'));
@@ -32,9 +34,9 @@ const cardOwnerAddress = ownerHDPprovider.getAddress(0);
 const cardVendorAddress = vendorHDPprovider.getAddress(0);
 const cardUserAddress = finalUserHDPprovider.getAddress(0);
 
-// console.log('owner:', cardOwnerAddress);
-// console.log('vendor:', cardVendorAddress);
-// console.log('final:', cardUserAddress);
+const jsonPrintOptions = {
+    noColor: false
+};
 
 const ownerTransactionObject = {
     from: ownerHDPprovider.getAddress(0),
@@ -104,7 +106,8 @@ async function cardInfoMenu() {
     ];
     console.log('See prepaid card information');
     let answer = await inquirer.prompt(questions);
-    console.log(answer);
+    let cardInfo = await ownerContractInstancePCM.methods.getCard(answer.id).call(ownerTransactionObject);
+    console.log(prettyJson.render(cardInfo, jsonPrintOptions));
 }
 
 async function vendorMenu() {
@@ -146,7 +149,9 @@ async function getCardQr() {
     ];
     console.log('Get prepaid card QR');
     let answer = await inquirer.prompt(questions);
-    console.log(answer);
+    qrcode.generate(answer.id, function (str) { 
+        console.log(str);
+    });
 }
 
 async function redeem() {
