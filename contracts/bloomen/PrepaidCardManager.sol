@@ -79,6 +79,21 @@ contract PrepaidCardManager is SignerRole, Ownable {
     
         delete activeCards_[hash];
         delete cards_[cardId];
+        for (uint256 i = 0; i < ids_.length; i++) {
+            if (ids_[i] == cardId) {
+                _removeCardId(i);
+                break;
+            }
+        }
+    }
+
+    function _removeCardId(uint256 index) internal {
+        if (index >= ids_.length) return;
+        for (uint i = index; i<ids_.length-1; i++){
+            ids_[i] = ids_[i+1];
+        }
+        delete ids_[ids_.length-1];
+        ids_.length--;
     }
 
 }
