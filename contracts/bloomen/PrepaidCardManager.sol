@@ -26,6 +26,7 @@ contract PrepaidCardManager is SignerRole, Ownable {
 
     mapping (uint256 => Card) private cards_;
     mapping (bytes32 => uint256) private activeCards_;
+    uint256[] private ids_;
 
     ERC223 public erc223;
 
@@ -47,12 +48,17 @@ contract PrepaidCardManager is SignerRole, Ownable {
         return (cards_[_cardId].cardId, cards_[_cardId].owner, cards_[_cardId].tokens, cards_[_cardId].active);
     }
 
+    function getCardIds() public view returns(uint256[]) {
+        return ids_;
+    }
+
     function addCard(uint256 _cardId, uint256 _tokens, bytes32 _hash) public validExists(_cardId) onlyOwner {
         require(_tokens > 0, "empty_tokens");
         require(cards_[_cardId].initialized == 0, "card_exist");
         erc223.mint(this,_tokens);
         Card memory newCard = Card(_hash, _cardId, _tokens, false, msg.sender, 1);
         cards_[_cardId] = newCard;
+        ids_.push(_cardId);
     }
 
     function activateCard(uint256 _cardId) public cardExists(_cardId) onlySigner {

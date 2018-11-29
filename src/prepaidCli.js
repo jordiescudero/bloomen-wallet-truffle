@@ -39,37 +39,37 @@ const jsonPrintOptions = {
 };
 
 const ownerTransactionObject = {
-    from: ownerHDPprovider.getAddress(0),
+    from: cardOwnerAddress,
     gas: 4000000,
     gasPrice: 0
 };
 
 const vendorTransactionObject = {
-    from: vendorHDPprovider.getAddress(0),
+    from: cardVendorAddress,
     gas: 4000000,
     gasPrice: 0
 };
 
 const finalUserTransactionObject = {
-    from: finalUserHDPprovider.getAddress(0),
+    from: cardUserAddress,
     gas: 4000000,
     gasPrice: 0
 };
 
 async function producerMenu() {
     let options = [
-        { name: 'Create a prepaid card', value: cardCreationMenu },
-        { name: 'Assign vendor to a prepaid card', value: addVendorMenu },
-        { name: 'See prepaid card information', value: cardInfoMenu }
+        { name: 'Create a prepaid card', value: cardCreation },
+        { name: 'Assign vendor to a prepaid card', value: addVendor },
+        { name: 'See prepaid card information', value: cardInfo }
     ];
     let questions = [
         { type: 'list', name: 'operation', message: 'Select an operation', choices: options }
     ];
     let answer = await inquirer.prompt(questions);
-    answer.operation();
+    await answer.operation();
 }
 
-async function cardCreationMenu() {
+async function cardCreation() {
     let questions = [
         { type: 'input', name: 'id', message: 'Give an identificator:' },
         { type: 'input', name: 'secret', message: 'Specify the secret key:' },
@@ -84,9 +84,14 @@ async function cardCreationMenu() {
     console.log('Done.');
 }
 
-async function addVendorMenu() {
+async function addVendor() {
+    let cardIds = await ownerContractInstancePCM.methods.getCardIds().call(ownerTransactionObject);
+    if (cardIds.length == 0) {
+        console.log('There are no prepaid cards.');
+        return;
+    }
     let questions = [
-        { type: 'input', name: 'id', message: 'Specify prepaid card id:' },
+        { type: 'list', name: 'id', message: 'Select a prepaid card:', choices: cardIds },
         { type: 'input', name: 'vendor', message: 'Specify vendor address:' }
     ];
     console.log('Assign vendor to a prepaid card');
@@ -100,30 +105,41 @@ async function addVendorMenu() {
     }
 }
 
-async function cardInfoMenu() {
+async function cardInfo() {
+    let cardIds = await ownerContractInstancePCM.methods.getCardIds().call(ownerTransactionObject);
+    if (cardIds.length == 0) {
+        console.log('There are no prepaid cards.');
+        return;
+    }
     let questions = [
-        { type: 'input', name: 'id', message: 'Specify prepaid card id:' }
+        { type: 'list', name: 'id', message: 'Select a prepaid card:', choices: cardIds }
     ];
     console.log('See prepaid card information');
     let answer = await inquirer.prompt(questions);
     let cardInfo = await ownerContractInstancePCM.methods.getCard(answer.id).call(ownerTransactionObject);
-    console.log(prettyJson.render(cardInfo, jsonPrintOptions));
+    let card = { cardId: cardInfo.cardId, owner: cardInfo.owner, tokens: cardInfo.tokens, active: cardInfo.active };
+    console.log(prettyJson.render(card, jsonPrintOptions));
 }
 
 async function vendorMenu() {
     let options = [
-        { name: 'Activate prepaid card', value: cardActivationMenu }
+        { name: 'Activate prepaid card', value: cardActivation }
     ];
     let questions = [
         { type: 'list', name: 'operation', message: 'Select an operation', choices: options }
     ];
     let answer = await inquirer.prompt(questions);
-    answer.operation();
+    await answer.operation();
 }
 
-async function cardActivationMenu() {
+async function cardActivation() {
+    let cardIds = await ownerContractInstancePCM.methods.getCardIds().call(ownerTransactionObject);
+    if (cardIds.length == 0) {
+        console.log('There are no prepaid cards.');
+        return;
+    }
     let questions = [
-        { type: 'input', name: 'id', message: 'Specify prepaid card id:' }
+        { type: 'list', name: 'id', message: 'Select a prepaid card:', choices: cardIds }
     ];
     console.log('Activate prepaid card');
     let answer = await inquirer.prompt(questions);
@@ -140,16 +156,21 @@ async function userMenu() {
         { type: 'list', name: 'operation', message: 'Select an operation', choices: options }
     ];
     let answer = await inquirer.prompt(questions);
-    answer.operation();
+    await answer.operation();
 }
 
 async function getCardQr() {
+    let cardIds = await ownerContractInstancePCM.methods.getCardIds().call(ownerTransactionObject);
+    if (cardIds.length == 0) {
+        console.log('There are no prepaid cards.');
+        return;
+    }
     let questions = [
-        { type: 'input', name: 'id', message: 'Specify prepaid card id:' }
+        { type: 'list', name: 'id', message: 'Select a prepaid card:', choices: cardIds }
     ];
     console.log('Get prepaid card QR');
     let answer = await inquirer.prompt(questions);
-    qrcode.generate(answer.id, function (str) { 
+    qrcode.generate(answer.id, function (str) {
         console.log(str);
     });
 }
@@ -198,6 +219,25 @@ async function addCard() {
 
 }
 
+async function mainMenu() {
+    let menuOptions = [
+        { name: "Producer", value: producerMenu },
+        { name: "Vendor", value: vendorMenu },
+        { name: "User", value: userMenu },
+        { name: "Exit", value: 0}
+    ];
+    let questions = [
+        { type: "list", name: "menu", message: "Select your profile", choices: menuOptions }
+    ];
+    let answer = await inquirer.prompt(questions);
+    if (answer.menu == 0) {
+        return;
+    } else {
+        await answer.menu();
+        mainMenu();
+    }
+}
+
 // addCard().then((result)=> {
 //     final();
 //     console.log(result);
@@ -223,15 +263,6 @@ figlet.text('Prepaid Cards System', {
     console.log(data);
     // program.parse(process.argv);
     // if (program.args.length == 0) {
-    let menuOptions = [
-        { name: "Producer", value: producerMenu },
-        { name: "Vendor", value: vendorMenu },
-        { name: "User", value: userMenu }
-    ];
-    let questions = [
-        { type: "list", name: "menu", message: "Select your profile", choices: menuOptions }
-    ];
-    let answer = await inquirer.prompt(questions);
-    answer.menu();
+    mainMenu();
     // }
 });
