@@ -1,11 +1,14 @@
+#!/usr/bin/env node
 require('dotenv').config();
 const HDWalletProvider = require("truffle-hdwallet-provider");
 const fs = require('fs');
 const Web3 = require('web3');
 const figlet = require('figlet');
 const inquirer = require('inquirer');
+const program = require('commander');
 const qrcode = require('qrcode-terminal');
 const prettyJson = require('prettyjson');
+const version = require('../package.json').version;
 
 const contractPCM = JSON.parse(fs.readFileSync('./build/contracts/PrepaidCardManager.json', 'utf8'));
 const contractERC223 = JSON.parse(fs.readFileSync('./build/contracts/ERC223.json', 'utf8'));
@@ -24,11 +27,11 @@ const vendorWeb3 = new Web3(vendorHDPprovider);
 const finalUserWeb3 = new Web3(finalUserHDPprovider);
 
 const ownerContractInstancePCM = new ownerWeb3.eth.Contract(contractPCM.abi, contractPCM.networks[process.env.DEVELOPMENT_NETWORKID].address);
-const ownerContractInstanceERC223 = new ownerWeb3.eth.Contract(contractERC223.abi, contractERC223.networks[process.env.DEVELOPMENT_NETWORKID].address);
-
-
 const vendorContractInstancePCM = new vendorWeb3.eth.Contract(contractPCM.abi, contractPCM.networks[process.env.DEVELOPMENT_NETWORKID].address);
 const finalUserContractInstancePCM = new finalUserWeb3.eth.Contract(contractPCM.abi, contractPCM.networks[process.env.DEVELOPMENT_NETWORKID].address);
+
+const ownerContractInstanceERC223 = new ownerWeb3.eth.Contract(contractERC223.abi, contractERC223.networks[process.env.DEVELOPMENT_NETWORKID].address);
+const finalUserrContractInstanceERC223 = new ownerWeb3.eth.Contract(contractERC223.abi, contractERC223.networks[process.env.DEVELOPMENT_NETWORKID].address);
 
 const cardOwnerAddress = ownerHDPprovider.getAddress(0);
 const cardVendorAddress = vendorHDPprovider.getAddress(0);
@@ -56,11 +59,19 @@ const finalUserTransactionObject = {
     gasPrice: 0
 };
 
+program
+    .version(version, '-v --version');
+
+program.on('--help', function () {
+    console.log('  Empty command triggers the menu.')
+});
+
 async function producerMenu() {
     let options = [
         { name: 'Create a prepaid card', value: cardCreation },
-        { name: 'Assign vendor to a prepaid card', value: addVendor },
-        { name: 'See prepaid card information', value: cardInfo }
+        { name: 'Authorize vendor', value: addVendor },
+        { name: 'See prepaid card information', value: cardInfo },
+        { name: 'Check balance', value: checkOwnerBalance }
     ];
     let questions = [
         { type: 'list', name: 'operation', message: 'Select an operation', choices: options }
@@ -71,7 +82,7 @@ async function producerMenu() {
 
 async function cardCreation() {
     let questions = [
-        { type: 'input', name: 'id', message: 'Give an identificator:' },
+        { type: 'input', name: 'id', message: 'Give a numeric identificator:' },
         { type: 'input', name: 'secret', message: 'Specify the secret key:' },
         { type: 'input', name: 'amount', message: 'Amount of tokens:' }
     ];
@@ -85,20 +96,14 @@ async function cardCreation() {
 }
 
 async function addVendor() {
-    let cardIds = await ownerContractInstancePCM.methods.getCardIds().call(ownerTransactionObject);
-    if (cardIds.length == 0) {
-        console.log('There are no prepaid cards.');
-        return;
-    }
     let questions = [
-        { type: 'list', name: 'id', message: 'Select a prepaid card:', choices: cardIds },
         { type: 'input', name: 'vendor', message: 'Specify vendor address:' }
     ];
     console.log('Assign vendor to a prepaid card');
     let answer = await inquirer.prompt(questions);
-    let isSigner = await ownerContractInstancePCM.methods.isSigner(vendorHDPprovider.getAddress(0)).call();
+    let isSigner = await ownerContractInstancePCM.methods.isSigner(cardVendorAddress).call();
     if (!isSigner) {
-        await ownerContractInstancePCM.methods.addSigner(vendorHDPprovider.getAddress(0)).send(ownerTransactionObject);
+        await ownerContractInstancePCM.methods.addSigner(cardVendorAddress).send(ownerTransactionObject);
         console.log('Done.');
     } else {
         console.log('Already vendor.');
@@ -121,6 +126,11 @@ async function cardInfo() {
     console.log(prettyJson.render(card, jsonPrintOptions));
 }
 
+async function checkOwnerBalance() {
+    let balance = await ownerContractInstanceERC223.methods.balanceOf(cardOwnerAddress).call(ownerTransactionObject);
+    console.log(balance + ' tokens.');
+}
+
 async function vendorMenu() {
     let options = [
         { name: 'Activate prepaid card', value: cardActivation }
@@ -138,8 +148,10 @@ async function cardActivation() {
         console.log('There are no prepaid cards.');
         return;
     }
+    let activeCardIds = await ownerContractInstancePCM.methods.getActiveCardIds().call(ownerTransactionObject);
+    let filtered = cardIds.filter(i => activeCardIds.indexOf(i) < 0);
     let questions = [
-        { type: 'list', name: 'id', message: 'Select a prepaid card:', choices: cardIds }
+        { type: 'list', name: 'id', message: 'Select a prepaid card:', choices: filtered }
     ];
     console.log('Activate prepaid card');
     let answer = await inquirer.prompt(questions);
@@ -150,7 +162,8 @@ async function cardActivation() {
 async function userMenu() {
     let options = [
         { name: 'Get prepaid card QR', value: getCardQr },
-        { name: 'Redeem card code', value: redeem }
+        { name: 'Redeem card code', value: redeem },
+        { name: 'Check balance', value: checkUserBalance }
     ];
     let questions = [
         { type: 'list', name: 'operation', message: 'Select an operation', choices: options }
@@ -160,19 +173,18 @@ async function userMenu() {
 }
 
 async function getCardQr() {
-    let cardIds = await ownerContractInstancePCM.methods.getCardIds().call(ownerTransactionObject);
-    if (cardIds.length == 0) {
+    let activeCardIds = await ownerContractInstancePCM.methods.getActiveCardIds().call(ownerTransactionObject);
+    if (activeCardIds.length == 0) {
         console.log('There are no prepaid cards.');
         return;
     }
     let questions = [
-        { type: 'list', name: 'id', message: 'Select a prepaid card:', choices: cardIds }
+        { type: 'list', name: 'id', message: 'Select a prepaid card:', choices: activeCardIds }
     ];
     console.log('Get prepaid card QR');
     let answer = await inquirer.prompt(questions);
-    qrcode.generate(answer.id, function (str) {
-        console.log(str);
-    });
+    let str = await qrcode.generate(answer.id);
+    console.log(str);
 }
 
 async function redeem() {
@@ -185,38 +197,9 @@ async function redeem() {
     console.log('Done.');
 }
 
-async function addCard() {
-    const _cardId = 2948;
-    const _secretKey = 'my secret key2';
-    await ownerContractInstancePCM.methods.addCard(_cardId, 100, ownerWeb3.utils.keccak256(_secretKey)).send(ownerTransactionObject);
-    console.log('addCard');
-
-    //ownerContractInstanceERC223.methods.mint(finalUserHDPprovider.getAddress(0),100).send(ownerTransactionObject);
-    //console.log('mint');
-
-
-    //let balancePCM = await ownerContractInstanceERC223.methods.balanceOf(finalUserHDPprovider.getAddress(0)).call();
-    //console.log('balancePCM',balancePCM);
-
-    let isSigner = await ownerContractInstancePCM.methods.isSigner(vendorHDPprovider.getAddress(0)).call();
-    console.log('isSigner', isSigner);
-    if (!isSigner) {
-        await ownerContractInstancePCM.methods.addSigner(vendorHDPprovider.getAddress(0)).send(ownerTransactionObject);
-        console.log('addSigner');
-    }
-    await vendorContractInstancePCM.methods.activateCard(_cardId).send(vendorTransactionObject);
-    console.log('activateCard');
-
-    //let card = await ownerContractInstancePCM.methods.getCard(_cardId).call();
-    //console.log('getCard',card);
-    //let balancePCM = await ownerContractInstanceERC223.methods.balanceOf(finalUserHDPprovider.getAddress(0)).call();
-    //console.log('balancePRE',balancePCM);
-    await finalUserContractInstancePCM.methods.validateCard(finalUserWeb3.utils.fromAscii(_secretKey)).send(finalUserTransactionObject);
-    console.log('validateCard');
-    //balancePCM = await ownerContractInstanceERC223.methods.balanceOf(finalUserHDPprovider.getAddress(0)).call();
-    //console.log('balancePOST',balancePCM);
-    return 'done';
-
+async function checkUserBalance() {
+    let balance = await finalUserrContractInstanceERC223.methods.balanceOf(cardUserAddress).call(finalUserTransactionObject);
+    console.log(balance + ' tokens.');
 }
 
 async function mainMenu() {
@@ -224,7 +207,7 @@ async function mainMenu() {
         { name: "Producer", value: producerMenu },
         { name: "Vendor", value: vendorMenu },
         { name: "User", value: userMenu },
-        { name: "Exit", value: 0}
+        { name: "Exit", value: 0 }
     ];
     let questions = [
         { type: "list", name: "menu", message: "Select your profile", choices: menuOptions }
@@ -237,14 +220,6 @@ async function mainMenu() {
         mainMenu();
     }
 }
-
-// addCard().then((result)=> {
-//     final();
-//     console.log(result);
-// }, (err)=> {      
-//     final();
-//     console.log(err);
-// });
 
 function final() {
     ownerHDPprovider.engine.stop();
@@ -261,8 +236,8 @@ figlet.text('Prepaid Cards System', {
         return;
     }
     console.log(data);
-    // program.parse(process.argv);
-    // if (program.args.length == 0) {
-    mainMenu();
-    // }
+    program.parse(process.argv);
+    if (program.args.length == 0) {
+        mainMenu();
+    }
 });

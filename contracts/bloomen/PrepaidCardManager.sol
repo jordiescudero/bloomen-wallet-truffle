@@ -27,6 +27,7 @@ contract PrepaidCardManager is SignerRole, Ownable {
     mapping (uint256 => Card) private cards_;
     mapping (bytes32 => uint256) private activeCards_;
     uint256[] private ids_;
+    uint256[] private activeCardIds_;
 
     ERC223 public erc223;
 
@@ -52,6 +53,10 @@ contract PrepaidCardManager is SignerRole, Ownable {
         return ids_;
     }
 
+    function getActiveCardIds() public view returns(uint256[]) {
+        return activeCardIds_;
+    }
+
     function addCard(uint256 _cardId, uint256 _tokens, bytes32 _hash) public validExists(_cardId) onlyOwner {
         require(_tokens > 0, "empty_tokens");
         require(cards_[_cardId].initialized == 0, "card_exist");
@@ -65,6 +70,7 @@ contract PrepaidCardManager is SignerRole, Ownable {
         require(cards_[_cardId].active == false, "not_activatable");
         cards_[_cardId].active = true;
         activeCards_[cards_[_cardId].hash] = _cardId;
+        activeCardIds_.push(_cardId);
     }
 
     function validateCard(bytes _secret) public {
@@ -82,18 +88,29 @@ contract PrepaidCardManager is SignerRole, Ownable {
         for (uint256 i = 0; i < ids_.length; i++) {
             if (ids_[i] == cardId) {
                 _removeCardId(i);
-                break;
+            }
+            if (activeCardIds_[i] == cardId) {
+                _removeActiveCardId(i);
             }
         }
     }
 
     function _removeCardId(uint256 index) internal {
         if (index >= ids_.length) return;
-        for (uint i = index; i<ids_.length-1; i++){
-            ids_[i] = ids_[i+1];
+        for (uint i = index; i < ids_.length - 1; i++) {
+            ids_[i] = ids_[i + 1];
         }
-        delete ids_[ids_.length-1];
+        delete ids_[ids_.length - 1];
         ids_.length--;
+    }
+
+    function _removeActiveCardId(uint256 index) internal {
+        if (index >= activeCardIds_.length) return;
+        for (uint i = index; i < activeCardIds_.length - 1; i++) {
+            activeCardIds_[i] = activeCardIds_[i + 1];
+        }
+        delete activeCardIds_[activeCardIds_.length - 1];
+        activeCardIds_.length--;
     }
 
 }
