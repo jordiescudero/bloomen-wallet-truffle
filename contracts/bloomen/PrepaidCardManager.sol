@@ -51,6 +51,8 @@ contract PrepaidCardManager is SignerRole, Ownable ,ERC223("BloomenCoin","BLO",2
   function addCard(uint256 _cardId, uint256 _tokens, bytes32 _hash) validExists(_cardId) onlyOwner public {
     require(_tokens > 0, "empty_tokens");
     require(cards_[_cardId].initialized == 0, "card_exist");
+    require(activeCards_[_hash] == 0, "duplicated_hash");
+
     _mint(this,_tokens);
     Card memory newCard = Card(_hash, _cardId, _tokens, false, msg.sender, 1);
     cards_[_cardId] = newCard;    

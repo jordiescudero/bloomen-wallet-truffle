@@ -34,14 +34,14 @@
     "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/token/ERC223ReceivingContract.sol",
     "exportedSymbols": {
       "ERC223ReceivingContract": [
-        713
+        722
       ]
     },
-    "id": 714,
+    "id": 723,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 703,
+        "id": 712,
         "literals": [
           "solidity",
           "^",
@@ -57,9 +57,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 713,
+        "id": 722,
         "linearizedBaseContracts": [
-          713
+          722
         ],
         "name": "ERC223ReceivingContract",
         "nodeType": "ContractDefinition",
@@ -67,7 +67,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 712,
+            "id": 721,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -75,15 +75,15 @@
             "name": "tokenFallback",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 710,
+              "id": 719,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 705,
+                  "id": 714,
                   "name": "_from",
                   "nodeType": "VariableDeclaration",
-                  "scope": 712,
+                  "scope": 721,
                   "src": "87:13:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -92,7 +92,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 704,
+                    "id": 713,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "87:7:10",
@@ -106,10 +106,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 707,
+                  "id": 716,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 712,
+                  "scope": 721,
                   "src": "102:11:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -118,7 +118,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 706,
+                    "id": 715,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "102:4:10",
@@ -132,10 +132,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 709,
+                  "id": 718,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 712,
+                  "scope": 721,
                   "src": "115:11:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -144,7 +144,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 708,
+                    "id": 717,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "115:5:10",
@@ -161,19 +161,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 711,
+              "id": 720,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "134:0:10"
             },
-            "scope": 713,
+            "scope": 722,
             "src": "64:71:10",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 714,
+        "scope": 723,
         "src": "26:111:10"
       }
     ],
@@ -183,14 +183,14 @@
     "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/token/ERC223ReceivingContract.sol",
     "exportedSymbols": {
       "ERC223ReceivingContract": [
-        713
+        722
       ]
     },
-    "id": 714,
+    "id": 723,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 703,
+        "id": 712,
         "literals": [
           "solidity",
           "^",
@@ -206,9 +206,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 713,
+        "id": 722,
         "linearizedBaseContracts": [
-          713
+          722
         ],
         "name": "ERC223ReceivingContract",
         "nodeType": "ContractDefinition",
@@ -216,7 +216,7 @@
           {
             "body": null,
             "documentation": null,
-            "id": 712,
+            "id": 721,
             "implemented": false,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -224,15 +224,15 @@
             "name": "tokenFallback",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 710,
+              "id": 719,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 705,
+                  "id": 714,
                   "name": "_from",
                   "nodeType": "VariableDeclaration",
-                  "scope": 712,
+                  "scope": 721,
                   "src": "87:13:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -241,7 +241,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 704,
+                    "id": 713,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "87:7:10",
@@ -255,10 +255,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 707,
+                  "id": 716,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 712,
+                  "scope": 721,
                   "src": "102:11:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -267,7 +267,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 706,
+                    "id": 715,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "102:4:10",
@@ -281,10 +281,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 709,
+                  "id": 718,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 712,
+                  "scope": 721,
                   "src": "115:11:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -293,7 +293,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 708,
+                    "id": 717,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "115:5:10",
@@ -310,19 +310,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 711,
+              "id": 720,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "134:0:10"
             },
-            "scope": 713,
+            "scope": 722,
             "src": "64:71:10",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 714,
+        "scope": 723,
         "src": "26:111:10"
       }
     ],
@@ -334,5 +334,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-02T19:26:18.274Z"
+  "updatedAt": "2018-12-02T20:03:12.801Z"
 }

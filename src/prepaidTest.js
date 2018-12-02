@@ -51,62 +51,76 @@ const ownerTransactionObject = {
   };
 
 
-async function addCard(){
-    const _cardId=294811;
-    const _secretKey = 'my secret key2';
-    ownerContractInstancePCM.methods.addCard(_cardId,100,ownerWeb3.utils.keccak256(_secretKey)).send(ownerTransactionObject)
+async function addCard(_cardId, _secretKey){
+    // const _cardId=294819;
+    // const _secretKey = 'my secret key2';
+    await ownerContractInstancePCM.methods.addCard(_cardId,100,ownerWeb3.utils.keccak256(_secretKey)).send(ownerTransactionObject)
      .then((tx)=>{
-        console.log(tx);
-        checkTransaction(tx.transactionHash);
+        //console.log(tx);
+        return checkTransaction(tx.transactionHash);
      });
     console.log('addCard');
 
-    // ownerContractInstanceERC223.methods.mint(finalUserHDPprovider.getAddress(0),100).send(ownerTransactionObject) 
-    // .then((tx)=>{
+    // // ownerContractInstanceERC223.methods.mint(finalUserHDPprovider.getAddress(0),100).send(ownerTransactionObject) 
+    // // .then((tx)=>{
+    // //         console.log(tx);
+    // //         checkTransaction(tx.transactionHash);
+    // //      });
+    // // console.log('mint');
+
+
+    // let balancePCM = await ownerContractInstanceERC223.methods.balanceOf(finalUserHDPprovider.getAddress(0)).call();
+    // console.log('balancePCM',balancePCM);
+
+    // let isSigner = await ownerContractInstancePCM.methods.isSigner(vendorHDPprovider.getAddress(0)).call();
+    // console.log('isSigner',isSigner);
+    // if (!isSigner) {
+    //     ownerContractInstancePCM.methods.addSigner(vendorHDPprovider.getAddress(0)).send(ownerTransactionObject).then((tx)=>{
     //         console.log(tx);
     //         checkTransaction(tx.transactionHash);
-    //      });
-    // console.log('mint');
+    //      });;
+    //     console.log('addSigner');
+    // }
 
-
-    let balancePCM = await ownerContractInstanceERC223.methods.balanceOf(finalUserHDPprovider.getAddress(0)).call();
-    console.log('balancePCM',balancePCM);
-
-    let isSigner = await ownerContractInstancePCM.methods.isSigner(vendorHDPprovider.getAddress(0)).call();
-    console.log('isSigner',isSigner);
-    if (!isSigner) {
-        ownerContractInstancePCM.methods.addSigner(vendorHDPprovider.getAddress(0)).send(ownerTransactionObject).then((tx)=>{
-            console.log(tx);
-            checkTransaction(tx.transactionHash);
-         });;
-        console.log('addSigner');
-    }
-
-    await vendorContractInstancePCM.methods.activateCard(_cardId).send(vendorTransactionObject).then((tx)=>{
-        console.log(tx);
-        checkTransaction(tx.transactionHash);
-     });;
+    await ownerContractInstancePCM.methods.activateCard(_cardId).send(ownerTransactionObject).then((tx)=>{
+        //console.log(tx);
+        return checkTransaction(tx.transactionHash);
+     });
     console.log('activateCard');
 
-    // let card = await ownerContractInstancePCM.methods.getCard(_cardId).call();
-    // console.log('getCard',card);
+    // // let card = await ownerContractInstancePCM.methods.getCard(_cardId).call();
+    // // console.log('getCard',card);
     let balanceuser = await ownerContractInstanceERC223.methods.balanceOf(finalUserHDPprovider.getAddress(0)).call();
     console.log('balancePRE',balanceuser);
 
     await finalUserContractInstancePCM.methods.validateCard( finalUserWeb3.utils.fromAscii(_secretKey)).send(finalUserTransactionObject).then((tx)=>{
-        console.log(tx);
-        checkTransaction(tx.transactionHash);
+        return  checkTransaction(tx.transactionHash);
      });
 
-    console.log('validateCard');
 
     balanceuser = await ownerContractInstanceERC223.methods.balanceOf(finalUserHDPprovider.getAddress(0)).call();
     console.log('balancePOST',balanceuser);
-    return 'done';
+    // return 'done';
     
 }
 
-addCard().then((result)=> {
+addCard(100,'koko100').then( 
+    ()=> addCard(20,'koko20')
+).then( 
+    ()=> addCard(30,'koko30')
+).then( 
+    ()=> addCard(40,'koko40')
+).then( 
+    ()=> addCard(50,'koko50')
+).then( 
+    ()=> addCard(60,'koko60')
+).then( 
+    ()=> addCard(70,'koko70')
+).then( 
+    ()=> addCard(80,'koko80')
+).then( 
+    ()=> addCard(90,'koko90')
+).then((result)=> {
     final();
     console.log(result);
 }, (err)=> {      
@@ -120,25 +134,30 @@ function final() {
     finalUserHDPprovider.engine.stop();
 }
 
-function checkTransaction(result) {
-    setTimeout(() => {
-        ownerWeb3.eth.getTransactionReceipt(result,
-            function(err,status){
+function checkTransaction(tx) {
 
-                console.log(status);
-                if (!status) {
-                    console.log('Next try...');
-                    checkTransaction(result);              
+    return new Promise( (resolve,reject) => {
+        setTimeout(() => {
+            ownerWeb3.eth.getTransactionReceipt(tx,
+                function(err,status){
+                    if (!status) {
+                        console.log('Next try...');
+                        checkTransaction(tx);              
+                    }
+                    else if( GAS == status.gasUsed ){
+                        //transaction error
+                        console.log('KO');
+                        reject();
+                    } else {
+                        console.log('OK');
+                        resolve();
+                    }
                 }
-                else if( GAS == status.gasUsed ){
-                    //transaction error
-                    console.log('KO');
-                } else {
-                    console.log('OK');
-                }
-            }
-        );
-    },1000);   
+            );
+        },1000); 
+
+    });
+      
 }
 
 
