@@ -1,0 +1,97 @@
+{
+  "contractName": "Assets",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820c836d841988d40775b43cd3a300260dcd241cfcd785870ec0a7390c0aa797db90029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820c836d841988d40775b43cd3a300260dcd241cfcd785870ec0a7390c0aa797db90029",
+  "sourceMap": "26:25:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:25:1;;;;;;;",
+  "deployedSourceMap": "26:25:1:-;;;;;",
+  "source": "pragma solidity ^0.4.23;\n\ncontract Assets  {\n    \n}",
+  "sourcePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Assets.sol",
+  "ast": {
+    "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Assets.sol",
+    "exportedSymbols": {
+      "Assets": [
+        59
+      ]
+    },
+    "id": 60,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 59,
+        "linearizedBaseContracts": [
+          59
+        ],
+        "name": "Assets",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 60,
+        "src": "26:25:1"
+      }
+    ],
+    "src": "0:51:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Assets.sol",
+    "exportedSymbols": {
+      "Assets": [
+        59
+      ]
+    },
+    "id": 60,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 58,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".23"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 59,
+        "linearizedBaseContracts": [
+          59
+        ],
+        "name": "Assets",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 60,
+        "src": "26:25:1"
+      }
+    ],
+    "src": "0:51:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-12-02T19:26:48.108Z"
+}

@@ -27,7 +27,7 @@
             "type": "node",
             "request": "launch",
             "name": "Alastria",
-            "program": "${workspaceFolder}/src/prepaidTestAlastria.js"
+            "program": "${workspaceFolder}/src/prepaidTest.js"
         }
     ]
 }

@@ -24,7 +24,7 @@ test/**/*.js
 test/**/*.js.map
 coverage/
 !test/preprocessor.js
-build/
+# build/
 bin/
 
 #data
