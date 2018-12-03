@@ -90,7 +90,7 @@ async function cardCreation() {
     let answer = await inquirer.prompt(questions);
     await ownerContractInstancePCM.methods.addCard(answer.id, answer.amount, ownerWeb3.utils.keccak256(answer.secret)).send(ownerTransactionObject);
     let secrets = JSON.parse(fs.readFileSync('./data/secrets.json', 'utf8'));
-    secrets.cards.push({ id: answer.id, secret: answer.secret });
+    secrets.cards.push({ id: answer.id, secret: answer.secret, active: false });
     fs.writeFileSync('./data/secrets.json', JSON.stringify(secrets), 'utf8');
     console.log('Done.');
 }
@@ -111,7 +111,11 @@ async function addVendor() {
 }
 
 async function cardInfo() {
-    let cardIds = await ownerContractInstancePCM.methods.getCardIds().call(ownerTransactionObject);
+    let cards = JSON.parse(fs.readFileSync('./data/secrets.json', 'utf8'));
+    let cardIds = [];
+    cards.cards.forEach(card => {
+        cardIds.push(card.id);
+    });
     if (cardIds.length == 0) {
         console.log('There are no prepaid cards.');
         return;
@@ -143,19 +147,29 @@ async function vendorMenu() {
 }
 
 async function cardActivation() {
-    let cardIds = await ownerContractInstancePCM.methods.getCardIds().call(ownerTransactionObject);
+    let cards = JSON.parse(fs.readFileSync('./data/secrets.json', 'utf8'));
+    let cardIds = [];
+    cards.cards.forEach(card => {
+        if (!card.active) {
+            cardIds.push(card.id);
+        }
+    });
     if (cardIds.length == 0) {
         console.log('There are no prepaid cards.');
         return;
     }
-    let activeCardIds = await ownerContractInstancePCM.methods.getActiveCardIds().call(ownerTransactionObject);
-    let filtered = cardIds.filter(i => activeCardIds.indexOf(i) < 0);
     let questions = [
-        { type: 'list', name: 'id', message: 'Select a prepaid card:', choices: filtered }
+        { type: 'list', name: 'id', message: 'Select a prepaid card:', choices: cardIds }
     ];
     console.log('Activate prepaid card');
     let answer = await inquirer.prompt(questions);
     await vendorContractInstancePCM.methods.activateCard(answer.id).send(vendorTransactionObject);
+    cards.cards.forEach(card => {
+        if (card.id == answer.id) {
+            card.active = true;
+        }
+    });
+    fs.writeFileSync('./data/secrets.json', JSON.stringify(cards), 'utf8');
     console.log('Done.');
 }
 
@@ -173,13 +187,19 @@ async function userMenu() {
 }
 
 async function getCardQr() {
-    let activeCardIds = await ownerContractInstancePCM.methods.getActiveCardIds().call(ownerTransactionObject);
-    if (activeCardIds.length == 0) {
+    let cards = JSON.parse(fs.readFileSync('./data/secrets.json', 'utf8'));
+    let cardIds = [];
+    cards.cards.forEach(card => {
+        if (card.active) {
+            cardIds.push(card.id);
+        }
+    });
+    if (cardIds.length == 0) {
         console.log('There are no prepaid cards.');
         return;
     }
     let questions = [
-        { type: 'list', name: 'id', message: 'Select a prepaid card:', choices: activeCardIds }
+        { type: 'list', name: 'id', message: 'Select a prepaid card:', choices: cardIds }
     ];
     console.log('Get prepaid card QR');
     let answer = await inquirer.prompt(questions);
@@ -194,6 +214,14 @@ async function redeem() {
     console.log('Redeem card code');
     let answer = await inquirer.prompt(questions);
     await finalUserContractInstancePCM.methods.validateCard(finalUserWeb3.utils.fromAscii(answer.secret)).send(finalUserTransactionObject);
+    let cards = JSON.parse(fs.readFileSync('./data/secrets.json', 'utf8'));
+    let i;
+    for (i = 0; i < cards.cards.lenth; i++) {
+        if (cards.cards[i].secret == answer.secret) {
+            cards.cards.splice(i, 1);
+        }
+    }
+    fs.writeFileSync('./data/secrets.json', JSON.stringify(cards), 'utf8');
     console.log('Done.');
 }
 
