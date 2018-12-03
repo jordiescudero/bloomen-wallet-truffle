@@ -1,24 +1,24 @@
 {
   "contractName": "Devices",
   "abi": [],
-  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a7230582032d6645cca4f4b889fe6440839f8b69421f9dbe7af569d5ce130b171ed4dd4f30029",
-  "deployedBytecode": "0x6080604052600080fd00a165627a7a7230582032d6645cca4f4b889fe6440839f8b69421f9dbe7af569d5ce130b171ed4dd4f30029",
-  "sourceMap": "26:26:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:26:3;;;;;;;",
-  "deployedSourceMap": "26:26:3:-;;;;;",
-  "source": "pragma solidity ^0.4.23;\n\ncontract Devices  {\n    \n}",
-  "sourcePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Devices.sol",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058204aecf184b2a53252c579e812a035e5a734be9ca08d511413c6be7eccc1451ca20029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058204aecf184b2a53252c579e812a035e5a734be9ca08d511413c6be7eccc1451ca20029",
+  "sourceMap": "28:28:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;28:28:2;;;;;;;",
+  "deployedSourceMap": "28:28:2:-;;;;;",
+  "source": "pragma solidity ^0.4.23;\r\n\r\ncontract Devices  {\r\n    \r\n}",
+  "sourcePath": "C:\\Users\\a562145\\git\\bloomen-wallet-truffle\\contracts\\bloomen\\Devices.sol",
   "ast": {
-    "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Devices.sol",
+    "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/Devices.sol",
     "exportedSymbols": {
       "Devices": [
-        131
+        76
       ]
     },
-    "id": 132,
+    "id": 77,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 130,
+        "id": 75,
         "literals": [
           "solidity",
           "^",
@@ -26,7 +26,7 @@
           ".23"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:3"
+        "src": "0:24:2"
       },
       {
         "baseContracts": [],
@@ -34,31 +34,31 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 131,
+        "id": 76,
         "linearizedBaseContracts": [
-          131
+          76
         ],
         "name": "Devices",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 132,
-        "src": "26:26:3"
+        "scope": 77,
+        "src": "28:28:2"
       }
     ],
-    "src": "0:52:3"
+    "src": "0:56:2"
   },
   "legacyAST": {
-    "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Devices.sol",
+    "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/Devices.sol",
     "exportedSymbols": {
       "Devices": [
-        131
+        76
       ]
     },
-    "id": 132,
+    "id": 77,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 130,
+        "id": 75,
         "literals": [
           "solidity",
           "^",
@@ -66,7 +66,7 @@
           ".23"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:3"
+        "src": "0:24:2"
       },
       {
         "baseContracts": [],
@@ -74,18 +74,18 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 131,
+        "id": 76,
         "linearizedBaseContracts": [
-          131
+          76
         ],
         "name": "Devices",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 132,
-        "src": "26:26:3"
+        "scope": 77,
+        "src": "28:28:2"
       }
     ],
-    "src": "0:52:3"
+    "src": "0:56:2"
   },
   "compiler": {
     "name": "solc",
@@ -93,5 +93,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-02T20:03:44.820Z"
+  "updatedAt": "2018-12-03T12:43:38.791Z"
 }

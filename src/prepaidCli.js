@@ -11,7 +11,6 @@ const prettyJson = require('prettyjson');
 const version = require('../package.json').version;
 
 const contractPCM = JSON.parse(fs.readFileSync('./build/contracts/PrepaidCardManager.json', 'utf8'));
-const contractERC223 = JSON.parse(fs.readFileSync('./build/contracts/ERC223.json', 'utf8'));
 
 const vendorMnemonic = 'addict boil just alien picture quantum crumble avocado cargo glide laundry pumpkin';
 const finalUserMnemonic = 'wing clog sketch scrub type volcano exotic nerve immense resist say youth';
@@ -29,9 +28,6 @@ const finalUserWeb3 = new Web3(finalUserHDPprovider);
 const ownerContractInstancePCM = new ownerWeb3.eth.Contract(contractPCM.abi, contractPCM.networks[process.env.DEVELOPMENT_NETWORKID].address);
 const vendorContractInstancePCM = new vendorWeb3.eth.Contract(contractPCM.abi, contractPCM.networks[process.env.DEVELOPMENT_NETWORKID].address);
 const finalUserContractInstancePCM = new finalUserWeb3.eth.Contract(contractPCM.abi, contractPCM.networks[process.env.DEVELOPMENT_NETWORKID].address);
-
-const ownerContractInstanceERC223 = new ownerWeb3.eth.Contract(contractERC223.abi, contractERC223.networks[process.env.DEVELOPMENT_NETWORKID].address);
-const finalUserrContractInstanceERC223 = new ownerWeb3.eth.Contract(contractERC223.abi, contractERC223.networks[process.env.DEVELOPMENT_NETWORKID].address);
 
 const cardOwnerAddress = ownerHDPprovider.getAddress(0);
 const cardVendorAddress = vendorHDPprovider.getAddress(0);
@@ -131,7 +127,7 @@ async function cardInfo() {
 }
 
 async function checkOwnerBalance() {
-    let balance = await ownerContractInstanceERC223.methods.balanceOf(cardOwnerAddress).call(ownerTransactionObject);
+    let balance = await ownerContractInstancePCM.methods.balanceOf(contractPCM.networks[process.env.DEVELOPMENT_NETWORKID].address).call(ownerTransactionObject);
     console.log(balance + ' tokens.');
 }
 
@@ -213,10 +209,10 @@ async function redeem() {
     ];
     console.log('Redeem card code');
     let answer = await inquirer.prompt(questions);
-    await finalUserContractInstancePCM.methods.validateCard(finalUserWeb3.utils.fromAscii(answer.secret)).send(finalUserTransactionObject);
     let cards = JSON.parse(fs.readFileSync('./data/secrets.json', 'utf8'));
+    await finalUserContractInstancePCM.methods.validateCard(finalUserWeb3.utils.fromAscii(answer.secret)).send(finalUserTransactionObject);
     let i;
-    for (i = 0; i < cards.cards.lenth; i++) {
+    for (i = 0; i < cards.cards.length; i++) {
         if (cards.cards[i].secret == answer.secret) {
             cards.cards.splice(i, 1);
         }
@@ -226,7 +222,7 @@ async function redeem() {
 }
 
 async function checkUserBalance() {
-    let balance = await finalUserrContractInstanceERC223.methods.balanceOf(cardUserAddress).call(finalUserTransactionObject);
+    let balance = await finalUserContractInstancePCM.methods.balanceOf(cardUserAddress).call(finalUserTransactionObject);
     console.log(balance + ' tokens.');
 }
 

@@ -114,107 +114,126 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b506040516080806102a6833981016040908152815160208301519183015160609093015160038054600160a060020a03938416600160a060020a03199182161790915560008054948416948216949094179093556001805491831691841691909117905560028054919093169116179055610216806100906000396000f3006080604052600436106100775763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ae7a5a8811461007c57806327b7ca5f146100ad57806371a97305146100d05780639640fe35146100e5578063c30a4d48146100fd578063ebf0da6514610112575b600080fd5b34801561008857600080fd5b50610091610127565b60408051600160a060020a039092168252519081900360200190f35b3480156100b957600080fd5b506100ce600160a060020a0360043516610136565b005b3480156100dc57600080fd5b50610091610195565b3480156100f157600080fd5b506100916004356101a4565b34801561010957600080fd5b506100916101cc565b34801561011e57600080fd5b506100916101db565b600054600160a060020a031681565b600480546001810182556000919091527f8a35acfbc15ff81a39ae7d344fd709f28e8600b4aa8c65c6b64bfe7fe36bd19b01805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600254600160a060020a031681565b60048054829081106101b257fe5b600091825260209091200154600160a060020a0316905081565b600154600160a060020a031681565b600354600160a060020a0316815600a165627a7a7230582020944ccaa9256149f7eaa04d7d83203c91c52c7b299d113f7cd8ea5c89c041fe0029",
-  "deployedBytecode": "0x6080604052600436106100775763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ae7a5a8811461007c57806327b7ca5f146100ad57806371a97305146100d05780639640fe35146100e5578063c30a4d48146100fd578063ebf0da6514610112575b600080fd5b34801561008857600080fd5b50610091610127565b60408051600160a060020a039092168252519081900360200190f35b3480156100b957600080fd5b506100ce600160a060020a0360043516610136565b005b3480156100dc57600080fd5b50610091610195565b3480156100f157600080fd5b506100916004356101a4565b34801561010957600080fd5b506100916101cc565b34801561011e57600080fd5b506100916101db565b600054600160a060020a031681565b600480546001810182556000919091527f8a35acfbc15ff81a39ae7d344fd709f28e8600b4aa8c65c6b64bfe7fe36bd19b01805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600254600160a060020a031681565b60048054829081106101b257fe5b600091825260209091200154600160a060020a0316905081565b600154600160a060020a031681565b600354600160a060020a0316815600a165627a7a7230582020944ccaa9256149f7eaa04d7d83203c91c52c7b299d113f7cd8ea5c89c041fe0029",
-  "sourceMap": "226:590:2:-;;;397:297;8:9:-1;5:2;;;30:1;27;20:12;5:2;397:297:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;519:6;:28;;-1:-1:-1;;;;;519:28:2;;;-1:-1:-1;;;;;;519:28:2;;;;;;;:6;553:64;;;;;;;;;;;;;;;519:28;623:31;;;;;;;;;;;;;;-1:-1:-1;660:28:2;;;;;;;;;;;226:590;;;;;;",
-  "deployedSourceMap": "226:590:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;248:44;;8:9:-1;5:2;;;30:1;27;20:12;5:2;248:44:2;;;;;;;;-1:-1:-1;;;;;248:44:2;;;;;;;;;;;;;;698:116;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;698:116:2;-1:-1:-1;;;;;698:116:2;;;;;;;322:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;322:20:2;;;;370:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;370:22:2;;;;;296;;8:9:-1;5:2;;;30:1;27;20:12;5:2;296:22:2;;;;346:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;346:20:2;;;;248:44;;;-1:-1:-1;;;;;248:44:2;;:::o;698:116::-;785:5;27:10:-1;;39:1;23:18;;45:23;;-1:-1;785:24:2;;;;;;;;-1:-1:-1;;785:24:2;-1:-1:-1;;;;;785:24:2;;;;;;;;;;698:116::o;322:20::-;;;-1:-1:-1;;;;;322:20:2;;:::o;370:22::-;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;370:22:2;;-1:-1:-1;370:22:2;:::o;296:::-;;;-1:-1:-1;;;;;296:22:2;;:::o;346:20::-;;;-1:-1:-1;;;;;346:20:2;;:::o",
-  "source": "pragma solidity ^0.4.23;\n\nimport \"./PrepaidCardManager.sol\";\nimport \"./Devices.sol\";\nimport \"./Assets.sol\";\nimport \"./common/DAPP.sol\";\nimport \"./token/ERC223.sol\";\nimport \"./dapp/ANT1DAPP.sol\";\nimport \"./dapp/DemoDAPP.sol\";\n\ncontract Bloomen {\n\n  PrepaidCardManager public prepaidCardManager;\n  Devices public devices;\n  Assets public assets;\n  ERC223 public erc223;\n  address[] public dapps;\n\n  constructor(address _erc223Addr, address _prepaidCardManagerAddr, address _assetsAddr, address _devicesAddr) public {\n    erc223 = ERC223(_erc223Addr);\n    prepaidCardManager = PrepaidCardManager(_prepaidCardManagerAddr);\n    devices = Devices(_devicesAddr);\n    assets = Assets(_assetsAddr);\n\n  }\n\n  function addDapp(address _dappAddress) public {\n    // TODO: Only owner protection\n    dapps.push(_dappAddress);\n  }\n}",
-  "sourcePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Bloomen.sol",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516080806103f9833981018060405261002f9190810190610094565b60038054600160a060020a03958616600160a060020a03199182161790915560008054948616948216949094179093556001805491851691841691909117905560028054919093169116179055610101565b600061008d82516100f5565b9392505050565b600080600080608085870312156100aa57600080fd5b60006100b68787610081565b94505060206100c787828801610081565b93505060406100d887828801610081565b92505060606100e987828801610081565b91505092959194509250565b600160a060020a031690565b6102e9806101106000396000f3006080604052600436106100775763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ae7a5a8811461007c57806327b7ca5f146100a757806371a97305146100c95780639640fe35146100de578063c30a4d481461010b578063ebf0da6514610120575b600080fd5b34801561008857600080fd5b50610091610135565b60405161009e9190610287565b60405180910390f35b3480156100b357600080fd5b506100c76100c2366004610217565b610144565b005b3480156100d557600080fd5b506100916101a3565b3480156100ea57600080fd5b506100fe6100f936600461023d565b6101b2565b60405161009e9190610273565b34801561011757600080fd5b506100916101da565b34801561012c57600080fd5b506100916101e9565b600054600160a060020a031681565b600480546001810182556000919091527f8a35acfbc15ff81a39ae7d344fd709f28e8600b4aa8c65c6b64bfe7fe36bd19b01805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600254600160a060020a031681565b60048054829081106101c057fe5b600091825260209091200154600160a060020a0316905081565b600154600160a060020a031681565b600354600160a060020a031681565b60006102048235610295565b9392505050565b600061020482356102a1565b60006020828403121561022957600080fd5b600061023584846101f8565b949350505050565b60006020828403121561024f57600080fd5b6000610235848461020b565b61026481610295565b82525050565b610264816102a4565b60208101610281828461025b565b92915050565b60208101610281828461026a565b600160a060020a031690565b90565b6000610281826102955600a265627a7a723058202dcdc4261286b3ece0323f6eefab67bbd4deed44bab1f37886b9be3a4afda0346c6578706572696d656e74616cf50037",
+  "deployedBytecode": "0x6080604052600436106100775763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ae7a5a8811461007c57806327b7ca5f146100a757806371a97305146100c95780639640fe35146100de578063c30a4d481461010b578063ebf0da6514610120575b600080fd5b34801561008857600080fd5b50610091610135565b60405161009e9190610287565b60405180910390f35b3480156100b357600080fd5b506100c76100c2366004610217565b610144565b005b3480156100d557600080fd5b506100916101a3565b3480156100ea57600080fd5b506100fe6100f936600461023d565b6101b2565b60405161009e9190610273565b34801561011757600080fd5b506100916101da565b34801561012c57600080fd5b506100916101e9565b600054600160a060020a031681565b600480546001810182556000919091527f8a35acfbc15ff81a39ae7d344fd709f28e8600b4aa8c65c6b64bfe7fe36bd19b01805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600254600160a060020a031681565b60048054829081106101c057fe5b600091825260209091200154600160a060020a0316905081565b600154600160a060020a031681565b600354600160a060020a031681565b60006102048235610295565b9392505050565b600061020482356102a1565b60006020828403121561022957600080fd5b600061023584846101f8565b949350505050565b60006020828403121561024f57600080fd5b6000610235848461020b565b61026481610295565b82525050565b610264816102a4565b60208101610281828461025b565b92915050565b60208101610281828461026a565b600160a060020a031690565b90565b6000610281826102955600a265627a7a723058202dcdc4261286b3ece0323f6eefab67bbd4deed44bab1f37886b9be3a4afda0346c6578706572696d656e74616cf50037",
+  "sourceMap": "350:650:1:-;;;541:319;8:9:-1;5:2;;;30:1;27;20:12;5:2;541:319:1;;;;;;;;;;;;;;;;;;;;;;668:6;:28;;-1:-1:-1;;;;;668:28:1;;;-1:-1:-1;;;;;;668:28:1;;;;;;;:6;707:64;;;;;;;;;;;;;;;668:28;782:31;;;;;;;;;;;;;;-1:-1:-1;824:28:1;;;;;;;;;;;350:650;;5:122:-1;;83:39;114:6;108:13;83:39;;;74:48;68:59;-1:-1;;;68:59;134:672;;;;;300:3;288:9;279:7;275:23;271:33;268:2;;;317:1;314;307:12;268:2;352:1;369:64;425:7;405:9;369:64;;;359:74;;331:108;470:2;488:64;544:7;535:6;524:9;520:22;488:64;;;478:74;;449:109;589:2;607:64;663:7;654:6;643:9;639:22;607:64;;;597:74;;568:109;708:2;726:64;782:7;773:6;762:9;758:22;726:64;;;716:74;;687:109;262:544;;;;;;;;813:128;-1:-1;;;;;882:54;;865:76;;350:650:1;;;;;;",
+  "deployedSourceMap": "350:650:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;376:44;;8:9:-1;5:2;;;30:1;27;20:12;5:2;376:44:1;;;;;;;;;;;;;;;;;;;;868:129;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;868:129:1;;;;;;;;;;;456:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;456:20:1;;;;510:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;510:22:1;;;;;;;;;;;;;;;;;427;;8:9:-1;5:2;;;30:1;27;20:12;5:2;427:22:1;;;;483:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;483:20:1;;;;376:44;;;-1:-1:-1;;;;;376:44:1;;:::o;868:129::-;965:5;27:10:-1;;39:1;23:18;;45:23;;-1:-1;965:24:1;;;;;;;;-1:-1:-1;;965:24:1;-1:-1:-1;;;;;965:24:1;;;;;;;;;;868:129::o;456:20::-;;;-1:-1:-1;;;;;456:20:1;;:::o;510:22::-;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;510:22:1;;-1:-1:-1;510:22:1;:::o;427:::-;;;-1:-1:-1;;;;;427:22:1;;:::o;483:20::-;;;-1:-1:-1;;;;;483:20:1;;:::o;5:118:-1:-;;72:46;110:6;97:20;72:46;;;63:55;57:66;-1:-1;;;57:66;130:118;;197:46;235:6;222:20;197:46;;255:241;;359:2;347:9;338:7;334:23;330:32;327:2;;;375:1;372;365:12;327:2;410:1;427:53;472:7;452:9;427:53;;;417:63;321:175;-1:-1;;;;321:175;503:241;;607:2;595:9;586:7;582:23;578:32;575:2;;;623:1;620;613:12;575:2;658:1;675:53;720:7;700:9;675:53;;751:110;824:31;849:5;824:31;;;819:3;812:44;806:55;;;868:140;953:49;996:5;953:49;;1492:193;1600:2;1585:18;;1614:61;1589:9;1648:6;1614:61;;;1571:114;;;;;1692:217;1812:2;1797:18;;1826:73;1801:9;1872:6;1826:73;;2624:128;-1:-1;;;;;2693:54;;2676:76;2894:79;2963:5;2946:27;2980:127;;3071:31;3096:5;3071:31;",
+  "source": "pragma solidity 0.4.24;\r\npragma experimental ABIEncoderV2;\r\n\r\nimport \"./PrepaidCardManager.sol\";\r\nimport \"./Devices.sol\";\r\nimport \"./Assets.sol\";\r\nimport \"./common/DAPP.sol\";\r\nimport \"./token/ERC223.sol\";\r\nimport \"./dapp/ANT1DAPP.sol\";\r\nimport \"./dapp/DemoDAPP.sol\";\r\nimport \"../../node_modules/json-warehouse/contracts/JsonContainerFactory.sol\";\r\n\r\ncontract Bloomen {\r\n\r\n    PrepaidCardManager public prepaidCardManager;\r\n    Devices public devices;\r\n    Assets public assets;\r\n    ERC223 public erc223;\r\n    address[] public dapps;\r\n\r\n    constructor(address _erc223Addr, address _prepaidCardManagerAddr, address _assetsAddr, address _devicesAddr) public {\r\n        erc223 = ERC223(_erc223Addr);\r\n        prepaidCardManager = PrepaidCardManager(_prepaidCardManagerAddr);\r\n        devices = Devices(_devicesAddr);\r\n        assets = Assets(_assetsAddr);\r\n    }\r\n\r\n    function addDapp(address _dappAddress) public {\r\n        // TODO: Only owner protection\r\n        dapps.push(_dappAddress);\r\n    }\r\n}",
+  "sourcePath": "C:\\Users\\a562145\\git\\bloomen-wallet-truffle\\contracts\\bloomen\\Bloomen.sol",
   "ast": {
-    "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Bloomen.sol",
+    "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/Bloomen.sol",
     "exportedSymbols": {
       "Bloomen": [
-        128
+        73
       ]
     },
-    "id": 129,
+    "id": 74,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 61,
+        "id": 4,
         "literals": [
           "solidity",
-          "^",
           "0.4",
-          ".23"
+          ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:2"
+        "src": "0:23:1"
       },
       {
-        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/PrepaidCardManager.sol",
+        "id": 5,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "25:33:1"
+      },
+      {
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/PrepaidCardManager.sol",
         "file": "./PrepaidCardManager.sol",
-        "id": 62,
+        "id": 6,
         "nodeType": "ImportDirective",
-        "scope": 129,
-        "sourceUnit": 427,
-        "src": "26:34:2",
+        "scope": 74,
+        "sourceUnit": 372,
+        "src": "62:34:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Devices.sol",
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/Devices.sol",
         "file": "./Devices.sol",
-        "id": 63,
+        "id": 7,
         "nodeType": "ImportDirective",
-        "scope": 129,
-        "sourceUnit": 132,
-        "src": "61:23:2",
+        "scope": 74,
+        "sourceUnit": 77,
+        "src": "98:23:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Assets.sol",
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/Assets.sol",
         "file": "./Assets.sol",
-        "id": 64,
+        "id": 8,
         "nodeType": "ImportDirective",
-        "scope": 129,
-        "sourceUnit": 60,
-        "src": "85:22:2",
+        "scope": 74,
+        "sourceUnit": 3,
+        "src": "123:22:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/common/DAPP.sol",
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/common/DAPP.sol",
         "file": "./common/DAPP.sol",
-        "id": 65,
+        "id": 9,
         "nodeType": "ImportDirective",
-        "scope": 129,
-        "sourceUnit": 504,
-        "src": "108:27:2",
+        "scope": 74,
+        "sourceUnit": 396,
+        "src": "147:27:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/token/ERC223.sol",
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/token/ERC223.sol",
         "file": "./token/ERC223.sol",
-        "id": 66,
+        "id": 10,
         "nodeType": "ImportDirective",
-        "scope": 129,
-        "sourceUnit": 711,
-        "src": "136:28:2",
+        "scope": 74,
+        "sourceUnit": 559,
+        "src": "176:28:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/dapp/ANT1DAPP.sol",
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/dapp/ANT1DAPP.sol",
         "file": "./dapp/ANT1DAPP.sol",
-        "id": 67,
+        "id": 11,
         "nodeType": "ImportDirective",
-        "scope": 129,
-        "sourceUnit": 566,
-        "src": "165:29:2",
+        "scope": 74,
+        "sourceUnit": 418,
+        "src": "206:29:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/dapp/DemoDAPP.sol",
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/dapp/DemoDAPP.sol",
         "file": "./dapp/DemoDAPP.sol",
-        "id": 68,
+        "id": 12,
         "nodeType": "ImportDirective",
-        "scope": 129,
-        "sourceUnit": 586,
-        "src": "195:29:2",
+        "scope": 74,
+        "sourceUnit": 434,
+        "src": "237:29:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/node_modules/json-warehouse/contracts/JsonContainerFactory.sol",
+        "file": "../../node_modules/json-warehouse/contracts/JsonContainerFactory.sol",
+        "id": 13,
+        "nodeType": "ImportDirective",
+        "scope": 74,
+        "sourceUnit": 1242,
+        "src": "268:78:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -224,35 +243,35 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 128,
+        "id": 73,
         "linearizedBaseContracts": [
-          128
+          73
         ],
         "name": "Bloomen",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 70,
+            "id": 15,
             "name": "prepaidCardManager",
             "nodeType": "VariableDeclaration",
-            "scope": 128,
-            "src": "248:44:2",
+            "scope": 73,
+            "src": "376:44:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_PrepaidCardManager_$426",
+              "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
               "typeString": "contract PrepaidCardManager"
             },
             "typeName": {
               "contractScope": null,
-              "id": 69,
+              "id": 14,
               "name": "PrepaidCardManager",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 426,
-              "src": "248:18:2",
+              "referencedDeclaration": 371,
+              "src": "376:18:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_PrepaidCardManager_$426",
+                "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
                 "typeString": "contract PrepaidCardManager"
               }
             },
@@ -261,26 +280,26 @@
           },
           {
             "constant": false,
-            "id": 72,
+            "id": 17,
             "name": "devices",
             "nodeType": "VariableDeclaration",
-            "scope": 128,
-            "src": "296:22:2",
+            "scope": 73,
+            "src": "427:22:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_Devices_$131",
+              "typeIdentifier": "t_contract$_Devices_$76",
               "typeString": "contract Devices"
             },
             "typeName": {
               "contractScope": null,
-              "id": 71,
+              "id": 16,
               "name": "Devices",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 131,
-              "src": "296:7:2",
+              "referencedDeclaration": 76,
+              "src": "427:7:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Devices_$131",
+                "typeIdentifier": "t_contract$_Devices_$76",
                 "typeString": "contract Devices"
               }
             },
@@ -289,26 +308,26 @@
           },
           {
             "constant": false,
-            "id": 74,
+            "id": 19,
             "name": "assets",
             "nodeType": "VariableDeclaration",
-            "scope": 128,
-            "src": "322:20:2",
+            "scope": 73,
+            "src": "456:20:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_Assets_$59",
+              "typeIdentifier": "t_contract$_Assets_$2",
               "typeString": "contract Assets"
             },
             "typeName": {
               "contractScope": null,
-              "id": 73,
+              "id": 18,
               "name": "Assets",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 59,
-              "src": "322:6:2",
+              "referencedDeclaration": 2,
+              "src": "456:6:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Assets_$59",
+                "typeIdentifier": "t_contract$_Assets_$2",
                 "typeString": "contract Assets"
               }
             },
@@ -317,26 +336,26 @@
           },
           {
             "constant": false,
-            "id": 76,
+            "id": 21,
             "name": "erc223",
             "nodeType": "VariableDeclaration",
-            "scope": 128,
-            "src": "346:20:2",
+            "scope": 73,
+            "src": "483:20:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ERC223_$710",
+              "typeIdentifier": "t_contract$_ERC223_$558",
               "typeString": "contract ERC223"
             },
             "typeName": {
               "contractScope": null,
-              "id": 75,
+              "id": 20,
               "name": "ERC223",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 710,
-              "src": "346:6:2",
+              "referencedDeclaration": 558,
+              "src": "483:6:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC223_$710",
+                "typeIdentifier": "t_contract$_ERC223_$558",
                 "typeString": "contract ERC223"
               }
             },
@@ -345,11 +364,11 @@
           },
           {
             "constant": false,
-            "id": 79,
+            "id": 24,
             "name": "dapps",
             "nodeType": "VariableDeclaration",
-            "scope": 128,
-            "src": "370:22:2",
+            "scope": 73,
+            "src": "510:22:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -358,19 +377,19 @@
             },
             "typeName": {
               "baseType": {
-                "id": 77,
+                "id": 22,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "370:7:2",
+                "src": "510:7:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
-              "id": 78,
+              "id": 23,
               "length": null,
               "nodeType": "ArrayTypeName",
-              "src": "370:9:2",
+              "src": "510:9:1",
               "typeDescriptions": {
                 "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
                 "typeString": "address[]"
@@ -381,28 +400,28 @@
           },
           {
             "body": {
-              "id": 114,
+              "id": 59,
               "nodeType": "Block",
-              "src": "513:181:2",
+              "src": "657:203:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 94,
+                    "id": 39,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 90,
+                      "id": 35,
                       "name": "erc223",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 76,
-                      "src": "519:6:2",
+                      "referencedDeclaration": 21,
+                      "src": "668:6:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC223_$710",
+                        "typeIdentifier": "t_contract$_ERC223_$558",
                         "typeString": "contract ERC223"
                       }
                     },
@@ -413,12 +432,12 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 92,
+                          "id": 37,
                           "name": "_erc223Addr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 81,
-                          "src": "535:11:2",
+                          "referencedDeclaration": 26,
+                          "src": "684:11:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -432,18 +451,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 91,
+                        "id": 36,
                         "name": "ERC223",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 710,
-                        "src": "528:6:2",
+                        "referencedDeclaration": 558,
+                        "src": "677:6:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_ERC223_$710_$",
+                          "typeIdentifier": "t_type$_t_contract$_ERC223_$558_$",
                           "typeString": "type(contract ERC223)"
                         }
                       },
-                      "id": 93,
+                      "id": 38,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -451,40 +470,40 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "528:19:2",
+                      "src": "677:19:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC223_$710",
+                        "typeIdentifier": "t_contract$_ERC223_$558",
                         "typeString": "contract ERC223"
                       }
                     },
-                    "src": "519:28:2",
+                    "src": "668:28:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC223_$710",
+                      "typeIdentifier": "t_contract$_ERC223_$558",
                       "typeString": "contract ERC223"
                     }
                   },
-                  "id": 95,
+                  "id": 40,
                   "nodeType": "ExpressionStatement",
-                  "src": "519:28:2"
+                  "src": "668:28:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 100,
+                    "id": 45,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 96,
+                      "id": 41,
                       "name": "prepaidCardManager",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 70,
-                      "src": "553:18:2",
+                      "referencedDeclaration": 15,
+                      "src": "707:18:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PrepaidCardManager_$426",
+                        "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
                         "typeString": "contract PrepaidCardManager"
                       }
                     },
@@ -495,12 +514,12 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 98,
+                          "id": 43,
                           "name": "_prepaidCardManagerAddr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 83,
-                          "src": "593:23:2",
+                          "referencedDeclaration": 28,
+                          "src": "747:23:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -514,18 +533,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 97,
+                        "id": 42,
                         "name": "PrepaidCardManager",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 426,
-                        "src": "574:18:2",
+                        "referencedDeclaration": 371,
+                        "src": "728:18:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_PrepaidCardManager_$426_$",
+                          "typeIdentifier": "t_type$_t_contract$_PrepaidCardManager_$371_$",
                           "typeString": "type(contract PrepaidCardManager)"
                         }
                       },
-                      "id": 99,
+                      "id": 44,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -533,40 +552,40 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "574:43:2",
+                      "src": "728:43:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PrepaidCardManager_$426",
+                        "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
                         "typeString": "contract PrepaidCardManager"
                       }
                     },
-                    "src": "553:64:2",
+                    "src": "707:64:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PrepaidCardManager_$426",
+                      "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
                       "typeString": "contract PrepaidCardManager"
                     }
                   },
-                  "id": 101,
+                  "id": 46,
                   "nodeType": "ExpressionStatement",
-                  "src": "553:64:2"
+                  "src": "707:64:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 106,
+                    "id": 51,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 102,
+                      "id": 47,
                       "name": "devices",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 72,
-                      "src": "623:7:2",
+                      "referencedDeclaration": 17,
+                      "src": "782:7:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Devices_$131",
+                        "typeIdentifier": "t_contract$_Devices_$76",
                         "typeString": "contract Devices"
                       }
                     },
@@ -577,12 +596,12 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 104,
+                          "id": 49,
                           "name": "_devicesAddr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 87,
-                          "src": "641:12:2",
+                          "referencedDeclaration": 32,
+                          "src": "800:12:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -596,18 +615,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 103,
+                        "id": 48,
                         "name": "Devices",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 131,
-                        "src": "633:7:2",
+                        "referencedDeclaration": 76,
+                        "src": "792:7:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Devices_$131_$",
+                          "typeIdentifier": "t_type$_t_contract$_Devices_$76_$",
                           "typeString": "type(contract Devices)"
                         }
                       },
-                      "id": 105,
+                      "id": 50,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -615,40 +634,40 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "633:21:2",
+                      "src": "792:21:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Devices_$131",
+                        "typeIdentifier": "t_contract$_Devices_$76",
                         "typeString": "contract Devices"
                       }
                     },
-                    "src": "623:31:2",
+                    "src": "782:31:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Devices_$131",
+                      "typeIdentifier": "t_contract$_Devices_$76",
                       "typeString": "contract Devices"
                     }
                   },
-                  "id": 107,
+                  "id": 52,
                   "nodeType": "ExpressionStatement",
-                  "src": "623:31:2"
+                  "src": "782:31:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 112,
+                    "id": 57,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 108,
+                      "id": 53,
                       "name": "assets",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 74,
-                      "src": "660:6:2",
+                      "referencedDeclaration": 19,
+                      "src": "824:6:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Assets_$59",
+                        "typeIdentifier": "t_contract$_Assets_$2",
                         "typeString": "contract Assets"
                       }
                     },
@@ -659,12 +678,12 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 110,
+                          "id": 55,
                           "name": "_assetsAddr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 85,
-                          "src": "676:11:2",
+                          "referencedDeclaration": 30,
+                          "src": "840:11:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -678,18 +697,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 109,
+                        "id": 54,
                         "name": "Assets",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 59,
-                        "src": "669:6:2",
+                        "referencedDeclaration": 2,
+                        "src": "833:6:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Assets_$59_$",
+                          "typeIdentifier": "t_type$_t_contract$_Assets_$2_$",
                           "typeString": "type(contract Assets)"
                         }
                       },
-                      "id": 111,
+                      "id": 56,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -697,26 +716,26 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "669:19:2",
+                      "src": "833:19:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Assets_$59",
+                        "typeIdentifier": "t_contract$_Assets_$2",
                         "typeString": "contract Assets"
                       }
                     },
-                    "src": "660:28:2",
+                    "src": "824:28:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Assets_$59",
+                      "typeIdentifier": "t_contract$_Assets_$2",
                       "typeString": "contract Assets"
                     }
                   },
-                  "id": 113,
+                  "id": 58,
                   "nodeType": "ExpressionStatement",
-                  "src": "660:28:2"
+                  "src": "824:28:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 115,
+            "id": 60,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -724,16 +743,16 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 88,
+              "id": 33,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 81,
+                  "id": 26,
                   "name": "_erc223Addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 115,
-                  "src": "409:19:2",
+                  "scope": 60,
+                  "src": "553:19:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -741,10 +760,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 80,
+                    "id": 25,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "409:7:2",
+                    "src": "553:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -755,11 +774,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 83,
+                  "id": 28,
                   "name": "_prepaidCardManagerAddr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 115,
-                  "src": "430:31:2",
+                  "scope": 60,
+                  "src": "574:31:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -767,10 +786,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 82,
+                    "id": 27,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "430:7:2",
+                    "src": "574:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -781,11 +800,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 85,
+                  "id": 30,
                   "name": "_assetsAddr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 115,
-                  "src": "463:19:2",
+                  "scope": 60,
+                  "src": "607:19:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -793,10 +812,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 84,
+                    "id": 29,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "463:7:2",
+                    "src": "607:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -807,11 +826,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 87,
+                  "id": 32,
                   "name": "_devicesAddr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 115,
-                  "src": "484:20:2",
+                  "scope": 60,
+                  "src": "628:20:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -819,10 +838,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 86,
+                    "id": 31,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "484:7:2",
+                    "src": "628:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -832,26 +851,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "408:97:2"
+              "src": "552:97:1"
             },
             "payable": false,
             "returnParameters": {
-              "id": 89,
+              "id": 34,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "513:0:2"
+              "src": "657:0:1"
             },
-            "scope": 128,
-            "src": "397:297:2",
+            "scope": 73,
+            "src": "541:319:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 126,
+              "id": 71,
               "nodeType": "Block",
-              "src": "744:70:2",
+              "src": "914:83:1",
               "statements": [
                 {
                   "expression": {
@@ -859,12 +878,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 123,
+                        "id": 68,
                         "name": "_dappAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 117,
-                        "src": "796:12:2",
+                        "referencedDeclaration": 62,
+                        "src": "976:12:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -880,18 +899,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 120,
+                        "id": 65,
                         "name": "dapps",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 79,
-                        "src": "785:5:2",
+                        "referencedDeclaration": 24,
+                        "src": "965:5:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 122,
+                      "id": 67,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -899,13 +918,13 @@
                       "memberName": "push",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "785:10:2",
+                      "src": "965:10:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 124,
+                    "id": 69,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -913,20 +932,20 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "785:24:2",
+                    "src": "965:24:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 125,
+                  "id": 70,
                   "nodeType": "ExpressionStatement",
-                  "src": "785:24:2"
+                  "src": "965:24:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 127,
+            "id": 72,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -934,16 +953,16 @@
             "name": "addDapp",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 118,
+              "id": 63,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 117,
+                  "id": 62,
                   "name": "_dappAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 127,
-                  "src": "715:20:2",
+                  "scope": 72,
+                  "src": "885:20:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -951,10 +970,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 116,
+                    "id": 61,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "715:7:2",
+                    "src": "885:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -964,123 +983,142 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "714:22:2"
+              "src": "884:22:1"
             },
             "payable": false,
             "returnParameters": {
-              "id": 119,
+              "id": 64,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "744:0:2"
+              "src": "914:0:1"
             },
-            "scope": 128,
-            "src": "698:116:2",
+            "scope": 73,
+            "src": "868:129:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 129,
-        "src": "226:590:2"
+        "scope": 74,
+        "src": "350:650:1"
       }
     ],
-    "src": "0:816:2"
+    "src": "0:1000:1"
   },
   "legacyAST": {
-    "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Bloomen.sol",
+    "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/Bloomen.sol",
     "exportedSymbols": {
       "Bloomen": [
-        128
+        73
       ]
     },
-    "id": 129,
+    "id": 74,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 61,
+        "id": 4,
         "literals": [
           "solidity",
-          "^",
           "0.4",
-          ".23"
+          ".24"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:2"
+        "src": "0:23:1"
       },
       {
-        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/PrepaidCardManager.sol",
+        "id": 5,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "25:33:1"
+      },
+      {
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/PrepaidCardManager.sol",
         "file": "./PrepaidCardManager.sol",
-        "id": 62,
+        "id": 6,
         "nodeType": "ImportDirective",
-        "scope": 129,
-        "sourceUnit": 427,
-        "src": "26:34:2",
+        "scope": 74,
+        "sourceUnit": 372,
+        "src": "62:34:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Devices.sol",
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/Devices.sol",
         "file": "./Devices.sol",
-        "id": 63,
+        "id": 7,
         "nodeType": "ImportDirective",
-        "scope": 129,
-        "sourceUnit": 132,
-        "src": "61:23:2",
+        "scope": 74,
+        "sourceUnit": 77,
+        "src": "98:23:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Assets.sol",
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/Assets.sol",
         "file": "./Assets.sol",
-        "id": 64,
+        "id": 8,
         "nodeType": "ImportDirective",
-        "scope": 129,
-        "sourceUnit": 60,
-        "src": "85:22:2",
+        "scope": 74,
+        "sourceUnit": 3,
+        "src": "123:22:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/common/DAPP.sol",
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/common/DAPP.sol",
         "file": "./common/DAPP.sol",
-        "id": 65,
+        "id": 9,
         "nodeType": "ImportDirective",
-        "scope": 129,
-        "sourceUnit": 504,
-        "src": "108:27:2",
+        "scope": 74,
+        "sourceUnit": 396,
+        "src": "147:27:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/token/ERC223.sol",
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/token/ERC223.sol",
         "file": "./token/ERC223.sol",
-        "id": 66,
+        "id": 10,
         "nodeType": "ImportDirective",
-        "scope": 129,
-        "sourceUnit": 711,
-        "src": "136:28:2",
+        "scope": 74,
+        "sourceUnit": 559,
+        "src": "176:28:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/dapp/ANT1DAPP.sol",
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/dapp/ANT1DAPP.sol",
         "file": "./dapp/ANT1DAPP.sol",
-        "id": 67,
+        "id": 11,
         "nodeType": "ImportDirective",
-        "scope": 129,
-        "sourceUnit": 566,
-        "src": "165:29:2",
+        "scope": 74,
+        "sourceUnit": 418,
+        "src": "206:29:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/dapp/DemoDAPP.sol",
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/dapp/DemoDAPP.sol",
         "file": "./dapp/DemoDAPP.sol",
-        "id": 68,
+        "id": 12,
         "nodeType": "ImportDirective",
-        "scope": 129,
-        "sourceUnit": 586,
-        "src": "195:29:2",
+        "scope": 74,
+        "sourceUnit": 434,
+        "src": "237:29:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/node_modules/json-warehouse/contracts/JsonContainerFactory.sol",
+        "file": "../../node_modules/json-warehouse/contracts/JsonContainerFactory.sol",
+        "id": 13,
+        "nodeType": "ImportDirective",
+        "scope": 74,
+        "sourceUnit": 1242,
+        "src": "268:78:1",
         "symbolAliases": [],
         "unitAlias": ""
       },
@@ -1090,35 +1128,35 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 128,
+        "id": 73,
         "linearizedBaseContracts": [
-          128
+          73
         ],
         "name": "Bloomen",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 70,
+            "id": 15,
             "name": "prepaidCardManager",
             "nodeType": "VariableDeclaration",
-            "scope": 128,
-            "src": "248:44:2",
+            "scope": 73,
+            "src": "376:44:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_PrepaidCardManager_$426",
+              "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
               "typeString": "contract PrepaidCardManager"
             },
             "typeName": {
               "contractScope": null,
-              "id": 69,
+              "id": 14,
               "name": "PrepaidCardManager",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 426,
-              "src": "248:18:2",
+              "referencedDeclaration": 371,
+              "src": "376:18:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_PrepaidCardManager_$426",
+                "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
                 "typeString": "contract PrepaidCardManager"
               }
             },
@@ -1127,26 +1165,26 @@
           },
           {
             "constant": false,
-            "id": 72,
+            "id": 17,
             "name": "devices",
             "nodeType": "VariableDeclaration",
-            "scope": 128,
-            "src": "296:22:2",
+            "scope": 73,
+            "src": "427:22:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_Devices_$131",
+              "typeIdentifier": "t_contract$_Devices_$76",
               "typeString": "contract Devices"
             },
             "typeName": {
               "contractScope": null,
-              "id": 71,
+              "id": 16,
               "name": "Devices",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 131,
-              "src": "296:7:2",
+              "referencedDeclaration": 76,
+              "src": "427:7:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Devices_$131",
+                "typeIdentifier": "t_contract$_Devices_$76",
                 "typeString": "contract Devices"
               }
             },
@@ -1155,26 +1193,26 @@
           },
           {
             "constant": false,
-            "id": 74,
+            "id": 19,
             "name": "assets",
             "nodeType": "VariableDeclaration",
-            "scope": 128,
-            "src": "322:20:2",
+            "scope": 73,
+            "src": "456:20:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_Assets_$59",
+              "typeIdentifier": "t_contract$_Assets_$2",
               "typeString": "contract Assets"
             },
             "typeName": {
               "contractScope": null,
-              "id": 73,
+              "id": 18,
               "name": "Assets",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 59,
-              "src": "322:6:2",
+              "referencedDeclaration": 2,
+              "src": "456:6:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Assets_$59",
+                "typeIdentifier": "t_contract$_Assets_$2",
                 "typeString": "contract Assets"
               }
             },
@@ -1183,26 +1221,26 @@
           },
           {
             "constant": false,
-            "id": 76,
+            "id": 21,
             "name": "erc223",
             "nodeType": "VariableDeclaration",
-            "scope": 128,
-            "src": "346:20:2",
+            "scope": 73,
+            "src": "483:20:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ERC223_$710",
+              "typeIdentifier": "t_contract$_ERC223_$558",
               "typeString": "contract ERC223"
             },
             "typeName": {
               "contractScope": null,
-              "id": 75,
+              "id": 20,
               "name": "ERC223",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 710,
-              "src": "346:6:2",
+              "referencedDeclaration": 558,
+              "src": "483:6:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC223_$710",
+                "typeIdentifier": "t_contract$_ERC223_$558",
                 "typeString": "contract ERC223"
               }
             },
@@ -1211,11 +1249,11 @@
           },
           {
             "constant": false,
-            "id": 79,
+            "id": 24,
             "name": "dapps",
             "nodeType": "VariableDeclaration",
-            "scope": 128,
-            "src": "370:22:2",
+            "scope": 73,
+            "src": "510:22:1",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -1224,19 +1262,19 @@
             },
             "typeName": {
               "baseType": {
-                "id": 77,
+                "id": 22,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "370:7:2",
+                "src": "510:7:1",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
-              "id": 78,
+              "id": 23,
               "length": null,
               "nodeType": "ArrayTypeName",
-              "src": "370:9:2",
+              "src": "510:9:1",
               "typeDescriptions": {
                 "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
                 "typeString": "address[]"
@@ -1247,28 +1285,28 @@
           },
           {
             "body": {
-              "id": 114,
+              "id": 59,
               "nodeType": "Block",
-              "src": "513:181:2",
+              "src": "657:203:1",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 94,
+                    "id": 39,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 90,
+                      "id": 35,
                       "name": "erc223",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 76,
-                      "src": "519:6:2",
+                      "referencedDeclaration": 21,
+                      "src": "668:6:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC223_$710",
+                        "typeIdentifier": "t_contract$_ERC223_$558",
                         "typeString": "contract ERC223"
                       }
                     },
@@ -1279,12 +1317,12 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 92,
+                          "id": 37,
                           "name": "_erc223Addr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 81,
-                          "src": "535:11:2",
+                          "referencedDeclaration": 26,
+                          "src": "684:11:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -1298,18 +1336,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 91,
+                        "id": 36,
                         "name": "ERC223",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 710,
-                        "src": "528:6:2",
+                        "referencedDeclaration": 558,
+                        "src": "677:6:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_ERC223_$710_$",
+                          "typeIdentifier": "t_type$_t_contract$_ERC223_$558_$",
                           "typeString": "type(contract ERC223)"
                         }
                       },
-                      "id": 93,
+                      "id": 38,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1317,40 +1355,40 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "528:19:2",
+                      "src": "677:19:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC223_$710",
+                        "typeIdentifier": "t_contract$_ERC223_$558",
                         "typeString": "contract ERC223"
                       }
                     },
-                    "src": "519:28:2",
+                    "src": "668:28:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC223_$710",
+                      "typeIdentifier": "t_contract$_ERC223_$558",
                       "typeString": "contract ERC223"
                     }
                   },
-                  "id": 95,
+                  "id": 40,
                   "nodeType": "ExpressionStatement",
-                  "src": "519:28:2"
+                  "src": "668:28:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 100,
+                    "id": 45,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 96,
+                      "id": 41,
                       "name": "prepaidCardManager",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 70,
-                      "src": "553:18:2",
+                      "referencedDeclaration": 15,
+                      "src": "707:18:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PrepaidCardManager_$426",
+                        "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
                         "typeString": "contract PrepaidCardManager"
                       }
                     },
@@ -1361,12 +1399,12 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 98,
+                          "id": 43,
                           "name": "_prepaidCardManagerAddr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 83,
-                          "src": "593:23:2",
+                          "referencedDeclaration": 28,
+                          "src": "747:23:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -1380,18 +1418,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 97,
+                        "id": 42,
                         "name": "PrepaidCardManager",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 426,
-                        "src": "574:18:2",
+                        "referencedDeclaration": 371,
+                        "src": "728:18:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_PrepaidCardManager_$426_$",
+                          "typeIdentifier": "t_type$_t_contract$_PrepaidCardManager_$371_$",
                           "typeString": "type(contract PrepaidCardManager)"
                         }
                       },
-                      "id": 99,
+                      "id": 44,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1399,40 +1437,40 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "574:43:2",
+                      "src": "728:43:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PrepaidCardManager_$426",
+                        "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
                         "typeString": "contract PrepaidCardManager"
                       }
                     },
-                    "src": "553:64:2",
+                    "src": "707:64:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PrepaidCardManager_$426",
+                      "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
                       "typeString": "contract PrepaidCardManager"
                     }
                   },
-                  "id": 101,
+                  "id": 46,
                   "nodeType": "ExpressionStatement",
-                  "src": "553:64:2"
+                  "src": "707:64:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 106,
+                    "id": 51,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 102,
+                      "id": 47,
                       "name": "devices",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 72,
-                      "src": "623:7:2",
+                      "referencedDeclaration": 17,
+                      "src": "782:7:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Devices_$131",
+                        "typeIdentifier": "t_contract$_Devices_$76",
                         "typeString": "contract Devices"
                       }
                     },
@@ -1443,12 +1481,12 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 104,
+                          "id": 49,
                           "name": "_devicesAddr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 87,
-                          "src": "641:12:2",
+                          "referencedDeclaration": 32,
+                          "src": "800:12:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -1462,18 +1500,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 103,
+                        "id": 48,
                         "name": "Devices",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 131,
-                        "src": "633:7:2",
+                        "referencedDeclaration": 76,
+                        "src": "792:7:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Devices_$131_$",
+                          "typeIdentifier": "t_type$_t_contract$_Devices_$76_$",
                           "typeString": "type(contract Devices)"
                         }
                       },
-                      "id": 105,
+                      "id": 50,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1481,40 +1519,40 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "633:21:2",
+                      "src": "792:21:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Devices_$131",
+                        "typeIdentifier": "t_contract$_Devices_$76",
                         "typeString": "contract Devices"
                       }
                     },
-                    "src": "623:31:2",
+                    "src": "782:31:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Devices_$131",
+                      "typeIdentifier": "t_contract$_Devices_$76",
                       "typeString": "contract Devices"
                     }
                   },
-                  "id": 107,
+                  "id": 52,
                   "nodeType": "ExpressionStatement",
-                  "src": "623:31:2"
+                  "src": "782:31:1"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 112,
+                    "id": 57,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 108,
+                      "id": 53,
                       "name": "assets",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 74,
-                      "src": "660:6:2",
+                      "referencedDeclaration": 19,
+                      "src": "824:6:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Assets_$59",
+                        "typeIdentifier": "t_contract$_Assets_$2",
                         "typeString": "contract Assets"
                       }
                     },
@@ -1525,12 +1563,12 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 110,
+                          "id": 55,
                           "name": "_assetsAddr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 85,
-                          "src": "676:11:2",
+                          "referencedDeclaration": 30,
+                          "src": "840:11:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -1544,18 +1582,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 109,
+                        "id": 54,
                         "name": "Assets",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 59,
-                        "src": "669:6:2",
+                        "referencedDeclaration": 2,
+                        "src": "833:6:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_Assets_$59_$",
+                          "typeIdentifier": "t_type$_t_contract$_Assets_$2_$",
                           "typeString": "type(contract Assets)"
                         }
                       },
-                      "id": 111,
+                      "id": 56,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1563,26 +1601,26 @@
                       "lValueRequested": false,
                       "names": [],
                       "nodeType": "FunctionCall",
-                      "src": "669:19:2",
+                      "src": "833:19:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_Assets_$59",
+                        "typeIdentifier": "t_contract$_Assets_$2",
                         "typeString": "contract Assets"
                       }
                     },
-                    "src": "660:28:2",
+                    "src": "824:28:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_Assets_$59",
+                      "typeIdentifier": "t_contract$_Assets_$2",
                       "typeString": "contract Assets"
                     }
                   },
-                  "id": 113,
+                  "id": 58,
                   "nodeType": "ExpressionStatement",
-                  "src": "660:28:2"
+                  "src": "824:28:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 115,
+            "id": 60,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -1590,16 +1628,16 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 88,
+              "id": 33,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 81,
+                  "id": 26,
                   "name": "_erc223Addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 115,
-                  "src": "409:19:2",
+                  "scope": 60,
+                  "src": "553:19:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1607,10 +1645,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 80,
+                    "id": 25,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "409:7:2",
+                    "src": "553:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -1621,11 +1659,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 83,
+                  "id": 28,
                   "name": "_prepaidCardManagerAddr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 115,
-                  "src": "430:31:2",
+                  "scope": 60,
+                  "src": "574:31:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1633,10 +1671,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 82,
+                    "id": 27,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "430:7:2",
+                    "src": "574:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -1647,11 +1685,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 85,
+                  "id": 30,
                   "name": "_assetsAddr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 115,
-                  "src": "463:19:2",
+                  "scope": 60,
+                  "src": "607:19:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1659,10 +1697,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 84,
+                    "id": 29,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "463:7:2",
+                    "src": "607:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -1673,11 +1711,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 87,
+                  "id": 32,
                   "name": "_devicesAddr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 115,
-                  "src": "484:20:2",
+                  "scope": 60,
+                  "src": "628:20:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1685,10 +1723,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 86,
+                    "id": 31,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "484:7:2",
+                    "src": "628:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -1698,26 +1736,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "408:97:2"
+              "src": "552:97:1"
             },
             "payable": false,
             "returnParameters": {
-              "id": 89,
+              "id": 34,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "513:0:2"
+              "src": "657:0:1"
             },
-            "scope": 128,
-            "src": "397:297:2",
+            "scope": 73,
+            "src": "541:319:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           },
           {
             "body": {
-              "id": 126,
+              "id": 71,
               "nodeType": "Block",
-              "src": "744:70:2",
+              "src": "914:83:1",
               "statements": [
                 {
                   "expression": {
@@ -1725,12 +1763,12 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 123,
+                        "id": 68,
                         "name": "_dappAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 117,
-                        "src": "796:12:2",
+                        "referencedDeclaration": 62,
+                        "src": "976:12:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -1746,18 +1784,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 120,
+                        "id": 65,
                         "name": "dapps",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 79,
-                        "src": "785:5:2",
+                        "referencedDeclaration": 24,
+                        "src": "965:5:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 122,
+                      "id": 67,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1765,13 +1803,13 @@
                       "memberName": "push",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "785:10:2",
+                      "src": "965:10:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_arraypush_nonpayable$_t_address_$returns$_t_uint256_$",
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 124,
+                    "id": 69,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1779,20 +1817,20 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "785:24:2",
+                    "src": "965:24:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "id": 125,
+                  "id": 70,
                   "nodeType": "ExpressionStatement",
-                  "src": "785:24:2"
+                  "src": "965:24:1"
                 }
               ]
             },
             "documentation": null,
-            "id": 127,
+            "id": 72,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1800,16 +1838,16 @@
             "name": "addDapp",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 118,
+              "id": 63,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 117,
+                  "id": 62,
                   "name": "_dappAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 127,
-                  "src": "715:20:2",
+                  "scope": 72,
+                  "src": "885:20:1",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1817,10 +1855,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 116,
+                    "id": 61,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "715:7:2",
+                    "src": "885:7:1",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -1830,27 +1868,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "714:22:2"
+              "src": "884:22:1"
             },
             "payable": false,
             "returnParameters": {
-              "id": 119,
+              "id": 64,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "744:0:2"
+              "src": "914:0:1"
             },
-            "scope": 128,
-            "src": "698:116:2",
+            "scope": 73,
+            "src": "868:129:1",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 129,
-        "src": "226:590:2"
+        "scope": 74,
+        "src": "350:650:1"
       }
     ],
-    "src": "0:816:2"
+    "src": "0:1000:1"
   },
   "compiler": {
     "name": "solc",
@@ -1858,5 +1896,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-02T20:03:49.062Z"
+  "updatedAt": "2018-12-03T12:43:39.291Z"
 }

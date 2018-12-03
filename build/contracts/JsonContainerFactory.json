@@ -54,14 +54,14 @@
     "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/node_modules/json-warehouse/contracts/JsonContainerFactory.sol",
     "exportedSymbols": {
       "JsonContainerFactory": [
-        1240
+        1241
       ]
     },
-    "id": 1241,
+    "id": 1242,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1093,
+        "id": 1094,
         "literals": [
           "solidity",
           "0.4",
@@ -71,7 +71,7 @@
         "src": "0:23:10"
       },
       {
-        "id": 1094,
+        "id": 1095,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -82,10 +82,10 @@
       {
         "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/node_modules/json-warehouse/contracts/lib/Structs.sol",
         "file": "./lib/Structs.sol",
-        "id": 1095,
+        "id": 1096,
         "nodeType": "ImportDirective",
-        "scope": 1241,
-        "sourceUnit": 2951,
+        "scope": 1242,
+        "sourceUnit": 2952,
         "src": "62:27:10",
         "symbolAliases": [],
         "unitAlias": ""
@@ -93,10 +93,10 @@
       {
         "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/node_modules/json-warehouse/contracts/JsonContainer.sol",
         "file": "./JsonContainer.sol",
-        "id": 1096,
+        "id": 1097,
         "nodeType": "ImportDirective",
-        "scope": 1241,
-        "sourceUnit": 1092,
+        "scope": 1242,
+        "sourceUnit": 1093,
         "src": "91:29:10",
         "symbolAliases": [],
         "unitAlias": ""
@@ -104,10 +104,10 @@
       {
         "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/node_modules/json-warehouse/node_modules/solidity-rlp/contracts/RLPReader.sol",
         "file": "../node_modules/solidity-rlp/contracts/RLPReader.sol",
-        "id": 1097,
+        "id": 1098,
         "nodeType": "ImportDirective",
-        "scope": 1241,
-        "sourceUnit": 3455,
+        "scope": 1242,
+        "sourceUnit": 3456,
         "src": "122:62:10",
         "symbolAliases": [],
         "unitAlias": ""
@@ -118,54 +118,54 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1098,
+              "id": 1099,
               "name": "Structs",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2950,
+              "referencedDeclaration": 2951,
               "src": "221:7:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Structs_$2950",
+                "typeIdentifier": "t_contract$_Structs_$2951",
                 "typeString": "contract Structs"
               }
             },
-            "id": 1099,
+            "id": 1100,
             "nodeType": "InheritanceSpecifier",
             "src": "221:7:10"
           }
         ],
         "contractDependencies": [
-          1091,
-          2950
+          1092,
+          2951
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1240,
+        "id": 1241,
         "linearizedBaseContracts": [
-          1240,
-          2950
+          1241,
+          2951
         ],
         "name": "JsonContainerFactory",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 1102,
+            "id": 1103,
             "libraryName": {
               "contractScope": null,
-              "id": 1100,
+              "id": 1101,
               "name": "RLPReader",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3454,
+              "referencedDeclaration": 3455,
               "src": "244:9:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RLPReader_$3454",
+                "typeIdentifier": "t_contract$_RLPReader_$3455",
                 "typeString": "library RLPReader"
               }
             },
             "nodeType": "UsingForDirective",
             "src": "238:26:10",
             "typeName": {
-              "id": 1101,
+              "id": 1102,
               "name": "bytes",
               "nodeType": "ElementaryTypeName",
               "src": "258:5:10",
@@ -176,23 +176,23 @@
             }
           },
           {
-            "id": 1105,
+            "id": 1106,
             "libraryName": {
               "contractScope": null,
-              "id": 1103,
+              "id": 1104,
               "name": "RLPReader",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3454,
+              "referencedDeclaration": 3455,
               "src": "276:9:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RLPReader_$3454",
+                "typeIdentifier": "t_contract$_RLPReader_$3455",
                 "typeString": "library RLPReader"
               }
             },
             "nodeType": "UsingForDirective",
             "src": "270:25:10",
             "typeName": {
-              "id": 1104,
+              "id": 1105,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "290:4:10",
@@ -203,16 +203,16 @@
             }
           },
           {
-            "id": 1108,
+            "id": 1109,
             "libraryName": {
               "contractScope": null,
-              "id": 1106,
+              "id": 1107,
               "name": "RLPReader",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3454,
+              "referencedDeclaration": 3455,
               "src": "307:9:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RLPReader_$3454",
+                "typeIdentifier": "t_contract$_RLPReader_$3455",
                 "typeString": "library RLPReader"
               }
             },
@@ -220,49 +220,49 @@
             "src": "301:38:10",
             "typeName": {
               "contractScope": null,
-              "id": 1107,
+              "id": 1108,
               "name": "RLPReader.RLPItem",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2972,
+              "referencedDeclaration": 2973,
               "src": "321:17:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_RLPItem_$2972_storage_ptr",
+                "typeIdentifier": "t_struct$_RLPItem_$2973_storage_ptr",
                 "typeString": "struct RLPReader.RLPItem"
               }
             }
           },
           {
             "constant": false,
-            "id": 1111,
+            "id": 1112,
             "name": "containers_",
             "nodeType": "VariableDeclaration",
-            "scope": 1240,
+            "scope": 1241,
             "src": "347:31:10",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_Container_$2949_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_Container_$2950_storage_$dyn_storage",
               "typeString": "struct Structs.Container[]"
             },
             "typeName": {
               "baseType": {
                 "contractScope": null,
-                "id": 1109,
+                "id": 1110,
                 "name": "Container",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 2949,
+                "referencedDeclaration": 2950,
                 "src": "347:9:10",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Container_$2949_storage_ptr",
+                  "typeIdentifier": "t_struct$_Container_$2950_storage_ptr",
                   "typeString": "struct Structs.Container"
                 }
               },
-              "id": 1110,
+              "id": 1111,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "347:11:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Container_$2949_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_Container_$2950_storage_$dyn_storage_ptr",
                 "typeString": "struct Structs.Container[]"
               }
             },
@@ -271,37 +271,37 @@
           },
           {
             "body": {
-              "id": 1229,
+              "id": 1230,
               "nodeType": "Block",
               "src": "451:740:10",
               "statements": [
                 {
                   "assignments": [
-                    1121
+                    1122
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1121,
+                      "id": 1122,
                       "name": "item",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1230,
+                      "scope": 1231,
                       "src": "462:29:10",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_RLPItem_$2972_memory_ptr",
+                        "typeIdentifier": "t_struct$_RLPItem_$2973_memory_ptr",
                         "typeString": "struct RLPReader.RLPItem"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1120,
+                        "id": 1121,
                         "name": "RLPReader.RLPItem",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2972,
+                        "referencedDeclaration": 2973,
                         "src": "462:17:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_RLPItem_$2972_storage_ptr",
+                          "typeIdentifier": "t_struct$_RLPItem_$2973_storage_ptr",
                           "typeString": "struct RLPReader.RLPItem"
                         }
                       },
@@ -309,7 +309,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1125,
+                  "id": 1126,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [],
@@ -317,32 +317,32 @@
                       "argumentTypes": [],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1122,
+                        "id": 1123,
                         "name": "_in",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1113,
+                        "referencedDeclaration": 1114,
                         "src": "494:3:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
                           "typeString": "bytes memory"
                         }
                       },
-                      "id": 1123,
+                      "id": 1124,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "toRlpItem",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 3000,
+                      "referencedDeclaration": 3001,
                       "src": "494:13:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_bytes_memory_ptr_$returns$_t_struct$_RLPItem_$2972_memory_ptr_$bound_to$_t_bytes_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_bytes_memory_ptr_$returns$_t_struct$_RLPItem_$2973_memory_ptr_$bound_to$_t_bytes_memory_ptr_$",
                         "typeString": "function (bytes memory) pure returns (struct RLPReader.RLPItem memory)"
                       }
                     },
-                    "id": 1124,
+                    "id": 1125,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -352,7 +352,7 @@
                     "nodeType": "FunctionCall",
                     "src": "494:15:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_RLPItem_$2972_memory_ptr",
+                      "typeIdentifier": "t_struct$_RLPItem_$2973_memory_ptr",
                       "typeString": "struct RLPReader.RLPItem memory"
                     }
                   },
@@ -361,41 +361,41 @@
                 },
                 {
                   "assignments": [
-                    1130
+                    1131
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1130,
+                      "id": 1131,
                       "name": "itemList",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1230,
+                      "scope": 1231,
                       "src": "520:35:10",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                        "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                         "typeString": "struct RLPReader.RLPItem[]"
                       },
                       "typeName": {
                         "baseType": {
                           "contractScope": null,
-                          "id": 1128,
+                          "id": 1129,
                           "name": "RLPReader.RLPItem",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 2972,
+                          "referencedDeclaration": 2973,
                           "src": "520:17:10",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_RLPItem_$2972_storage_ptr",
+                            "typeIdentifier": "t_struct$_RLPItem_$2973_storage_ptr",
                             "typeString": "struct RLPReader.RLPItem"
                           }
                         },
-                        "id": 1129,
+                        "id": 1130,
                         "length": null,
                         "nodeType": "ArrayTypeName",
                         "src": "520:19:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_storage_$dyn_storage_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_storage_$dyn_storage_ptr",
                           "typeString": "struct RLPReader.RLPItem[]"
                         }
                       },
@@ -403,7 +403,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1134,
+                  "id": 1135,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [],
@@ -411,32 +411,32 @@
                       "argumentTypes": [],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1131,
+                        "id": 1132,
                         "name": "item",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1121,
+                        "referencedDeclaration": 1122,
                         "src": "558:4:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_RLPItem_$2972_memory_ptr",
+                          "typeIdentifier": "t_struct$_RLPItem_$2973_memory_ptr",
                           "typeString": "struct RLPReader.RLPItem memory"
                         }
                       },
-                      "id": 1132,
+                      "id": 1133,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "toList",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 3075,
+                      "referencedDeclaration": 3076,
                       "src": "558:11:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2972_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2972_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2973_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2973_memory_ptr_$",
                         "typeString": "function (struct RLPReader.RLPItem memory) pure returns (struct RLPReader.RLPItem memory[] memory)"
                       }
                     },
-                    "id": 1133,
+                    "id": 1134,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -446,7 +446,7 @@
                     "nodeType": "FunctionCall",
                     "src": "558:13:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                       "typeString": "struct RLPReader.RLPItem memory[] memory"
                     }
                   },
@@ -455,15 +455,15 @@
                 },
                 {
                   "assignments": [
-                    1136
+                    1137
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1136,
+                      "id": 1137,
                       "name": "listLength",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1230,
+                      "scope": 1231,
                       "src": "584:15:10",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -472,7 +472,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 1135,
+                        "id": 1136,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "584:4:10",
@@ -485,23 +485,23 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1139,
+                  "id": 1140,
                   "initialValue": {
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1137,
+                      "id": 1138,
                       "name": "itemList",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1130,
+                      "referencedDeclaration": 1131,
                       "src": "602:8:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                        "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                         "typeString": "struct RLPReader.RLPItem memory[] memory"
                       }
                     },
-                    "id": 1138,
+                    "id": 1139,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -520,41 +520,41 @@
                 },
                 {
                   "assignments": [
-                    1143
+                    1144
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1143,
+                      "id": 1144,
                       "name": "data",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1230,
+                      "scope": 1231,
                       "src": "628:23:10",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_PathValue_$2944_memory_$dyn_memory_ptr",
+                        "typeIdentifier": "t_array$_t_struct$_PathValue_$2945_memory_$dyn_memory_ptr",
                         "typeString": "struct Structs.PathValue[]"
                       },
                       "typeName": {
                         "baseType": {
                           "contractScope": null,
-                          "id": 1141,
+                          "id": 1142,
                           "name": "PathValue",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 2944,
+                          "referencedDeclaration": 2945,
                           "src": "628:9:10",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_PathValue_$2944_storage_ptr",
+                            "typeIdentifier": "t_struct$_PathValue_$2945_storage_ptr",
                             "typeString": "struct Structs.PathValue"
                           }
                         },
-                        "id": 1142,
+                        "id": 1143,
                         "length": null,
                         "nodeType": "ArrayTypeName",
                         "src": "628:11:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2944_storage_$dyn_storage_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2945_storage_$dyn_storage_ptr",
                           "typeString": "struct Structs.PathValue[]"
                         }
                       },
@@ -562,17 +562,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1149,
+                  "id": 1150,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1147,
+                        "id": 1148,
                         "name": "listLength",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1136,
+                        "referencedDeclaration": 1137,
                         "src": "670:10:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -587,7 +587,7 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1146,
+                      "id": 1147,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -595,33 +595,33 @@
                       "nodeType": "NewExpression",
                       "src": "654:15:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_objectcreation_pure$_t_uint256_$returns$_t_array$_t_struct$_PathValue_$2944_memory_$dyn_memory_$",
+                        "typeIdentifier": "t_function_objectcreation_pure$_t_uint256_$returns$_t_array$_t_struct$_PathValue_$2945_memory_$dyn_memory_$",
                         "typeString": "function (uint256) pure returns (struct Structs.PathValue memory[] memory)"
                       },
                       "typeName": {
                         "baseType": {
                           "contractScope": null,
-                          "id": 1144,
+                          "id": 1145,
                           "name": "PathValue",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 2944,
+                          "referencedDeclaration": 2945,
                           "src": "658:9:10",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_PathValue_$2944_storage_ptr",
+                            "typeIdentifier": "t_struct$_PathValue_$2945_storage_ptr",
                             "typeString": "struct Structs.PathValue"
                           }
                         },
-                        "id": 1145,
+                        "id": 1146,
                         "length": null,
                         "nodeType": "ArrayTypeName",
                         "src": "658:11:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2944_storage_$dyn_storage_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2945_storage_$dyn_storage_ptr",
                           "typeString": "struct Structs.PathValue[]"
                         }
                       }
                     },
-                    "id": 1148,
+                    "id": 1149,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -631,7 +631,7 @@
                     "nodeType": "FunctionCall",
                     "src": "654:27:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_PathValue_$2944_memory_$dyn_memory",
+                      "typeIdentifier": "t_array$_t_struct$_PathValue_$2945_memory_$dyn_memory",
                       "typeString": "struct Structs.PathValue memory[] memory"
                     }
                   },
@@ -640,37 +640,37 @@
                 },
                 {
                   "body": {
-                    "id": 1204,
+                    "id": 1205,
                     "nodeType": "Block",
                     "src": "730:294:10",
                     "statements": [
                       {
                         "assignments": [
-                          1161
+                          1162
                         ],
                         "declarations": [
                           {
                             "constant": false,
-                            "id": 1161,
+                            "id": 1162,
                             "name": "pathValue",
                             "nodeType": "VariableDeclaration",
-                            "scope": 1230,
+                            "scope": 1231,
                             "src": "745:26:10",
                             "stateVariable": false,
                             "storageLocation": "memory",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_PathValue_$2944_memory_ptr",
+                              "typeIdentifier": "t_struct$_PathValue_$2945_memory_ptr",
                               "typeString": "struct Structs.PathValue"
                             },
                             "typeName": {
                               "contractScope": null,
-                              "id": 1160,
+                              "id": 1161,
                               "name": "PathValue",
                               "nodeType": "UserDefinedTypeName",
-                              "referencedDeclaration": 2944,
+                              "referencedDeclaration": 2945,
                               "src": "745:9:10",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_PathValue_$2944_storage_ptr",
+                                "typeIdentifier": "t_struct$_PathValue_$2945_storage_ptr",
                                 "typeString": "struct Structs.PathValue"
                               }
                             },
@@ -678,7 +678,7 @@
                             "visibility": "internal"
                           }
                         ],
-                        "id": 1197,
+                        "id": 1198,
                         "initialValue": {
                           "argumentTypes": null,
                           "arguments": [
@@ -701,25 +701,25 @@
                                             "argumentTypes": null,
                                             "baseExpression": {
                                               "argumentTypes": null,
-                                              "id": 1164,
+                                              "id": 1165,
                                               "name": "itemList",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 1130,
+                                              "referencedDeclaration": 1131,
                                               "src": "809:8:10",
                                               "typeDescriptions": {
-                                                "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                                                "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                                                 "typeString": "struct RLPReader.RLPItem memory[] memory"
                                               }
                                             },
-                                            "id": 1166,
+                                            "id": 1167,
                                             "indexExpression": {
                                               "argumentTypes": null,
-                                              "id": 1165,
+                                              "id": 1166,
                                               "name": "i",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 1151,
+                                              "referencedDeclaration": 1152,
                                               "src": "818:1:10",
                                               "typeDescriptions": {
                                                 "typeIdentifier": "t_uint256",
@@ -733,25 +733,25 @@
                                             "nodeType": "IndexAccess",
                                             "src": "809:11:10",
                                             "typeDescriptions": {
-                                              "typeIdentifier": "t_struct$_RLPItem_$2972_memory",
+                                              "typeIdentifier": "t_struct$_RLPItem_$2973_memory",
                                               "typeString": "struct RLPReader.RLPItem memory"
                                             }
                                           },
-                                          "id": 1167,
+                                          "id": 1168,
                                           "isConstant": false,
                                           "isLValue": true,
                                           "isPure": false,
                                           "lValueRequested": false,
                                           "memberName": "toList",
                                           "nodeType": "MemberAccess",
-                                          "referencedDeclaration": 3075,
+                                          "referencedDeclaration": 3076,
                                           "src": "809:18:10",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2972_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2972_memory_ptr_$",
+                                            "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2973_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2973_memory_ptr_$",
                                             "typeString": "function (struct RLPReader.RLPItem memory) pure returns (struct RLPReader.RLPItem memory[] memory)"
                                           }
                                         },
-                                        "id": 1168,
+                                        "id": 1169,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": false,
@@ -761,15 +761,15 @@
                                         "nodeType": "FunctionCall",
                                         "src": "809:20:10",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                                           "typeString": "struct RLPReader.RLPItem memory[] memory"
                                         }
                                       },
-                                      "id": 1170,
+                                      "id": 1171,
                                       "indexExpression": {
                                         "argumentTypes": null,
                                         "hexValue": "30",
-                                        "id": 1169,
+                                        "id": 1170,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": true,
@@ -791,25 +791,25 @@
                                       "nodeType": "IndexAccess",
                                       "src": "809:23:10",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_struct$_RLPItem_$2972_memory",
+                                        "typeIdentifier": "t_struct$_RLPItem_$2973_memory",
                                         "typeString": "struct RLPReader.RLPItem memory"
                                       }
                                     },
-                                    "id": 1171,
+                                    "id": 1172,
                                     "isConstant": false,
                                     "isLValue": true,
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "memberName": "toBytes",
                                     "nodeType": "MemberAccess",
-                                    "referencedDeclaration": 3413,
+                                    "referencedDeclaration": 3414,
                                     "src": "809:31:10",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2972_memory_ptr_$returns$_t_bytes_memory_ptr_$bound_to$_t_struct$_RLPItem_$2972_memory_ptr_$",
+                                      "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2973_memory_ptr_$returns$_t_bytes_memory_ptr_$bound_to$_t_struct$_RLPItem_$2973_memory_ptr_$",
                                       "typeString": "function (struct RLPReader.RLPItem memory) pure returns (bytes memory)"
                                     }
                                   },
-                                  "id": 1172,
+                                  "id": 1173,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -831,7 +831,7 @@
                                     "typeString": "bytes memory"
                                   }
                                 ],
-                                "id": 1163,
+                                "id": 1164,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -844,7 +844,7 @@
                                 },
                                 "typeName": "string"
                               },
-                              "id": 1173,
+                              "id": 1174,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -877,25 +877,25 @@
                                             "argumentTypes": null,
                                             "baseExpression": {
                                               "argumentTypes": null,
-                                              "id": 1175,
+                                              "id": 1176,
                                               "name": "itemList",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 1130,
+                                              "referencedDeclaration": 1131,
                                               "src": "869:8:10",
                                               "typeDescriptions": {
-                                                "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                                                "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                                                 "typeString": "struct RLPReader.RLPItem memory[] memory"
                                               }
                                             },
-                                            "id": 1177,
+                                            "id": 1178,
                                             "indexExpression": {
                                               "argumentTypes": null,
-                                              "id": 1176,
+                                              "id": 1177,
                                               "name": "i",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 1151,
+                                              "referencedDeclaration": 1152,
                                               "src": "878:1:10",
                                               "typeDescriptions": {
                                                 "typeIdentifier": "t_uint256",
@@ -909,25 +909,25 @@
                                             "nodeType": "IndexAccess",
                                             "src": "869:11:10",
                                             "typeDescriptions": {
-                                              "typeIdentifier": "t_struct$_RLPItem_$2972_memory",
+                                              "typeIdentifier": "t_struct$_RLPItem_$2973_memory",
                                               "typeString": "struct RLPReader.RLPItem memory"
                                             }
                                           },
-                                          "id": 1178,
+                                          "id": 1179,
                                           "isConstant": false,
                                           "isLValue": true,
                                           "isPure": false,
                                           "lValueRequested": false,
                                           "memberName": "toList",
                                           "nodeType": "MemberAccess",
-                                          "referencedDeclaration": 3075,
+                                          "referencedDeclaration": 3076,
                                           "src": "869:18:10",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2972_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2972_memory_ptr_$",
+                                            "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2973_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2973_memory_ptr_$",
                                             "typeString": "function (struct RLPReader.RLPItem memory) pure returns (struct RLPReader.RLPItem memory[] memory)"
                                           }
                                         },
-                                        "id": 1179,
+                                        "id": 1180,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": false,
@@ -937,15 +937,15 @@
                                         "nodeType": "FunctionCall",
                                         "src": "869:20:10",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                                           "typeString": "struct RLPReader.RLPItem memory[] memory"
                                         }
                                       },
-                                      "id": 1181,
+                                      "id": 1182,
                                       "indexExpression": {
                                         "argumentTypes": null,
                                         "hexValue": "31",
-                                        "id": 1180,
+                                        "id": 1181,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": true,
@@ -967,25 +967,25 @@
                                       "nodeType": "IndexAccess",
                                       "src": "869:23:10",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_struct$_RLPItem_$2972_memory",
+                                        "typeIdentifier": "t_struct$_RLPItem_$2973_memory",
                                         "typeString": "struct RLPReader.RLPItem memory"
                                       }
                                     },
-                                    "id": 1182,
+                                    "id": 1183,
                                     "isConstant": false,
                                     "isLValue": true,
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "memberName": "toBytes",
                                     "nodeType": "MemberAccess",
-                                    "referencedDeclaration": 3413,
+                                    "referencedDeclaration": 3414,
                                     "src": "869:31:10",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2972_memory_ptr_$returns$_t_bytes_memory_ptr_$bound_to$_t_struct$_RLPItem_$2972_memory_ptr_$",
+                                      "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2973_memory_ptr_$returns$_t_bytes_memory_ptr_$bound_to$_t_struct$_RLPItem_$2973_memory_ptr_$",
                                       "typeString": "function (struct RLPReader.RLPItem memory) pure returns (bytes memory)"
                                     }
                                   },
-                                  "id": 1183,
+                                  "id": 1184,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -1007,7 +1007,7 @@
                                     "typeString": "bytes memory"
                                   }
                                 ],
-                                "id": 1174,
+                                "id": 1175,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -1020,7 +1020,7 @@
                                 },
                                 "typeName": "string"
                               },
-                              "id": 1184,
+                              "id": 1185,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -1053,25 +1053,25 @@
                                             "argumentTypes": null,
                                             "baseExpression": {
                                               "argumentTypes": null,
-                                              "id": 1186,
+                                              "id": 1187,
                                               "name": "itemList",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 1130,
+                                              "referencedDeclaration": 1131,
                                               "src": "929:8:10",
                                               "typeDescriptions": {
-                                                "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                                                "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                                                 "typeString": "struct RLPReader.RLPItem memory[] memory"
                                               }
                                             },
-                                            "id": 1188,
+                                            "id": 1189,
                                             "indexExpression": {
                                               "argumentTypes": null,
-                                              "id": 1187,
+                                              "id": 1188,
                                               "name": "i",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 1151,
+                                              "referencedDeclaration": 1152,
                                               "src": "938:1:10",
                                               "typeDescriptions": {
                                                 "typeIdentifier": "t_uint256",
@@ -1085,25 +1085,25 @@
                                             "nodeType": "IndexAccess",
                                             "src": "929:11:10",
                                             "typeDescriptions": {
-                                              "typeIdentifier": "t_struct$_RLPItem_$2972_memory",
+                                              "typeIdentifier": "t_struct$_RLPItem_$2973_memory",
                                               "typeString": "struct RLPReader.RLPItem memory"
                                             }
                                           },
-                                          "id": 1189,
+                                          "id": 1190,
                                           "isConstant": false,
                                           "isLValue": true,
                                           "isPure": false,
                                           "lValueRequested": false,
                                           "memberName": "toList",
                                           "nodeType": "MemberAccess",
-                                          "referencedDeclaration": 3075,
+                                          "referencedDeclaration": 3076,
                                           "src": "929:18:10",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2972_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2972_memory_ptr_$",
+                                            "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2973_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2973_memory_ptr_$",
                                             "typeString": "function (struct RLPReader.RLPItem memory) pure returns (struct RLPReader.RLPItem memory[] memory)"
                                           }
                                         },
-                                        "id": 1190,
+                                        "id": 1191,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": false,
@@ -1113,15 +1113,15 @@
                                         "nodeType": "FunctionCall",
                                         "src": "929:20:10",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                                           "typeString": "struct RLPReader.RLPItem memory[] memory"
                                         }
                                       },
-                                      "id": 1192,
+                                      "id": 1193,
                                       "indexExpression": {
                                         "argumentTypes": null,
                                         "hexValue": "32",
-                                        "id": 1191,
+                                        "id": 1192,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": true,
@@ -1143,25 +1143,25 @@
                                       "nodeType": "IndexAccess",
                                       "src": "929:23:10",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_struct$_RLPItem_$2972_memory",
+                                        "typeIdentifier": "t_struct$_RLPItem_$2973_memory",
                                         "typeString": "struct RLPReader.RLPItem memory"
                                       }
                                     },
-                                    "id": 1193,
+                                    "id": 1194,
                                     "isConstant": false,
                                     "isLValue": true,
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "memberName": "toBytes",
                                     "nodeType": "MemberAccess",
-                                    "referencedDeclaration": 3413,
+                                    "referencedDeclaration": 3414,
                                     "src": "929:31:10",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2972_memory_ptr_$returns$_t_bytes_memory_ptr_$bound_to$_t_struct$_RLPItem_$2972_memory_ptr_$",
+                                      "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2973_memory_ptr_$returns$_t_bytes_memory_ptr_$bound_to$_t_struct$_RLPItem_$2973_memory_ptr_$",
                                       "typeString": "function (struct RLPReader.RLPItem memory) pure returns (bytes memory)"
                                     }
                                   },
-                                  "id": 1194,
+                                  "id": 1195,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -1183,7 +1183,7 @@
                                     "typeString": "bytes memory"
                                   }
                                 ],
-                                "id": 1185,
+                                "id": 1186,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -1196,7 +1196,7 @@
                                 },
                                 "typeName": "string"
                               },
-                              "id": 1195,
+                              "id": 1196,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -1226,18 +1226,18 @@
                                 "typeString": "string memory"
                               }
                             ],
-                            "id": 1162,
+                            "id": 1163,
                             "name": "PathValue",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2944,
+                            "referencedDeclaration": 2945,
                             "src": "774:9:10",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_struct$_PathValue_$2944_storage_ptr_$",
+                              "typeIdentifier": "t_type$_t_struct$_PathValue_$2945_storage_ptr_$",
                               "typeString": "type(struct Structs.PathValue storage pointer)"
                             }
                           },
-                          "id": 1196,
+                          "id": 1197,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1247,7 +1247,7 @@
                           "nodeType": "FunctionCall",
                           "src": "774:204:10",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_PathValue_$2944_memory",
+                            "typeIdentifier": "t_struct$_PathValue_$2945_memory",
                             "typeString": "struct Structs.PathValue memory"
                           }
                         },
@@ -1257,7 +1257,7 @@
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1202,
+                          "id": 1203,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1266,25 +1266,25 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 1198,
+                              "id": 1199,
                               "name": "data",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1143,
+                              "referencedDeclaration": 1144,
                               "src": "993:4:10",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_array$_t_struct$_PathValue_$2944_memory_$dyn_memory_ptr",
+                                "typeIdentifier": "t_array$_t_struct$_PathValue_$2945_memory_$dyn_memory_ptr",
                                 "typeString": "struct Structs.PathValue memory[] memory"
                               }
                             },
-                            "id": 1200,
+                            "id": 1201,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 1199,
+                              "id": 1200,
                               "name": "i",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1151,
+                              "referencedDeclaration": 1152,
                               "src": "998:1:10",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -1298,7 +1298,7 @@
                             "nodeType": "IndexAccess",
                             "src": "993:7:10",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_PathValue_$2944_memory",
+                              "typeIdentifier": "t_struct$_PathValue_$2945_memory",
                               "typeString": "struct Structs.PathValue memory"
                             }
                           },
@@ -1306,24 +1306,24 @@
                           "operator": "=",
                           "rightHandSide": {
                             "argumentTypes": null,
-                            "id": 1201,
+                            "id": 1202,
                             "name": "pathValue",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1161,
+                            "referencedDeclaration": 1162,
                             "src": "1003:9:10",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_PathValue_$2944_memory_ptr",
+                              "typeIdentifier": "t_struct$_PathValue_$2945_memory_ptr",
                               "typeString": "struct Structs.PathValue memory"
                             }
                           },
                           "src": "993:19:10",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_PathValue_$2944_memory",
+                            "typeIdentifier": "t_struct$_PathValue_$2945_memory",
                             "typeString": "struct Structs.PathValue memory"
                           }
                         },
-                        "id": 1203,
+                        "id": 1204,
                         "nodeType": "ExpressionStatement",
                         "src": "993:19:10"
                       }
@@ -1335,18 +1335,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1156,
+                    "id": 1157,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 1154,
+                      "id": 1155,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1151,
+                      "referencedDeclaration": 1152,
                       "src": "709:1:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1357,11 +1357,11 @@
                     "operator": "<",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 1155,
+                      "id": 1156,
                       "name": "listLength",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1136,
+                      "referencedDeclaration": 1137,
                       "src": "713:10:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1374,18 +1374,18 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1205,
+                  "id": 1206,
                   "initializationExpression": {
                     "assignments": [
-                      1151
+                      1152
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 1151,
+                        "id": 1152,
                         "name": "i",
                         "nodeType": "VariableDeclaration",
-                        "scope": 1230,
+                        "scope": 1231,
                         "src": "697:6:10",
                         "stateVariable": false,
                         "storageLocation": "default",
@@ -1394,7 +1394,7 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 1150,
+                          "id": 1151,
                           "name": "uint",
                           "nodeType": "ElementaryTypeName",
                           "src": "697:4:10",
@@ -1407,11 +1407,11 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 1153,
+                    "id": 1154,
                     "initialValue": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 1152,
+                      "id": 1153,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1432,7 +1432,7 @@
                   "loopExpression": {
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1158,
+                      "id": 1159,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1443,11 +1443,11 @@
                       "src": "725:3:10",
                       "subExpression": {
                         "argumentTypes": null,
-                        "id": 1157,
+                        "id": 1158,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1151,
+                        "referencedDeclaration": 1152,
                         "src": "725:1:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1459,7 +1459,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 1159,
+                    "id": 1160,
                     "nodeType": "ExpressionStatement",
                     "src": "725:3:10"
                   },
@@ -1468,31 +1468,31 @@
                 },
                 {
                   "assignments": [
-                    1207
+                    1208
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1207,
+                      "id": 1208,
                       "name": "container",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1230,
+                      "scope": 1231,
                       "src": "1036:23:10",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_JsonContainer_$1091",
+                        "typeIdentifier": "t_contract$_JsonContainer_$1092",
                         "typeString": "contract JsonContainer"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1206,
+                        "id": 1207,
                         "name": "JsonContainer",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1091,
+                        "referencedDeclaration": 1092,
                         "src": "1036:13:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_JsonContainer_$1091",
+                          "typeIdentifier": "t_contract$_JsonContainer_$1092",
                           "typeString": "contract JsonContainer"
                         }
                       },
@@ -1500,13 +1500,13 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1211,
+                  "id": 1212,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 1209,
+                      "id": 1210,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1514,23 +1514,23 @@
                       "nodeType": "NewExpression",
                       "src": "1062:17:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_JsonContainer_$1091_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_JsonContainer_$1092_$",
                         "typeString": "function () returns (contract JsonContainer)"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1208,
+                        "id": 1209,
                         "name": "JsonContainer",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1091,
+                        "referencedDeclaration": 1092,
                         "src": "1066:13:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_JsonContainer_$1091",
+                          "typeIdentifier": "t_contract$_JsonContainer_$1092",
                           "typeString": "contract JsonContainer"
                         }
                       }
                     },
-                    "id": 1210,
+                    "id": 1211,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1540,7 +1540,7 @@
                     "nodeType": "FunctionCall",
                     "src": "1062:19:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_JsonContainer_$1091",
+                      "typeIdentifier": "t_contract$_JsonContainer_$1092",
                       "typeString": "contract JsonContainer"
                     }
                   },
@@ -1553,14 +1553,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1215,
+                        "id": 1216,
                         "name": "data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1143,
+                        "referencedDeclaration": 1144,
                         "src": "1113:4:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2944_memory_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2945_memory_$dyn_memory_ptr",
                           "typeString": "struct Structs.PathValue memory[] memory"
                         }
                       }
@@ -1568,38 +1568,38 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2944_memory_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2945_memory_$dyn_memory_ptr",
                           "typeString": "struct Structs.PathValue memory[] memory"
                         }
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1212,
+                        "id": 1213,
                         "name": "container",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1207,
+                        "referencedDeclaration": 1208,
                         "src": "1092:9:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_JsonContainer_$1091",
+                          "typeIdentifier": "t_contract$_JsonContainer_$1092",
                           "typeString": "contract JsonContainer"
                         }
                       },
-                      "id": 1214,
+                      "id": 1215,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "initialize",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 644,
+                      "referencedDeclaration": 645,
                       "src": "1092:20:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_external_nonpayable$_t_array$_t_struct$_PathValue_$2944_memory_$dyn_memory_ptr_$returns$__$",
+                        "typeIdentifier": "t_function_external_nonpayable$_t_array$_t_struct$_PathValue_$2945_memory_$dyn_memory_ptr_$returns$__$",
                         "typeString": "function (struct Structs.PathValue memory[] memory) external"
                       }
                     },
-                    "id": 1216,
+                    "id": 1217,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1613,7 +1613,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1217,
+                  "id": 1218,
                   "nodeType": "ExpressionStatement",
                   "src": "1092:26:10"
                 },
@@ -1629,14 +1629,14 @@
                             "arguments": [
                               {
                                 "argumentTypes": null,
-                                "id": 1223,
+                                "id": 1224,
                                 "name": "container",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1207,
+                                "referencedDeclaration": 1208,
                                 "src": "1164:9:10",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_JsonContainer_$1091",
+                                  "typeIdentifier": "t_contract$_JsonContainer_$1092",
                                   "typeString": "contract JsonContainer"
                                 }
                               }
@@ -1644,11 +1644,11 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_JsonContainer_$1091",
+                                  "typeIdentifier": "t_contract$_JsonContainer_$1092",
                                   "typeString": "contract JsonContainer"
                                 }
                               ],
-                              "id": 1222,
+                              "id": 1223,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -1661,7 +1661,7 @@
                               },
                               "typeName": "address"
                             },
-                            "id": 1224,
+                            "id": 1225,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1677,11 +1677,11 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 1225,
+                            "id": 1226,
                             "name": "_name",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1115,
+                            "referencedDeclaration": 1116,
                             "src": "1176:5:10",
                             "typeDescriptions": {
                               "typeIdentifier": "t_string_memory_ptr",
@@ -1700,18 +1700,18 @@
                               "typeString": "string memory"
                             }
                           ],
-                          "id": 1221,
+                          "id": 1222,
                           "name": "Container",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2949,
+                          "referencedDeclaration": 2950,
                           "src": "1146:9:10",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_struct$_Container_$2949_storage_ptr_$",
+                            "typeIdentifier": "t_type$_t_struct$_Container_$2950_storage_ptr_$",
                             "typeString": "type(struct Structs.Container storage pointer)"
                           }
                         },
-                        "id": 1226,
+                        "id": 1227,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1721,7 +1721,7 @@
                         "nodeType": "FunctionCall",
                         "src": "1146:36:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Container_$2949_memory",
+                          "typeIdentifier": "t_struct$_Container_$2950_memory",
                           "typeString": "struct Structs.Container memory"
                         }
                       }
@@ -1729,24 +1729,24 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_struct$_Container_$2949_memory",
+                          "typeIdentifier": "t_struct$_Container_$2950_memory",
                           "typeString": "struct Structs.Container memory"
                         }
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1218,
+                        "id": 1219,
                         "name": "containers_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1111,
+                        "referencedDeclaration": 1112,
                         "src": "1129:11:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Container_$2949_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_Container_$2950_storage_$dyn_storage",
                           "typeString": "struct Structs.Container storage ref[] storage ref"
                         }
                       },
-                      "id": 1220,
+                      "id": 1221,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1756,11 +1756,11 @@
                       "referencedDeclaration": null,
                       "src": "1129:16:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Container_$2949_storage_$returns$_t_uint256_$",
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Container_$2950_storage_$returns$_t_uint256_$",
                         "typeString": "function (struct Structs.Container storage ref) returns (uint256)"
                       }
                     },
-                    "id": 1227,
+                    "id": 1228,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1774,14 +1774,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1228,
+                  "id": 1229,
                   "nodeType": "ExpressionStatement",
                   "src": "1129:54:10"
                 }
               ]
             },
             "documentation": null,
-            "id": 1230,
+            "id": 1231,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1789,15 +1789,15 @@
             "name": "createContainer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1116,
+              "id": 1117,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1113,
+                  "id": 1114,
                   "name": "_in",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1230,
+                  "scope": 1231,
                   "src": "412:16:10",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1806,7 +1806,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1112,
+                    "id": 1113,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "412:5:10",
@@ -1820,10 +1820,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1115,
+                  "id": 1116,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1230,
+                  "scope": 1231,
                   "src": "430:12:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1832,7 +1832,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1114,
+                    "id": 1115,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "430:6:10",
@@ -1849,12 +1849,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1117,
+              "id": 1118,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "451:0:10"
             },
-            "scope": 1240,
+            "scope": 1241,
             "src": "387:804:10",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1862,33 +1862,33 @@
           },
           {
             "body": {
-              "id": 1238,
+              "id": 1239,
               "nodeType": "Block",
               "src": "1258:37:10",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1236,
+                    "id": 1237,
                     "name": "containers_",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1111,
+                    "referencedDeclaration": 1112,
                     "src": "1276:11:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Container_$2949_storage_$dyn_storage",
+                      "typeIdentifier": "t_array$_t_struct$_Container_$2950_storage_$dyn_storage",
                       "typeString": "struct Structs.Container storage ref[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 1235,
-                  "id": 1237,
+                  "functionReturnParameters": 1236,
+                  "id": 1238,
                   "nodeType": "Return",
                   "src": "1269:18:10"
                 }
               ]
             },
             "documentation": null,
-            "id": 1239,
+            "id": 1240,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1896,48 +1896,48 @@
             "name": "getContainers",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1231,
+              "id": 1232,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1221:2:10"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1235,
+              "id": 1236,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1234,
+                  "id": 1235,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1239,
+                  "scope": 1240,
                   "src": "1245:11:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Container_$2949_memory_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Container_$2950_memory_$dyn_memory_ptr",
                     "typeString": "struct Structs.Container[]"
                   },
                   "typeName": {
                     "baseType": {
                       "contractScope": null,
-                      "id": 1232,
+                      "id": 1233,
                       "name": "Container",
                       "nodeType": "UserDefinedTypeName",
-                      "referencedDeclaration": 2949,
+                      "referencedDeclaration": 2950,
                       "src": "1245:9:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Container_$2949_storage_ptr",
+                        "typeIdentifier": "t_struct$_Container_$2950_storage_ptr",
                         "typeString": "struct Structs.Container"
                       }
                     },
-                    "id": 1233,
+                    "id": 1234,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "1245:11:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Container_$2949_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Container_$2950_storage_$dyn_storage_ptr",
                       "typeString": "struct Structs.Container[]"
                     }
                   },
@@ -1947,14 +1947,14 @@
               ],
               "src": "1244:13:10"
             },
-            "scope": 1240,
+            "scope": 1241,
             "src": "1199:96:10",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1241,
+        "scope": 1242,
         "src": "188:1112:10"
       }
     ],
@@ -1964,14 +1964,14 @@
     "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/node_modules/json-warehouse/contracts/JsonContainerFactory.sol",
     "exportedSymbols": {
       "JsonContainerFactory": [
-        1240
+        1241
       ]
     },
-    "id": 1241,
+    "id": 1242,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1093,
+        "id": 1094,
         "literals": [
           "solidity",
           "0.4",
@@ -1981,7 +1981,7 @@
         "src": "0:23:10"
       },
       {
-        "id": 1094,
+        "id": 1095,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -1992,10 +1992,10 @@
       {
         "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/node_modules/json-warehouse/contracts/lib/Structs.sol",
         "file": "./lib/Structs.sol",
-        "id": 1095,
+        "id": 1096,
         "nodeType": "ImportDirective",
-        "scope": 1241,
-        "sourceUnit": 2951,
+        "scope": 1242,
+        "sourceUnit": 2952,
         "src": "62:27:10",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2003,10 +2003,10 @@
       {
         "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/node_modules/json-warehouse/contracts/JsonContainer.sol",
         "file": "./JsonContainer.sol",
-        "id": 1096,
+        "id": 1097,
         "nodeType": "ImportDirective",
-        "scope": 1241,
-        "sourceUnit": 1092,
+        "scope": 1242,
+        "sourceUnit": 1093,
         "src": "91:29:10",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2014,10 +2014,10 @@
       {
         "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/node_modules/json-warehouse/node_modules/solidity-rlp/contracts/RLPReader.sol",
         "file": "../node_modules/solidity-rlp/contracts/RLPReader.sol",
-        "id": 1097,
+        "id": 1098,
         "nodeType": "ImportDirective",
-        "scope": 1241,
-        "sourceUnit": 3455,
+        "scope": 1242,
+        "sourceUnit": 3456,
         "src": "122:62:10",
         "symbolAliases": [],
         "unitAlias": ""
@@ -2028,54 +2028,54 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1098,
+              "id": 1099,
               "name": "Structs",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2950,
+              "referencedDeclaration": 2951,
               "src": "221:7:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Structs_$2950",
+                "typeIdentifier": "t_contract$_Structs_$2951",
                 "typeString": "contract Structs"
               }
             },
-            "id": 1099,
+            "id": 1100,
             "nodeType": "InheritanceSpecifier",
             "src": "221:7:10"
           }
         ],
         "contractDependencies": [
-          1091,
-          2950
+          1092,
+          2951
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1240,
+        "id": 1241,
         "linearizedBaseContracts": [
-          1240,
-          2950
+          1241,
+          2951
         ],
         "name": "JsonContainerFactory",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "id": 1102,
+            "id": 1103,
             "libraryName": {
               "contractScope": null,
-              "id": 1100,
+              "id": 1101,
               "name": "RLPReader",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3454,
+              "referencedDeclaration": 3455,
               "src": "244:9:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RLPReader_$3454",
+                "typeIdentifier": "t_contract$_RLPReader_$3455",
                 "typeString": "library RLPReader"
               }
             },
             "nodeType": "UsingForDirective",
             "src": "238:26:10",
             "typeName": {
-              "id": 1101,
+              "id": 1102,
               "name": "bytes",
               "nodeType": "ElementaryTypeName",
               "src": "258:5:10",
@@ -2086,23 +2086,23 @@
             }
           },
           {
-            "id": 1105,
+            "id": 1106,
             "libraryName": {
               "contractScope": null,
-              "id": 1103,
+              "id": 1104,
               "name": "RLPReader",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3454,
+              "referencedDeclaration": 3455,
               "src": "276:9:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RLPReader_$3454",
+                "typeIdentifier": "t_contract$_RLPReader_$3455",
                 "typeString": "library RLPReader"
               }
             },
             "nodeType": "UsingForDirective",
             "src": "270:25:10",
             "typeName": {
-              "id": 1104,
+              "id": 1105,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "290:4:10",
@@ -2113,16 +2113,16 @@
             }
           },
           {
-            "id": 1108,
+            "id": 1109,
             "libraryName": {
               "contractScope": null,
-              "id": 1106,
+              "id": 1107,
               "name": "RLPReader",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3454,
+              "referencedDeclaration": 3455,
               "src": "307:9:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_RLPReader_$3454",
+                "typeIdentifier": "t_contract$_RLPReader_$3455",
                 "typeString": "library RLPReader"
               }
             },
@@ -2130,49 +2130,49 @@
             "src": "301:38:10",
             "typeName": {
               "contractScope": null,
-              "id": 1107,
+              "id": 1108,
               "name": "RLPReader.RLPItem",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2972,
+              "referencedDeclaration": 2973,
               "src": "321:17:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_struct$_RLPItem_$2972_storage_ptr",
+                "typeIdentifier": "t_struct$_RLPItem_$2973_storage_ptr",
                 "typeString": "struct RLPReader.RLPItem"
               }
             }
           },
           {
             "constant": false,
-            "id": 1111,
+            "id": 1112,
             "name": "containers_",
             "nodeType": "VariableDeclaration",
-            "scope": 1240,
+            "scope": 1241,
             "src": "347:31:10",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_Container_$2949_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_Container_$2950_storage_$dyn_storage",
               "typeString": "struct Structs.Container[]"
             },
             "typeName": {
               "baseType": {
                 "contractScope": null,
-                "id": 1109,
+                "id": 1110,
                 "name": "Container",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 2949,
+                "referencedDeclaration": 2950,
                 "src": "347:9:10",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Container_$2949_storage_ptr",
+                  "typeIdentifier": "t_struct$_Container_$2950_storage_ptr",
                   "typeString": "struct Structs.Container"
                 }
               },
-              "id": 1110,
+              "id": 1111,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "347:11:10",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Container_$2949_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_Container_$2950_storage_$dyn_storage_ptr",
                 "typeString": "struct Structs.Container[]"
               }
             },
@@ -2181,37 +2181,37 @@
           },
           {
             "body": {
-              "id": 1229,
+              "id": 1230,
               "nodeType": "Block",
               "src": "451:740:10",
               "statements": [
                 {
                   "assignments": [
-                    1121
+                    1122
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1121,
+                      "id": 1122,
                       "name": "item",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1230,
+                      "scope": 1231,
                       "src": "462:29:10",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_RLPItem_$2972_memory_ptr",
+                        "typeIdentifier": "t_struct$_RLPItem_$2973_memory_ptr",
                         "typeString": "struct RLPReader.RLPItem"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1120,
+                        "id": 1121,
                         "name": "RLPReader.RLPItem",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 2972,
+                        "referencedDeclaration": 2973,
                         "src": "462:17:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_RLPItem_$2972_storage_ptr",
+                          "typeIdentifier": "t_struct$_RLPItem_$2973_storage_ptr",
                           "typeString": "struct RLPReader.RLPItem"
                         }
                       },
@@ -2219,7 +2219,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1125,
+                  "id": 1126,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [],
@@ -2227,32 +2227,32 @@
                       "argumentTypes": [],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1122,
+                        "id": 1123,
                         "name": "_in",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1113,
+                        "referencedDeclaration": 1114,
                         "src": "494:3:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes_memory_ptr",
                           "typeString": "bytes memory"
                         }
                       },
-                      "id": 1123,
+                      "id": 1124,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "toRlpItem",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 3000,
+                      "referencedDeclaration": 3001,
                       "src": "494:13:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_bytes_memory_ptr_$returns$_t_struct$_RLPItem_$2972_memory_ptr_$bound_to$_t_bytes_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_bytes_memory_ptr_$returns$_t_struct$_RLPItem_$2973_memory_ptr_$bound_to$_t_bytes_memory_ptr_$",
                         "typeString": "function (bytes memory) pure returns (struct RLPReader.RLPItem memory)"
                       }
                     },
-                    "id": 1124,
+                    "id": 1125,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2262,7 +2262,7 @@
                     "nodeType": "FunctionCall",
                     "src": "494:15:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_RLPItem_$2972_memory_ptr",
+                      "typeIdentifier": "t_struct$_RLPItem_$2973_memory_ptr",
                       "typeString": "struct RLPReader.RLPItem memory"
                     }
                   },
@@ -2271,41 +2271,41 @@
                 },
                 {
                   "assignments": [
-                    1130
+                    1131
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1130,
+                      "id": 1131,
                       "name": "itemList",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1230,
+                      "scope": 1231,
                       "src": "520:35:10",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                        "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                         "typeString": "struct RLPReader.RLPItem[]"
                       },
                       "typeName": {
                         "baseType": {
                           "contractScope": null,
-                          "id": 1128,
+                          "id": 1129,
                           "name": "RLPReader.RLPItem",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 2972,
+                          "referencedDeclaration": 2973,
                           "src": "520:17:10",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_RLPItem_$2972_storage_ptr",
+                            "typeIdentifier": "t_struct$_RLPItem_$2973_storage_ptr",
                             "typeString": "struct RLPReader.RLPItem"
                           }
                         },
-                        "id": 1129,
+                        "id": 1130,
                         "length": null,
                         "nodeType": "ArrayTypeName",
                         "src": "520:19:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_storage_$dyn_storage_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_storage_$dyn_storage_ptr",
                           "typeString": "struct RLPReader.RLPItem[]"
                         }
                       },
@@ -2313,7 +2313,7 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1134,
+                  "id": 1135,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [],
@@ -2321,32 +2321,32 @@
                       "argumentTypes": [],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1131,
+                        "id": 1132,
                         "name": "item",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1121,
+                        "referencedDeclaration": 1122,
                         "src": "558:4:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_RLPItem_$2972_memory_ptr",
+                          "typeIdentifier": "t_struct$_RLPItem_$2973_memory_ptr",
                           "typeString": "struct RLPReader.RLPItem memory"
                         }
                       },
-                      "id": 1132,
+                      "id": 1133,
                       "isConstant": false,
                       "isLValue": true,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "toList",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 3075,
+                      "referencedDeclaration": 3076,
                       "src": "558:11:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2972_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2972_memory_ptr_$",
+                        "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2973_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2973_memory_ptr_$",
                         "typeString": "function (struct RLPReader.RLPItem memory) pure returns (struct RLPReader.RLPItem memory[] memory)"
                       }
                     },
-                    "id": 1133,
+                    "id": 1134,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2356,7 +2356,7 @@
                     "nodeType": "FunctionCall",
                     "src": "558:13:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                       "typeString": "struct RLPReader.RLPItem memory[] memory"
                     }
                   },
@@ -2365,15 +2365,15 @@
                 },
                 {
                   "assignments": [
-                    1136
+                    1137
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1136,
+                      "id": 1137,
                       "name": "listLength",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1230,
+                      "scope": 1231,
                       "src": "584:15:10",
                       "stateVariable": false,
                       "storageLocation": "default",
@@ -2382,7 +2382,7 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 1135,
+                        "id": 1136,
                         "name": "uint",
                         "nodeType": "ElementaryTypeName",
                         "src": "584:4:10",
@@ -2395,23 +2395,23 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1139,
+                  "id": 1140,
                   "initialValue": {
                     "argumentTypes": null,
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1137,
+                      "id": 1138,
                       "name": "itemList",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1130,
+                      "referencedDeclaration": 1131,
                       "src": "602:8:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                        "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                         "typeString": "struct RLPReader.RLPItem memory[] memory"
                       }
                     },
-                    "id": 1138,
+                    "id": 1139,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2430,41 +2430,41 @@
                 },
                 {
                   "assignments": [
-                    1143
+                    1144
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1143,
+                      "id": 1144,
                       "name": "data",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1230,
+                      "scope": 1231,
                       "src": "628:23:10",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_array$_t_struct$_PathValue_$2944_memory_$dyn_memory_ptr",
+                        "typeIdentifier": "t_array$_t_struct$_PathValue_$2945_memory_$dyn_memory_ptr",
                         "typeString": "struct Structs.PathValue[]"
                       },
                       "typeName": {
                         "baseType": {
                           "contractScope": null,
-                          "id": 1141,
+                          "id": 1142,
                           "name": "PathValue",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 2944,
+                          "referencedDeclaration": 2945,
                           "src": "628:9:10",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_PathValue_$2944_storage_ptr",
+                            "typeIdentifier": "t_struct$_PathValue_$2945_storage_ptr",
                             "typeString": "struct Structs.PathValue"
                           }
                         },
-                        "id": 1142,
+                        "id": 1143,
                         "length": null,
                         "nodeType": "ArrayTypeName",
                         "src": "628:11:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2944_storage_$dyn_storage_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2945_storage_$dyn_storage_ptr",
                           "typeString": "struct Structs.PathValue[]"
                         }
                       },
@@ -2472,17 +2472,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1149,
+                  "id": 1150,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1147,
+                        "id": 1148,
                         "name": "listLength",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1136,
+                        "referencedDeclaration": 1137,
                         "src": "670:10:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2497,7 +2497,7 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1146,
+                      "id": 1147,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -2505,33 +2505,33 @@
                       "nodeType": "NewExpression",
                       "src": "654:15:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_objectcreation_pure$_t_uint256_$returns$_t_array$_t_struct$_PathValue_$2944_memory_$dyn_memory_$",
+                        "typeIdentifier": "t_function_objectcreation_pure$_t_uint256_$returns$_t_array$_t_struct$_PathValue_$2945_memory_$dyn_memory_$",
                         "typeString": "function (uint256) pure returns (struct Structs.PathValue memory[] memory)"
                       },
                       "typeName": {
                         "baseType": {
                           "contractScope": null,
-                          "id": 1144,
+                          "id": 1145,
                           "name": "PathValue",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 2944,
+                          "referencedDeclaration": 2945,
                           "src": "658:9:10",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_PathValue_$2944_storage_ptr",
+                            "typeIdentifier": "t_struct$_PathValue_$2945_storage_ptr",
                             "typeString": "struct Structs.PathValue"
                           }
                         },
-                        "id": 1145,
+                        "id": 1146,
                         "length": null,
                         "nodeType": "ArrayTypeName",
                         "src": "658:11:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2944_storage_$dyn_storage_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2945_storage_$dyn_storage_ptr",
                           "typeString": "struct Structs.PathValue[]"
                         }
                       }
                     },
-                    "id": 1148,
+                    "id": 1149,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2541,7 +2541,7 @@
                     "nodeType": "FunctionCall",
                     "src": "654:27:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_PathValue_$2944_memory_$dyn_memory",
+                      "typeIdentifier": "t_array$_t_struct$_PathValue_$2945_memory_$dyn_memory",
                       "typeString": "struct Structs.PathValue memory[] memory"
                     }
                   },
@@ -2550,37 +2550,37 @@
                 },
                 {
                   "body": {
-                    "id": 1204,
+                    "id": 1205,
                     "nodeType": "Block",
                     "src": "730:294:10",
                     "statements": [
                       {
                         "assignments": [
-                          1161
+                          1162
                         ],
                         "declarations": [
                           {
                             "constant": false,
-                            "id": 1161,
+                            "id": 1162,
                             "name": "pathValue",
                             "nodeType": "VariableDeclaration",
-                            "scope": 1230,
+                            "scope": 1231,
                             "src": "745:26:10",
                             "stateVariable": false,
                             "storageLocation": "memory",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_PathValue_$2944_memory_ptr",
+                              "typeIdentifier": "t_struct$_PathValue_$2945_memory_ptr",
                               "typeString": "struct Structs.PathValue"
                             },
                             "typeName": {
                               "contractScope": null,
-                              "id": 1160,
+                              "id": 1161,
                               "name": "PathValue",
                               "nodeType": "UserDefinedTypeName",
-                              "referencedDeclaration": 2944,
+                              "referencedDeclaration": 2945,
                               "src": "745:9:10",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_PathValue_$2944_storage_ptr",
+                                "typeIdentifier": "t_struct$_PathValue_$2945_storage_ptr",
                                 "typeString": "struct Structs.PathValue"
                               }
                             },
@@ -2588,7 +2588,7 @@
                             "visibility": "internal"
                           }
                         ],
-                        "id": 1197,
+                        "id": 1198,
                         "initialValue": {
                           "argumentTypes": null,
                           "arguments": [
@@ -2611,25 +2611,25 @@
                                             "argumentTypes": null,
                                             "baseExpression": {
                                               "argumentTypes": null,
-                                              "id": 1164,
+                                              "id": 1165,
                                               "name": "itemList",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 1130,
+                                              "referencedDeclaration": 1131,
                                               "src": "809:8:10",
                                               "typeDescriptions": {
-                                                "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                                                "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                                                 "typeString": "struct RLPReader.RLPItem memory[] memory"
                                               }
                                             },
-                                            "id": 1166,
+                                            "id": 1167,
                                             "indexExpression": {
                                               "argumentTypes": null,
-                                              "id": 1165,
+                                              "id": 1166,
                                               "name": "i",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 1151,
+                                              "referencedDeclaration": 1152,
                                               "src": "818:1:10",
                                               "typeDescriptions": {
                                                 "typeIdentifier": "t_uint256",
@@ -2643,25 +2643,25 @@
                                             "nodeType": "IndexAccess",
                                             "src": "809:11:10",
                                             "typeDescriptions": {
-                                              "typeIdentifier": "t_struct$_RLPItem_$2972_memory",
+                                              "typeIdentifier": "t_struct$_RLPItem_$2973_memory",
                                               "typeString": "struct RLPReader.RLPItem memory"
                                             }
                                           },
-                                          "id": 1167,
+                                          "id": 1168,
                                           "isConstant": false,
                                           "isLValue": true,
                                           "isPure": false,
                                           "lValueRequested": false,
                                           "memberName": "toList",
                                           "nodeType": "MemberAccess",
-                                          "referencedDeclaration": 3075,
+                                          "referencedDeclaration": 3076,
                                           "src": "809:18:10",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2972_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2972_memory_ptr_$",
+                                            "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2973_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2973_memory_ptr_$",
                                             "typeString": "function (struct RLPReader.RLPItem memory) pure returns (struct RLPReader.RLPItem memory[] memory)"
                                           }
                                         },
-                                        "id": 1168,
+                                        "id": 1169,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": false,
@@ -2671,15 +2671,15 @@
                                         "nodeType": "FunctionCall",
                                         "src": "809:20:10",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                                           "typeString": "struct RLPReader.RLPItem memory[] memory"
                                         }
                                       },
-                                      "id": 1170,
+                                      "id": 1171,
                                       "indexExpression": {
                                         "argumentTypes": null,
                                         "hexValue": "30",
-                                        "id": 1169,
+                                        "id": 1170,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": true,
@@ -2701,25 +2701,25 @@
                                       "nodeType": "IndexAccess",
                                       "src": "809:23:10",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_struct$_RLPItem_$2972_memory",
+                                        "typeIdentifier": "t_struct$_RLPItem_$2973_memory",
                                         "typeString": "struct RLPReader.RLPItem memory"
                                       }
                                     },
-                                    "id": 1171,
+                                    "id": 1172,
                                     "isConstant": false,
                                     "isLValue": true,
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "memberName": "toBytes",
                                     "nodeType": "MemberAccess",
-                                    "referencedDeclaration": 3413,
+                                    "referencedDeclaration": 3414,
                                     "src": "809:31:10",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2972_memory_ptr_$returns$_t_bytes_memory_ptr_$bound_to$_t_struct$_RLPItem_$2972_memory_ptr_$",
+                                      "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2973_memory_ptr_$returns$_t_bytes_memory_ptr_$bound_to$_t_struct$_RLPItem_$2973_memory_ptr_$",
                                       "typeString": "function (struct RLPReader.RLPItem memory) pure returns (bytes memory)"
                                     }
                                   },
-                                  "id": 1172,
+                                  "id": 1173,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -2741,7 +2741,7 @@
                                     "typeString": "bytes memory"
                                   }
                                 ],
-                                "id": 1163,
+                                "id": 1164,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -2754,7 +2754,7 @@
                                 },
                                 "typeName": "string"
                               },
-                              "id": 1173,
+                              "id": 1174,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -2787,25 +2787,25 @@
                                             "argumentTypes": null,
                                             "baseExpression": {
                                               "argumentTypes": null,
-                                              "id": 1175,
+                                              "id": 1176,
                                               "name": "itemList",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 1130,
+                                              "referencedDeclaration": 1131,
                                               "src": "869:8:10",
                                               "typeDescriptions": {
-                                                "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                                                "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                                                 "typeString": "struct RLPReader.RLPItem memory[] memory"
                                               }
                                             },
-                                            "id": 1177,
+                                            "id": 1178,
                                             "indexExpression": {
                                               "argumentTypes": null,
-                                              "id": 1176,
+                                              "id": 1177,
                                               "name": "i",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 1151,
+                                              "referencedDeclaration": 1152,
                                               "src": "878:1:10",
                                               "typeDescriptions": {
                                                 "typeIdentifier": "t_uint256",
@@ -2819,25 +2819,25 @@
                                             "nodeType": "IndexAccess",
                                             "src": "869:11:10",
                                             "typeDescriptions": {
-                                              "typeIdentifier": "t_struct$_RLPItem_$2972_memory",
+                                              "typeIdentifier": "t_struct$_RLPItem_$2973_memory",
                                               "typeString": "struct RLPReader.RLPItem memory"
                                             }
                                           },
-                                          "id": 1178,
+                                          "id": 1179,
                                           "isConstant": false,
                                           "isLValue": true,
                                           "isPure": false,
                                           "lValueRequested": false,
                                           "memberName": "toList",
                                           "nodeType": "MemberAccess",
-                                          "referencedDeclaration": 3075,
+                                          "referencedDeclaration": 3076,
                                           "src": "869:18:10",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2972_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2972_memory_ptr_$",
+                                            "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2973_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2973_memory_ptr_$",
                                             "typeString": "function (struct RLPReader.RLPItem memory) pure returns (struct RLPReader.RLPItem memory[] memory)"
                                           }
                                         },
-                                        "id": 1179,
+                                        "id": 1180,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": false,
@@ -2847,15 +2847,15 @@
                                         "nodeType": "FunctionCall",
                                         "src": "869:20:10",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                                           "typeString": "struct RLPReader.RLPItem memory[] memory"
                                         }
                                       },
-                                      "id": 1181,
+                                      "id": 1182,
                                       "indexExpression": {
                                         "argumentTypes": null,
                                         "hexValue": "31",
-                                        "id": 1180,
+                                        "id": 1181,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": true,
@@ -2877,25 +2877,25 @@
                                       "nodeType": "IndexAccess",
                                       "src": "869:23:10",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_struct$_RLPItem_$2972_memory",
+                                        "typeIdentifier": "t_struct$_RLPItem_$2973_memory",
                                         "typeString": "struct RLPReader.RLPItem memory"
                                       }
                                     },
-                                    "id": 1182,
+                                    "id": 1183,
                                     "isConstant": false,
                                     "isLValue": true,
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "memberName": "toBytes",
                                     "nodeType": "MemberAccess",
-                                    "referencedDeclaration": 3413,
+                                    "referencedDeclaration": 3414,
                                     "src": "869:31:10",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2972_memory_ptr_$returns$_t_bytes_memory_ptr_$bound_to$_t_struct$_RLPItem_$2972_memory_ptr_$",
+                                      "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2973_memory_ptr_$returns$_t_bytes_memory_ptr_$bound_to$_t_struct$_RLPItem_$2973_memory_ptr_$",
                                       "typeString": "function (struct RLPReader.RLPItem memory) pure returns (bytes memory)"
                                     }
                                   },
-                                  "id": 1183,
+                                  "id": 1184,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -2917,7 +2917,7 @@
                                     "typeString": "bytes memory"
                                   }
                                 ],
-                                "id": 1174,
+                                "id": 1175,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -2930,7 +2930,7 @@
                                 },
                                 "typeName": "string"
                               },
-                              "id": 1184,
+                              "id": 1185,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -2963,25 +2963,25 @@
                                             "argumentTypes": null,
                                             "baseExpression": {
                                               "argumentTypes": null,
-                                              "id": 1186,
+                                              "id": 1187,
                                               "name": "itemList",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 1130,
+                                              "referencedDeclaration": 1131,
                                               "src": "929:8:10",
                                               "typeDescriptions": {
-                                                "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                                                "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                                                 "typeString": "struct RLPReader.RLPItem memory[] memory"
                                               }
                                             },
-                                            "id": 1188,
+                                            "id": 1189,
                                             "indexExpression": {
                                               "argumentTypes": null,
-                                              "id": 1187,
+                                              "id": 1188,
                                               "name": "i",
                                               "nodeType": "Identifier",
                                               "overloadedDeclarations": [],
-                                              "referencedDeclaration": 1151,
+                                              "referencedDeclaration": 1152,
                                               "src": "938:1:10",
                                               "typeDescriptions": {
                                                 "typeIdentifier": "t_uint256",
@@ -2995,25 +2995,25 @@
                                             "nodeType": "IndexAccess",
                                             "src": "929:11:10",
                                             "typeDescriptions": {
-                                              "typeIdentifier": "t_struct$_RLPItem_$2972_memory",
+                                              "typeIdentifier": "t_struct$_RLPItem_$2973_memory",
                                               "typeString": "struct RLPReader.RLPItem memory"
                                             }
                                           },
-                                          "id": 1189,
+                                          "id": 1190,
                                           "isConstant": false,
                                           "isLValue": true,
                                           "isPure": false,
                                           "lValueRequested": false,
                                           "memberName": "toList",
                                           "nodeType": "MemberAccess",
-                                          "referencedDeclaration": 3075,
+                                          "referencedDeclaration": 3076,
                                           "src": "929:18:10",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2972_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2972_memory_ptr_$",
+                                            "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2973_memory_ptr_$returns$_t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr_$bound_to$_t_struct$_RLPItem_$2973_memory_ptr_$",
                                             "typeString": "function (struct RLPReader.RLPItem memory) pure returns (struct RLPReader.RLPItem memory[] memory)"
                                           }
                                         },
-                                        "id": 1190,
+                                        "id": 1191,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": false,
@@ -3023,15 +3023,15 @@
                                         "nodeType": "FunctionCall",
                                         "src": "929:20:10",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2972_memory_$dyn_memory_ptr",
+                                          "typeIdentifier": "t_array$_t_struct$_RLPItem_$2973_memory_$dyn_memory_ptr",
                                           "typeString": "struct RLPReader.RLPItem memory[] memory"
                                         }
                                       },
-                                      "id": 1192,
+                                      "id": 1193,
                                       "indexExpression": {
                                         "argumentTypes": null,
                                         "hexValue": "32",
-                                        "id": 1191,
+                                        "id": 1192,
                                         "isConstant": false,
                                         "isLValue": false,
                                         "isPure": true,
@@ -3053,25 +3053,25 @@
                                       "nodeType": "IndexAccess",
                                       "src": "929:23:10",
                                       "typeDescriptions": {
-                                        "typeIdentifier": "t_struct$_RLPItem_$2972_memory",
+                                        "typeIdentifier": "t_struct$_RLPItem_$2973_memory",
                                         "typeString": "struct RLPReader.RLPItem memory"
                                       }
                                     },
-                                    "id": 1193,
+                                    "id": 1194,
                                     "isConstant": false,
                                     "isLValue": true,
                                     "isPure": false,
                                     "lValueRequested": false,
                                     "memberName": "toBytes",
                                     "nodeType": "MemberAccess",
-                                    "referencedDeclaration": 3413,
+                                    "referencedDeclaration": 3414,
                                     "src": "929:31:10",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2972_memory_ptr_$returns$_t_bytes_memory_ptr_$bound_to$_t_struct$_RLPItem_$2972_memory_ptr_$",
+                                      "typeIdentifier": "t_function_internal_pure$_t_struct$_RLPItem_$2973_memory_ptr_$returns$_t_bytes_memory_ptr_$bound_to$_t_struct$_RLPItem_$2973_memory_ptr_$",
                                       "typeString": "function (struct RLPReader.RLPItem memory) pure returns (bytes memory)"
                                     }
                                   },
-                                  "id": 1194,
+                                  "id": 1195,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": false,
@@ -3093,7 +3093,7 @@
                                     "typeString": "bytes memory"
                                   }
                                 ],
-                                "id": 1185,
+                                "id": 1186,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": true,
@@ -3106,7 +3106,7 @@
                                 },
                                 "typeName": "string"
                               },
-                              "id": 1195,
+                              "id": 1196,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -3136,18 +3136,18 @@
                                 "typeString": "string memory"
                               }
                             ],
-                            "id": 1162,
+                            "id": 1163,
                             "name": "PathValue",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2944,
+                            "referencedDeclaration": 2945,
                             "src": "774:9:10",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_struct$_PathValue_$2944_storage_ptr_$",
+                              "typeIdentifier": "t_type$_t_struct$_PathValue_$2945_storage_ptr_$",
                               "typeString": "type(struct Structs.PathValue storage pointer)"
                             }
                           },
-                          "id": 1196,
+                          "id": 1197,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3157,7 +3157,7 @@
                           "nodeType": "FunctionCall",
                           "src": "774:204:10",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_PathValue_$2944_memory",
+                            "typeIdentifier": "t_struct$_PathValue_$2945_memory",
                             "typeString": "struct Structs.PathValue memory"
                           }
                         },
@@ -3167,7 +3167,7 @@
                       {
                         "expression": {
                           "argumentTypes": null,
-                          "id": 1202,
+                          "id": 1203,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3176,25 +3176,25 @@
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 1198,
+                              "id": 1199,
                               "name": "data",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1143,
+                              "referencedDeclaration": 1144,
                               "src": "993:4:10",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_array$_t_struct$_PathValue_$2944_memory_$dyn_memory_ptr",
+                                "typeIdentifier": "t_array$_t_struct$_PathValue_$2945_memory_$dyn_memory_ptr",
                                 "typeString": "struct Structs.PathValue memory[] memory"
                               }
                             },
-                            "id": 1200,
+                            "id": 1201,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 1199,
+                              "id": 1200,
                               "name": "i",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1151,
+                              "referencedDeclaration": 1152,
                               "src": "998:1:10",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -3208,7 +3208,7 @@
                             "nodeType": "IndexAccess",
                             "src": "993:7:10",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_PathValue_$2944_memory",
+                              "typeIdentifier": "t_struct$_PathValue_$2945_memory",
                               "typeString": "struct Structs.PathValue memory"
                             }
                           },
@@ -3216,24 +3216,24 @@
                           "operator": "=",
                           "rightHandSide": {
                             "argumentTypes": null,
-                            "id": 1201,
+                            "id": 1202,
                             "name": "pathValue",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1161,
+                            "referencedDeclaration": 1162,
                             "src": "1003:9:10",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_PathValue_$2944_memory_ptr",
+                              "typeIdentifier": "t_struct$_PathValue_$2945_memory_ptr",
                               "typeString": "struct Structs.PathValue memory"
                             }
                           },
                           "src": "993:19:10",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_PathValue_$2944_memory",
+                            "typeIdentifier": "t_struct$_PathValue_$2945_memory",
                             "typeString": "struct Structs.PathValue memory"
                           }
                         },
-                        "id": 1203,
+                        "id": 1204,
                         "nodeType": "ExpressionStatement",
                         "src": "993:19:10"
                       }
@@ -3245,18 +3245,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1156,
+                    "id": 1157,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 1154,
+                      "id": 1155,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1151,
+                      "referencedDeclaration": 1152,
                       "src": "709:1:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3267,11 +3267,11 @@
                     "operator": "<",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 1155,
+                      "id": 1156,
                       "name": "listLength",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1136,
+                      "referencedDeclaration": 1137,
                       "src": "713:10:10",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3284,18 +3284,18 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1205,
+                  "id": 1206,
                   "initializationExpression": {
                     "assignments": [
-                      1151
+                      1152
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 1151,
+                        "id": 1152,
                         "name": "i",
                         "nodeType": "VariableDeclaration",
-                        "scope": 1230,
+                        "scope": 1231,
                         "src": "697:6:10",
                         "stateVariable": false,
                         "storageLocation": "default",
@@ -3304,7 +3304,7 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 1150,
+                          "id": 1151,
                           "name": "uint",
                           "nodeType": "ElementaryTypeName",
                           "src": "697:4:10",
@@ -3317,11 +3317,11 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 1153,
+                    "id": 1154,
                     "initialValue": {
                       "argumentTypes": null,
                       "hexValue": "30",
-                      "id": 1152,
+                      "id": 1153,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -3342,7 +3342,7 @@
                   "loopExpression": {
                     "expression": {
                       "argumentTypes": null,
-                      "id": 1158,
+                      "id": 1159,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3353,11 +3353,11 @@
                       "src": "725:3:10",
                       "subExpression": {
                         "argumentTypes": null,
-                        "id": 1157,
+                        "id": 1158,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1151,
+                        "referencedDeclaration": 1152,
                         "src": "725:1:10",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3369,7 +3369,7 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 1159,
+                    "id": 1160,
                     "nodeType": "ExpressionStatement",
                     "src": "725:3:10"
                   },
@@ -3378,31 +3378,31 @@
                 },
                 {
                   "assignments": [
-                    1207
+                    1208
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 1207,
+                      "id": 1208,
                       "name": "container",
                       "nodeType": "VariableDeclaration",
-                      "scope": 1230,
+                      "scope": 1231,
                       "src": "1036:23:10",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_JsonContainer_$1091",
+                        "typeIdentifier": "t_contract$_JsonContainer_$1092",
                         "typeString": "contract JsonContainer"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1206,
+                        "id": 1207,
                         "name": "JsonContainer",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1091,
+                        "referencedDeclaration": 1092,
                         "src": "1036:13:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_JsonContainer_$1091",
+                          "typeIdentifier": "t_contract$_JsonContainer_$1092",
                           "typeString": "contract JsonContainer"
                         }
                       },
@@ -3410,13 +3410,13 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 1211,
+                  "id": 1212,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 1209,
+                      "id": 1210,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3424,23 +3424,23 @@
                       "nodeType": "NewExpression",
                       "src": "1062:17:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_JsonContainer_$1091_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_JsonContainer_$1092_$",
                         "typeString": "function () returns (contract JsonContainer)"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 1208,
+                        "id": 1209,
                         "name": "JsonContainer",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 1091,
+                        "referencedDeclaration": 1092,
                         "src": "1066:13:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_JsonContainer_$1091",
+                          "typeIdentifier": "t_contract$_JsonContainer_$1092",
                           "typeString": "contract JsonContainer"
                         }
                       }
                     },
-                    "id": 1210,
+                    "id": 1211,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3450,7 +3450,7 @@
                     "nodeType": "FunctionCall",
                     "src": "1062:19:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_JsonContainer_$1091",
+                      "typeIdentifier": "t_contract$_JsonContainer_$1092",
                       "typeString": "contract JsonContainer"
                     }
                   },
@@ -3463,14 +3463,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1215,
+                        "id": 1216,
                         "name": "data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1143,
+                        "referencedDeclaration": 1144,
                         "src": "1113:4:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2944_memory_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2945_memory_$dyn_memory_ptr",
                           "typeString": "struct Structs.PathValue memory[] memory"
                         }
                       }
@@ -3478,38 +3478,38 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2944_memory_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_PathValue_$2945_memory_$dyn_memory_ptr",
                           "typeString": "struct Structs.PathValue memory[] memory"
                         }
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1212,
+                        "id": 1213,
                         "name": "container",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1207,
+                        "referencedDeclaration": 1208,
                         "src": "1092:9:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_JsonContainer_$1091",
+                          "typeIdentifier": "t_contract$_JsonContainer_$1092",
                           "typeString": "contract JsonContainer"
                         }
                       },
-                      "id": 1214,
+                      "id": 1215,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "initialize",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 644,
+                      "referencedDeclaration": 645,
                       "src": "1092:20:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_external_nonpayable$_t_array$_t_struct$_PathValue_$2944_memory_$dyn_memory_ptr_$returns$__$",
+                        "typeIdentifier": "t_function_external_nonpayable$_t_array$_t_struct$_PathValue_$2945_memory_$dyn_memory_ptr_$returns$__$",
                         "typeString": "function (struct Structs.PathValue memory[] memory) external"
                       }
                     },
-                    "id": 1216,
+                    "id": 1217,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3523,7 +3523,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1217,
+                  "id": 1218,
                   "nodeType": "ExpressionStatement",
                   "src": "1092:26:10"
                 },
@@ -3539,14 +3539,14 @@
                             "arguments": [
                               {
                                 "argumentTypes": null,
-                                "id": 1223,
+                                "id": 1224,
                                 "name": "container",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 1207,
+                                "referencedDeclaration": 1208,
                                 "src": "1164:9:10",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_contract$_JsonContainer_$1091",
+                                  "typeIdentifier": "t_contract$_JsonContainer_$1092",
                                   "typeString": "contract JsonContainer"
                                 }
                               }
@@ -3554,11 +3554,11 @@
                             "expression": {
                               "argumentTypes": [
                                 {
-                                  "typeIdentifier": "t_contract$_JsonContainer_$1091",
+                                  "typeIdentifier": "t_contract$_JsonContainer_$1092",
                                   "typeString": "contract JsonContainer"
                                 }
                               ],
-                              "id": 1222,
+                              "id": 1223,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -3571,7 +3571,7 @@
                               },
                               "typeName": "address"
                             },
-                            "id": 1224,
+                            "id": 1225,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -3587,11 +3587,11 @@
                           },
                           {
                             "argumentTypes": null,
-                            "id": 1225,
+                            "id": 1226,
                             "name": "_name",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1115,
+                            "referencedDeclaration": 1116,
                             "src": "1176:5:10",
                             "typeDescriptions": {
                               "typeIdentifier": "t_string_memory_ptr",
@@ -3610,18 +3610,18 @@
                               "typeString": "string memory"
                             }
                           ],
-                          "id": 1221,
+                          "id": 1222,
                           "name": "Container",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2949,
+                          "referencedDeclaration": 2950,
                           "src": "1146:9:10",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_type$_t_struct$_Container_$2949_storage_ptr_$",
+                            "typeIdentifier": "t_type$_t_struct$_Container_$2950_storage_ptr_$",
                             "typeString": "type(struct Structs.Container storage pointer)"
                           }
                         },
-                        "id": 1226,
+                        "id": 1227,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3631,7 +3631,7 @@
                         "nodeType": "FunctionCall",
                         "src": "1146:36:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Container_$2949_memory",
+                          "typeIdentifier": "t_struct$_Container_$2950_memory",
                           "typeString": "struct Structs.Container memory"
                         }
                       }
@@ -3639,24 +3639,24 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_struct$_Container_$2949_memory",
+                          "typeIdentifier": "t_struct$_Container_$2950_memory",
                           "typeString": "struct Structs.Container memory"
                         }
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1218,
+                        "id": 1219,
                         "name": "containers_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1111,
+                        "referencedDeclaration": 1112,
                         "src": "1129:11:10",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_Container_$2949_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_Container_$2950_storage_$dyn_storage",
                           "typeString": "struct Structs.Container storage ref[] storage ref"
                         }
                       },
-                      "id": 1220,
+                      "id": 1221,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3666,11 +3666,11 @@
                       "referencedDeclaration": null,
                       "src": "1129:16:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Container_$2949_storage_$returns$_t_uint256_$",
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Container_$2950_storage_$returns$_t_uint256_$",
                         "typeString": "function (struct Structs.Container storage ref) returns (uint256)"
                       }
                     },
-                    "id": 1227,
+                    "id": 1228,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3684,14 +3684,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 1228,
+                  "id": 1229,
                   "nodeType": "ExpressionStatement",
                   "src": "1129:54:10"
                 }
               ]
             },
             "documentation": null,
-            "id": 1230,
+            "id": 1231,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -3699,15 +3699,15 @@
             "name": "createContainer",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1116,
+              "id": 1117,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1113,
+                  "id": 1114,
                   "name": "_in",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1230,
+                  "scope": 1231,
                   "src": "412:16:10",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3716,7 +3716,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 1112,
+                    "id": 1113,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "412:5:10",
@@ -3730,10 +3730,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1115,
+                  "id": 1116,
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1230,
+                  "scope": 1231,
                   "src": "430:12:10",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -3742,7 +3742,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1114,
+                    "id": 1115,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "430:6:10",
@@ -3759,12 +3759,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1117,
+              "id": 1118,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "451:0:10"
             },
-            "scope": 1240,
+            "scope": 1241,
             "src": "387:804:10",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3772,33 +3772,33 @@
           },
           {
             "body": {
-              "id": 1238,
+              "id": 1239,
               "nodeType": "Block",
               "src": "1258:37:10",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1236,
+                    "id": 1237,
                     "name": "containers_",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1111,
+                    "referencedDeclaration": 1112,
                     "src": "1276:11:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Container_$2949_storage_$dyn_storage",
+                      "typeIdentifier": "t_array$_t_struct$_Container_$2950_storage_$dyn_storage",
                       "typeString": "struct Structs.Container storage ref[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 1235,
-                  "id": 1237,
+                  "functionReturnParameters": 1236,
+                  "id": 1238,
                   "nodeType": "Return",
                   "src": "1269:18:10"
                 }
               ]
             },
             "documentation": null,
-            "id": 1239,
+            "id": 1240,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -3806,48 +3806,48 @@
             "name": "getContainers",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1231,
+              "id": 1232,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1221:2:10"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1235,
+              "id": 1236,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1234,
+                  "id": 1235,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1239,
+                  "scope": 1240,
                   "src": "1245:11:10",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_Container_$2949_memory_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_Container_$2950_memory_$dyn_memory_ptr",
                     "typeString": "struct Structs.Container[]"
                   },
                   "typeName": {
                     "baseType": {
                       "contractScope": null,
-                      "id": 1232,
+                      "id": 1233,
                       "name": "Container",
                       "nodeType": "UserDefinedTypeName",
-                      "referencedDeclaration": 2949,
+                      "referencedDeclaration": 2950,
                       "src": "1245:9:10",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Container_$2949_storage_ptr",
+                        "typeIdentifier": "t_struct$_Container_$2950_storage_ptr",
                         "typeString": "struct Structs.Container"
                       }
                     },
-                    "id": 1233,
+                    "id": 1234,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "1245:11:10",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_Container_$2949_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_Container_$2950_storage_$dyn_storage_ptr",
                       "typeString": "struct Structs.Container[]"
                     }
                   },
@@ -3857,14 +3857,14 @@
               ],
               "src": "1244:13:10"
             },
-            "scope": 1240,
+            "scope": 1241,
             "src": "1199:96:10",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1241,
+        "scope": 1242,
         "src": "188:1112:10"
       }
     ],
@@ -3876,5 +3876,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-03T09:51:48.774Z"
+  "updatedAt": "2018-12-03T12:43:28.872Z"
 }
