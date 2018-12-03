@@ -16,7 +16,7 @@ const vendorMnemonic = 'addict boil just alien picture quantum crumble avocado c
 const finalUserMnemonic = 'wing clog sketch scrub type volcano exotic nerve immense resist say youth';
 
 const ownerHDPprovider = new HDWalletProvider(process.env.DEVELOPMENT_MNEMONIC, "http://" + process.env.DEVELOPMENT_HOST + ":" + process.env.DEVELOPMENT_PORT);
-const vendorHDPprovider = new HDWalletProvider(vendorMnemonic, "http://" + process.env.DEVELOPMENT_HOST + ":" + process.env.DEVELOPMENT_PORT);
+const vendorHDPprovider = new HDWalletProvider(vendorMnemonic, "http://" + process.env.DEVELOPMENT_HOST + ":" + process.env.DEVELOPMENT_PORT, 0, 3);
 const finalUserHDPprovider = new HDWalletProvider(finalUserMnemonic, "http://" + process.env.DEVELOPMENT_HOST + ":" + process.env.DEVELOPMENT_PORT);
 
 final(); // si hacemos esto evitamos el blocktracker que no creo que nos sea de utilidad...
@@ -30,7 +30,9 @@ const vendorContractInstancePCM = new vendorWeb3.eth.Contract(contractPCM.abi, c
 const finalUserContractInstancePCM = new finalUserWeb3.eth.Contract(contractPCM.abi, contractPCM.networks[process.env.DEVELOPMENT_NETWORKID].address);
 
 const cardOwnerAddress = ownerHDPprovider.getAddress(0);
-const cardVendorAddress = vendorHDPprovider.getAddress(0);
+const cardVendorOneAddress = vendorHDPprovider.getAddress(0);
+const cardVendorTwoAddress = vendorHDPprovider.getAddress(1);
+const cardVendorThreeAddress = vendorHDPprovider.getAddress(2);
 const cardUserAddress = finalUserHDPprovider.getAddress(0);
 
 const jsonPrintOptions = {
@@ -43,8 +45,20 @@ const ownerTransactionObject = {
     gasPrice: 0
 };
 
-const vendorTransactionObject = {
-    from: cardVendorAddress,
+const vendorOneTransactionObject = {
+    from: cardVendorOneAddress,
+    gas: 4000000,
+    gasPrice: 0
+};
+
+const vendorTwoTransactionObject = {
+    from: cardVendorTwoAddress,
+    gas: 4000000,
+    gasPrice: 0
+};
+
+const vendorThreeTransactionObject = {
+    from: cardVendorThreeAddress,
     gas: 4000000,
     gasPrice: 0
 };
@@ -65,12 +79,12 @@ program.on('--help', function () {
 async function producerMenu() {
     let options = [
         { name: 'Create a prepaid card', value: cardCreation },
-        { name: 'Authorize vendor', value: addVendor },
+        { name: 'Authorize vendor', value: authorizeVendor },
         { name: 'See prepaid card information', value: cardInfo },
         { name: 'Check balance', value: checkOwnerBalance }
     ];
     let questions = [
-        { type: 'list', name: 'operation', message: 'Select an operation', choices: options }
+        { type: 'list', name: 'operation', message: 'Select an operation:', choices: options }
     ];
     let answer = await inquirer.prompt(questions);
     await answer.operation();
@@ -91,15 +105,20 @@ async function cardCreation() {
     console.log('Done.');
 }
 
-async function addVendor() {
+async function authorizeVendor() {
+    let options = [
+        { name: "One", value: cardVendorOneAddress },
+        { name: "Two", value: cardVendorTwoAddress },
+        { name: "Three", value: cardVendorThreeAddress }
+    ];
     let questions = [
-        { type: 'input', name: 'vendor', message: 'Specify vendor address:' }
+        { type: 'list', name: 'vendor', message: 'Select a vendor:', choices: options }
     ];
     console.log('Assign vendor to a prepaid card');
     let answer = await inquirer.prompt(questions);
-    let isSigner = await ownerContractInstancePCM.methods.isSigner(cardVendorAddress).call();
+    let isSigner = await ownerContractInstancePCM.methods.isSigner(answer.vendor).call();
     if (!isSigner) {
-        await ownerContractInstancePCM.methods.addSigner(cardVendorAddress).send(ownerTransactionObject);
+        await ownerContractInstancePCM.methods.addSigner(answer.vendor).send(ownerTransactionObject);
         console.log('Done.');
     } else {
         console.log('Already vendor.');
@@ -132,17 +151,23 @@ async function checkOwnerBalance() {
 }
 
 async function vendorMenu() {
+    let vendors = [
+        { name: "One", value: vendorOneTransactionObject },
+        { name: "Two", value: vendorTwoTransactionObject },
+        { name: "Three", value: vendorThreeTransactionObject }
+    ];
     let options = [
         { name: 'Activate prepaid card', value: cardActivation }
     ];
     let questions = [
-        { type: 'list', name: 'operation', message: 'Select an operation', choices: options }
+        { type: 'list', name: 'vendor', message: 'Select vendor:', choices: vendors },
+        { type: 'list', name: 'operation', message: 'Select an operation:', choices: options }
     ];
     let answer = await inquirer.prompt(questions);
-    await answer.operation();
+    await answer.operation(answer.vendor);
 }
 
-async function cardActivation() {
+async function cardActivation(vendor) {
     let cards = JSON.parse(fs.readFileSync('./data/secrets.json', 'utf8'));
     let cardIds = [];
     cards.cards.forEach(card => {
@@ -159,7 +184,7 @@ async function cardActivation() {
     ];
     console.log('Activate prepaid card');
     let answer = await inquirer.prompt(questions);
-    await vendorContractInstancePCM.methods.activateCard(answer.id).send(vendorTransactionObject);
+    await vendorContractInstancePCM.methods.activateCard(answer.id).send(vendor);
     cards.cards.forEach(card => {
         if (card.id == answer.id) {
             card.active = true;
@@ -176,7 +201,7 @@ async function userMenu() {
         { name: 'Check balance', value: checkUserBalance }
     ];
     let questions = [
-        { type: 'list', name: 'operation', message: 'Select an operation', choices: options }
+        { type: 'list', name: 'operation', message: 'Select an operation:', choices: options }
     ];
     let answer = await inquirer.prompt(questions);
     await answer.operation();
@@ -199,8 +224,7 @@ async function getCardQr() {
     ];
     console.log('Get prepaid card QR');
     let answer = await inquirer.prompt(questions);
-    let str = await qrcode.generate(answer.id);
-    console.log(str);
+    await qrcode.generate(answer.id);
 }
 
 async function redeem() {
@@ -234,7 +258,7 @@ async function mainMenu() {
         { name: "Exit", value: 0 }
     ];
     let questions = [
-        { type: "list", name: "menu", message: "Select your profile", choices: menuOptions }
+        { type: "list", name: "menu", message: "Select your profile:", choices: menuOptions }
     ];
     let answer = await inquirer.prompt(questions);
     if (answer.menu == 0) {
