@@ -1,0 +1,401 @@
+{
+  "contractName": "Structs",
+  "abi": [],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a723058204eb52141865d9bbd0e545fbf474e4ca6a89255025c68d5762395efb1496effcd0029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a723058204eb52141865d9bbd0e545fbf474e4ca6a89255025c68d5762395efb1496effcd0029",
+  "sourceMap": "31:207:12:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;31:207:12;;;;;;;",
+  "deployedSourceMap": "31:207:12:-;;;;;",
+  "source": "pragma solidity 0.4.24;\r\n  \r\n  contract Structs {\r\n\r\n    struct PathValue {\r\n        string path;\r\n        string value;\r\n        string valueType;\r\n    }\r\n\r\n    struct Container {\r\n      address add;\r\n      string name;\r\n    }\r\n    \r\n  }\r\n",
+  "sourcePath": "C:\\Users\\a562145\\git\\bloomen-wallet-truffle\\node_modules\\json-warehouse\\contracts\\lib\\Structs.sol",
+  "ast": {
+    "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/node_modules/json-warehouse/contracts/lib/Structs.sol",
+    "exportedSymbols": {
+      "Structs": [
+        2950
+      ]
+    },
+    "id": 2951,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2937,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:12"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2950,
+        "linearizedBaseContracts": [
+          2950
+        ],
+        "name": "Structs",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Structs.PathValue",
+            "id": 2944,
+            "members": [
+              {
+                "constant": false,
+                "id": 2939,
+                "name": "path",
+                "nodeType": "VariableDeclaration",
+                "scope": 2944,
+                "src": "85:11:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 2938,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "85:6:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2941,
+                "name": "value",
+                "nodeType": "VariableDeclaration",
+                "scope": 2944,
+                "src": "107:12:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 2940,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "107:6:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2943,
+                "name": "valueType",
+                "nodeType": "VariableDeclaration",
+                "scope": 2944,
+                "src": "130:16:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 2942,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "130:6:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "PathValue",
+            "nodeType": "StructDefinition",
+            "scope": 2950,
+            "src": "57:97:12",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Structs.Container",
+            "id": 2949,
+            "members": [
+              {
+                "constant": false,
+                "id": 2946,
+                "name": "add",
+                "nodeType": "VariableDeclaration",
+                "scope": 2949,
+                "src": "188:11:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 2945,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "188:7:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2948,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 2949,
+                "src": "208:11:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 2947,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "208:6:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Container",
+            "nodeType": "StructDefinition",
+            "scope": 2950,
+            "src": "162:65:12",
+            "visibility": "public"
+          }
+        ],
+        "scope": 2951,
+        "src": "31:207:12"
+      }
+    ],
+    "src": "0:240:12"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/node_modules/json-warehouse/contracts/lib/Structs.sol",
+    "exportedSymbols": {
+      "Structs": [
+        2950
+      ]
+    },
+    "id": 2951,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2937,
+        "literals": [
+          "solidity",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:12"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2950,
+        "linearizedBaseContracts": [
+          2950
+        ],
+        "name": "Structs",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Structs.PathValue",
+            "id": 2944,
+            "members": [
+              {
+                "constant": false,
+                "id": 2939,
+                "name": "path",
+                "nodeType": "VariableDeclaration",
+                "scope": 2944,
+                "src": "85:11:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 2938,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "85:6:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2941,
+                "name": "value",
+                "nodeType": "VariableDeclaration",
+                "scope": 2944,
+                "src": "107:12:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 2940,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "107:6:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2943,
+                "name": "valueType",
+                "nodeType": "VariableDeclaration",
+                "scope": 2944,
+                "src": "130:16:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 2942,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "130:6:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "PathValue",
+            "nodeType": "StructDefinition",
+            "scope": 2950,
+            "src": "57:97:12",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Structs.Container",
+            "id": 2949,
+            "members": [
+              {
+                "constant": false,
+                "id": 2946,
+                "name": "add",
+                "nodeType": "VariableDeclaration",
+                "scope": 2949,
+                "src": "188:11:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 2945,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "188:7:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 2948,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 2949,
+                "src": "208:11:12",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 2947,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "208:6:12",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Container",
+            "nodeType": "StructDefinition",
+            "scope": 2950,
+            "src": "162:65:12",
+            "visibility": "public"
+          }
+        ],
+        "scope": 2951,
+        "src": "31:207:12"
+      }
+    ],
+    "src": "0:240:12"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-12-03T09:51:48.775Z"
+}
