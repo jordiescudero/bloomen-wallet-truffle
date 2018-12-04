@@ -25,7 +25,7 @@ test/**/*.js.map
 coverage/
 !test/preprocessor.js
 # build/
-bin/
+# bin/
 
 #data
 ganache_db/*

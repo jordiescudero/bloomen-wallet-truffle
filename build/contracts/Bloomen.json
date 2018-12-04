@@ -114,8 +114,8 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x608060405234801561001057600080fd5b506040516080806103f9833981018060405261002f9190810190610094565b60038054600160a060020a03958616600160a060020a03199182161790915560008054948616948216949094179093556001805491851691841691909117905560028054919093169116179055610101565b600061008d82516100f5565b9392505050565b600080600080608085870312156100aa57600080fd5b60006100b68787610081565b94505060206100c787828801610081565b93505060406100d887828801610081565b92505060606100e987828801610081565b91505092959194509250565b600160a060020a031690565b6102e9806101106000396000f3006080604052600436106100775763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ae7a5a8811461007c57806327b7ca5f146100a757806371a97305146100c95780639640fe35146100de578063c30a4d481461010b578063ebf0da6514610120575b600080fd5b34801561008857600080fd5b50610091610135565b60405161009e9190610287565b60405180910390f35b3480156100b357600080fd5b506100c76100c2366004610217565b610144565b005b3480156100d557600080fd5b506100916101a3565b3480156100ea57600080fd5b506100fe6100f936600461023d565b6101b2565b60405161009e9190610273565b34801561011757600080fd5b506100916101da565b34801561012c57600080fd5b506100916101e9565b600054600160a060020a031681565b600480546001810182556000919091527f8a35acfbc15ff81a39ae7d344fd709f28e8600b4aa8c65c6b64bfe7fe36bd19b01805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600254600160a060020a031681565b60048054829081106101c057fe5b600091825260209091200154600160a060020a0316905081565b600154600160a060020a031681565b600354600160a060020a031681565b60006102048235610295565b9392505050565b600061020482356102a1565b60006020828403121561022957600080fd5b600061023584846101f8565b949350505050565b60006020828403121561024f57600080fd5b6000610235848461020b565b61026481610295565b82525050565b610264816102a4565b60208101610281828461025b565b92915050565b60208101610281828461026a565b600160a060020a031690565b90565b6000610281826102955600a265627a7a723058202dcdc4261286b3ece0323f6eefab67bbd4deed44bab1f37886b9be3a4afda0346c6578706572696d656e74616cf50037",
-  "deployedBytecode": "0x6080604052600436106100775763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ae7a5a8811461007c57806327b7ca5f146100a757806371a97305146100c95780639640fe35146100de578063c30a4d481461010b578063ebf0da6514610120575b600080fd5b34801561008857600080fd5b50610091610135565b60405161009e9190610287565b60405180910390f35b3480156100b357600080fd5b506100c76100c2366004610217565b610144565b005b3480156100d557600080fd5b506100916101a3565b3480156100ea57600080fd5b506100fe6100f936600461023d565b6101b2565b60405161009e9190610273565b34801561011757600080fd5b506100916101da565b34801561012c57600080fd5b506100916101e9565b600054600160a060020a031681565b600480546001810182556000919091527f8a35acfbc15ff81a39ae7d344fd709f28e8600b4aa8c65c6b64bfe7fe36bd19b01805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600254600160a060020a031681565b60048054829081106101c057fe5b600091825260209091200154600160a060020a0316905081565b600154600160a060020a031681565b600354600160a060020a031681565b60006102048235610295565b9392505050565b600061020482356102a1565b60006020828403121561022957600080fd5b600061023584846101f8565b949350505050565b60006020828403121561024f57600080fd5b6000610235848461020b565b61026481610295565b82525050565b610264816102a4565b60208101610281828461025b565b92915050565b60208101610281828461026a565b600160a060020a031690565b90565b6000610281826102955600a265627a7a723058202dcdc4261286b3ece0323f6eefab67bbd4deed44bab1f37886b9be3a4afda0346c6578706572696d656e74616cf50037",
+  "bytecode": "0x608060405234801561001057600080fd5b506040516080806103f9833981018060405261002f9190810190610094565b60038054600160a060020a03958616600160a060020a03199182161790915560008054948616948216949094179093556001805491851691841691909117905560028054919093169116179055610101565b600061008d82516100f5565b9392505050565b600080600080608085870312156100aa57600080fd5b60006100b68787610081565b94505060206100c787828801610081565b93505060406100d887828801610081565b92505060606100e987828801610081565b91505092959194509250565b600160a060020a031690565b6102e9806101106000396000f3006080604052600436106100775763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ae7a5a8811461007c57806327b7ca5f146100a757806371a97305146100c95780639640fe35146100de578063c30a4d481461010b578063ebf0da6514610120575b600080fd5b34801561008857600080fd5b50610091610135565b60405161009e9190610287565b60405180910390f35b3480156100b357600080fd5b506100c76100c2366004610217565b610144565b005b3480156100d557600080fd5b506100916101a3565b3480156100ea57600080fd5b506100fe6100f936600461023d565b6101b2565b60405161009e9190610273565b34801561011757600080fd5b506100916101da565b34801561012c57600080fd5b506100916101e9565b600054600160a060020a031681565b600480546001810182556000919091527f8a35acfbc15ff81a39ae7d344fd709f28e8600b4aa8c65c6b64bfe7fe36bd19b01805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600254600160a060020a031681565b60048054829081106101c057fe5b600091825260209091200154600160a060020a0316905081565b600154600160a060020a031681565b600354600160a060020a031681565b60006102048235610295565b9392505050565b600061020482356102a1565b60006020828403121561022957600080fd5b600061023584846101f8565b949350505050565b60006020828403121561024f57600080fd5b6000610235848461020b565b61026481610295565b82525050565b610264816102a4565b60208101610281828461025b565b92915050565b60208101610281828461026a565b600160a060020a031690565b90565b6000610281826102955600a265627a7a72305820c2d43fdf95750d849433c853a96c46147c258f967815ce8c3d39e2a8e72c8f636c6578706572696d656e74616cf50037",
+  "deployedBytecode": "0x6080604052600436106100775763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ae7a5a8811461007c57806327b7ca5f146100a757806371a97305146100c95780639640fe35146100de578063c30a4d481461010b578063ebf0da6514610120575b600080fd5b34801561008857600080fd5b50610091610135565b60405161009e9190610287565b60405180910390f35b3480156100b357600080fd5b506100c76100c2366004610217565b610144565b005b3480156100d557600080fd5b506100916101a3565b3480156100ea57600080fd5b506100fe6100f936600461023d565b6101b2565b60405161009e9190610273565b34801561011757600080fd5b506100916101da565b34801561012c57600080fd5b506100916101e9565b600054600160a060020a031681565b600480546001810182556000919091527f8a35acfbc15ff81a39ae7d344fd709f28e8600b4aa8c65c6b64bfe7fe36bd19b01805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600254600160a060020a031681565b60048054829081106101c057fe5b600091825260209091200154600160a060020a0316905081565b600154600160a060020a031681565b600354600160a060020a031681565b60006102048235610295565b9392505050565b600061020482356102a1565b60006020828403121561022957600080fd5b600061023584846101f8565b949350505050565b60006020828403121561024f57600080fd5b6000610235848461020b565b61026481610295565b82525050565b610264816102a4565b60208101610281828461025b565b92915050565b60208101610281828461026a565b600160a060020a031690565b90565b6000610281826102955600a265627a7a72305820c2d43fdf95750d849433c853a96c46147c258f967815ce8c3d39e2a8e72c8f636c6578706572696d656e74616cf50037",
   "sourceMap": "350:650:1:-;;;541:319;8:9:-1;5:2;;;30:1;27;20:12;5:2;541:319:1;;;;;;;;;;;;;;;;;;;;;;668:6;:28;;-1:-1:-1;;;;;668:28:1;;;-1:-1:-1;;;;;;668:28:1;;;;;;;:6;707:64;;;;;;;;;;;;;;;668:28;782:31;;;;;;;;;;;;;;-1:-1:-1;824:28:1;;;;;;;;;;;350:650;;5:122:-1;;83:39;114:6;108:13;83:39;;;74:48;68:59;-1:-1;;;68:59;134:672;;;;;300:3;288:9;279:7;275:23;271:33;268:2;;;317:1;314;307:12;268:2;352:1;369:64;425:7;405:9;369:64;;;359:74;;331:108;470:2;488:64;544:7;535:6;524:9;520:22;488:64;;;478:74;;449:109;589:2;607:64;663:7;654:6;643:9;639:22;607:64;;;597:74;;568:109;708:2;726:64;782:7;773:6;762:9;758:22;726:64;;;716:74;;687:109;262:544;;;;;;;;813:128;-1:-1;;;;;882:54;;865:76;;350:650:1;;;;;;",
   "deployedSourceMap": "350:650:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;376:44;;8:9:-1;5:2;;;30:1;27;20:12;5:2;376:44:1;;;;;;;;;;;;;;;;;;;;868:129;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;868:129:1;;;;;;;;;;;456:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;456:20:1;;;;510:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;510:22:1;;;;;;;;;;;;;;;;;427;;8:9:-1;5:2;;;30:1;27;20:12;5:2;427:22:1;;;;483:20;;8:9:-1;5:2;;;30:1;27;20:12;5:2;483:20:1;;;;376:44;;;-1:-1:-1;;;;;376:44:1;;:::o;868:129::-;965:5;27:10:-1;;39:1;23:18;;45:23;;-1:-1;965:24:1;;;;;;;;-1:-1:-1;;965:24:1;-1:-1:-1;;;;;965:24:1;;;;;;;;;;868:129::o;456:20::-;;;-1:-1:-1;;;;;456:20:1;;:::o;510:22::-;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;510:22:1;;-1:-1:-1;510:22:1;:::o;427:::-;;;-1:-1:-1;;;;;427:22:1;;:::o;483:20::-;;;-1:-1:-1;;;;;483:20:1;;:::o;5:118:-1:-;;72:46;110:6;97:20;72:46;;;63:55;57:66;-1:-1;;;57:66;130:118;;197:46;235:6;222:20;197:46;;255:241;;359:2;347:9;338:7;334:23;330:32;327:2;;;375:1;372;365:12;327:2;410:1;427:53;472:7;452:9;427:53;;;417:63;321:175;-1:-1;;;;321:175;503:241;;607:2;595:9;586:7;582:23;578:32;575:2;;;623:1;620;613:12;575:2;658:1;675:53;720:7;700:9;675:53;;751:110;824:31;849:5;824:31;;;819:3;812:44;806:55;;;868:140;953:49;996:5;953:49;;1492:193;1600:2;1585:18;;1614:61;1589:9;1648:6;1614:61;;;1571:114;;;;;1692:217;1812:2;1797:18;;1826:73;1801:9;1872:6;1826:73;;2624:128;-1:-1;;;;;2693:54;;2676:76;2894:79;2963:5;2946:27;2980:127;;3071:31;3096:5;3071:31;",
   "source": "pragma solidity 0.4.24;\r\npragma experimental ABIEncoderV2;\r\n\r\nimport \"./PrepaidCardManager.sol\";\r\nimport \"./Devices.sol\";\r\nimport \"./Assets.sol\";\r\nimport \"./common/DAPP.sol\";\r\nimport \"./token/ERC223.sol\";\r\nimport \"./dapp/ANT1DAPP.sol\";\r\nimport \"./dapp/DemoDAPP.sol\";\r\nimport \"../../node_modules/json-warehouse/contracts/JsonContainerFactory.sol\";\r\n\r\ncontract Bloomen {\r\n\r\n    PrepaidCardManager public prepaidCardManager;\r\n    Devices public devices;\r\n    Assets public assets;\r\n    ERC223 public erc223;\r\n    address[] public dapps;\r\n\r\n    constructor(address _erc223Addr, address _prepaidCardManagerAddr, address _assetsAddr, address _devicesAddr) public {\r\n        erc223 = ERC223(_erc223Addr);\r\n        prepaidCardManager = PrepaidCardManager(_prepaidCardManagerAddr);\r\n        devices = Devices(_devicesAddr);\r\n        assets = Assets(_assetsAddr);\r\n    }\r\n\r\n    function addDapp(address _dappAddress) public {\r\n        // TODO: Only owner protection\r\n        dapps.push(_dappAddress);\r\n    }\r\n}",
@@ -155,7 +155,7 @@
         "id": 6,
         "nodeType": "ImportDirective",
         "scope": 74,
-        "sourceUnit": 372,
+        "sourceUnit": 360,
         "src": "62:34:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -188,7 +188,7 @@
         "id": 9,
         "nodeType": "ImportDirective",
         "scope": 74,
-        "sourceUnit": 396,
+        "sourceUnit": 384,
         "src": "147:27:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -199,7 +199,7 @@
         "id": 10,
         "nodeType": "ImportDirective",
         "scope": 74,
-        "sourceUnit": 559,
+        "sourceUnit": 547,
         "src": "176:28:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -210,7 +210,7 @@
         "id": 11,
         "nodeType": "ImportDirective",
         "scope": 74,
-        "sourceUnit": 418,
+        "sourceUnit": 406,
         "src": "206:29:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -221,7 +221,7 @@
         "id": 12,
         "nodeType": "ImportDirective",
         "scope": 74,
-        "sourceUnit": 434,
+        "sourceUnit": 422,
         "src": "237:29:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -232,7 +232,7 @@
         "id": 13,
         "nodeType": "ImportDirective",
         "scope": 74,
-        "sourceUnit": 1242,
+        "sourceUnit": 1230,
         "src": "268:78:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -260,7 +260,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
+              "typeIdentifier": "t_contract$_PrepaidCardManager_$359",
               "typeString": "contract PrepaidCardManager"
             },
             "typeName": {
@@ -268,10 +268,10 @@
               "id": 14,
               "name": "PrepaidCardManager",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 371,
+              "referencedDeclaration": 359,
               "src": "376:18:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
+                "typeIdentifier": "t_contract$_PrepaidCardManager_$359",
                 "typeString": "contract PrepaidCardManager"
               }
             },
@@ -344,7 +344,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ERC223_$558",
+              "typeIdentifier": "t_contract$_ERC223_$546",
               "typeString": "contract ERC223"
             },
             "typeName": {
@@ -352,10 +352,10 @@
               "id": 20,
               "name": "ERC223",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 558,
+              "referencedDeclaration": 546,
               "src": "483:6:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC223_$558",
+                "typeIdentifier": "t_contract$_ERC223_$546",
                 "typeString": "contract ERC223"
               }
             },
@@ -421,7 +421,7 @@
                       "referencedDeclaration": 21,
                       "src": "668:6:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC223_$558",
+                        "typeIdentifier": "t_contract$_ERC223_$546",
                         "typeString": "contract ERC223"
                       }
                     },
@@ -455,10 +455,10 @@
                         "name": "ERC223",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 558,
+                        "referencedDeclaration": 546,
                         "src": "677:6:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_ERC223_$558_$",
+                          "typeIdentifier": "t_type$_t_contract$_ERC223_$546_$",
                           "typeString": "type(contract ERC223)"
                         }
                       },
@@ -472,13 +472,13 @@
                       "nodeType": "FunctionCall",
                       "src": "677:19:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC223_$558",
+                        "typeIdentifier": "t_contract$_ERC223_$546",
                         "typeString": "contract ERC223"
                       }
                     },
                     "src": "668:28:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC223_$558",
+                      "typeIdentifier": "t_contract$_ERC223_$546",
                       "typeString": "contract ERC223"
                     }
                   },
@@ -503,7 +503,7 @@
                       "referencedDeclaration": 15,
                       "src": "707:18:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
+                        "typeIdentifier": "t_contract$_PrepaidCardManager_$359",
                         "typeString": "contract PrepaidCardManager"
                       }
                     },
@@ -537,10 +537,10 @@
                         "name": "PrepaidCardManager",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 371,
+                        "referencedDeclaration": 359,
                         "src": "728:18:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_PrepaidCardManager_$371_$",
+                          "typeIdentifier": "t_type$_t_contract$_PrepaidCardManager_$359_$",
                           "typeString": "type(contract PrepaidCardManager)"
                         }
                       },
@@ -554,13 +554,13 @@
                       "nodeType": "FunctionCall",
                       "src": "728:43:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
+                        "typeIdentifier": "t_contract$_PrepaidCardManager_$359",
                         "typeString": "contract PrepaidCardManager"
                       }
                     },
                     "src": "707:64:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
+                      "typeIdentifier": "t_contract$_PrepaidCardManager_$359",
                       "typeString": "contract PrepaidCardManager"
                     }
                   },
@@ -1040,7 +1040,7 @@
         "id": 6,
         "nodeType": "ImportDirective",
         "scope": 74,
-        "sourceUnit": 372,
+        "sourceUnit": 360,
         "src": "62:34:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1073,7 +1073,7 @@
         "id": 9,
         "nodeType": "ImportDirective",
         "scope": 74,
-        "sourceUnit": 396,
+        "sourceUnit": 384,
         "src": "147:27:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1084,7 +1084,7 @@
         "id": 10,
         "nodeType": "ImportDirective",
         "scope": 74,
-        "sourceUnit": 559,
+        "sourceUnit": 547,
         "src": "176:28:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1095,7 +1095,7 @@
         "id": 11,
         "nodeType": "ImportDirective",
         "scope": 74,
-        "sourceUnit": 418,
+        "sourceUnit": 406,
         "src": "206:29:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1106,7 +1106,7 @@
         "id": 12,
         "nodeType": "ImportDirective",
         "scope": 74,
-        "sourceUnit": 434,
+        "sourceUnit": 422,
         "src": "237:29:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1117,7 +1117,7 @@
         "id": 13,
         "nodeType": "ImportDirective",
         "scope": 74,
-        "sourceUnit": 1242,
+        "sourceUnit": 1230,
         "src": "268:78:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1145,7 +1145,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
+              "typeIdentifier": "t_contract$_PrepaidCardManager_$359",
               "typeString": "contract PrepaidCardManager"
             },
             "typeName": {
@@ -1153,10 +1153,10 @@
               "id": 14,
               "name": "PrepaidCardManager",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 371,
+              "referencedDeclaration": 359,
               "src": "376:18:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
+                "typeIdentifier": "t_contract$_PrepaidCardManager_$359",
                 "typeString": "contract PrepaidCardManager"
               }
             },
@@ -1229,7 +1229,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ERC223_$558",
+              "typeIdentifier": "t_contract$_ERC223_$546",
               "typeString": "contract ERC223"
             },
             "typeName": {
@@ -1237,10 +1237,10 @@
               "id": 20,
               "name": "ERC223",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 558,
+              "referencedDeclaration": 546,
               "src": "483:6:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC223_$558",
+                "typeIdentifier": "t_contract$_ERC223_$546",
                 "typeString": "contract ERC223"
               }
             },
@@ -1306,7 +1306,7 @@
                       "referencedDeclaration": 21,
                       "src": "668:6:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC223_$558",
+                        "typeIdentifier": "t_contract$_ERC223_$546",
                         "typeString": "contract ERC223"
                       }
                     },
@@ -1340,10 +1340,10 @@
                         "name": "ERC223",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 558,
+                        "referencedDeclaration": 546,
                         "src": "677:6:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_ERC223_$558_$",
+                          "typeIdentifier": "t_type$_t_contract$_ERC223_$546_$",
                           "typeString": "type(contract ERC223)"
                         }
                       },
@@ -1357,13 +1357,13 @@
                       "nodeType": "FunctionCall",
                       "src": "677:19:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC223_$558",
+                        "typeIdentifier": "t_contract$_ERC223_$546",
                         "typeString": "contract ERC223"
                       }
                     },
                     "src": "668:28:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC223_$558",
+                      "typeIdentifier": "t_contract$_ERC223_$546",
                       "typeString": "contract ERC223"
                     }
                   },
@@ -1388,7 +1388,7 @@
                       "referencedDeclaration": 15,
                       "src": "707:18:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
+                        "typeIdentifier": "t_contract$_PrepaidCardManager_$359",
                         "typeString": "contract PrepaidCardManager"
                       }
                     },
@@ -1422,10 +1422,10 @@
                         "name": "PrepaidCardManager",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 371,
+                        "referencedDeclaration": 359,
                         "src": "728:18:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_PrepaidCardManager_$371_$",
+                          "typeIdentifier": "t_type$_t_contract$_PrepaidCardManager_$359_$",
                           "typeString": "type(contract PrepaidCardManager)"
                         }
                       },
@@ -1439,13 +1439,13 @@
                       "nodeType": "FunctionCall",
                       "src": "728:43:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
+                        "typeIdentifier": "t_contract$_PrepaidCardManager_$359",
                         "typeString": "contract PrepaidCardManager"
                       }
                     },
                     "src": "707:64:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_PrepaidCardManager_$371",
+                      "typeIdentifier": "t_contract$_PrepaidCardManager_$359",
                       "typeString": "contract PrepaidCardManager"
                     }
                   },
@@ -1896,5 +1896,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-03T13:49:20.325Z"
+  "updatedAt": "2018-12-04T08:47:39.196Z"
 }

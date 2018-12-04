@@ -107,14 +107,14 @@
     "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/common/DAPP.sol",
     "exportedSymbols": {
       "DAPP": [
-        395
+        383
       ]
     },
-    "id": 396,
+    "id": 384,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 373,
+        "id": 361,
         "literals": [
           "solidity",
           "0.4",
@@ -124,7 +124,7 @@
         "src": "0:23:4"
       },
       {
-        "id": 374,
+        "id": 362,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -135,10 +135,10 @@
       {
         "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/node_modules/json-warehouse/contracts/JsonContainer.sol",
         "file": "../../../node_modules/json-warehouse/contracts/JsonContainer.sol",
-        "id": 375,
+        "id": 363,
         "nodeType": "ImportDirective",
-        "scope": 396,
-        "sourceUnit": 1093,
+        "scope": 384,
+        "sourceUnit": 1081,
         "src": "64:74:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -146,10 +146,10 @@
       {
         "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/token/ERC223.sol",
         "file": "../token/ERC223.sol",
-        "id": 376,
+        "id": 364,
         "nodeType": "ImportDirective",
-        "scope": 396,
-        "sourceUnit": 559,
+        "scope": 384,
+        "sourceUnit": 547,
         "src": "140:29:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -160,59 +160,59 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 377,
+              "id": 365,
               "name": "JsonContainer",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1092,
+              "referencedDeclaration": 1080,
               "src": "192:13:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_JsonContainer_$1092",
+                "typeIdentifier": "t_contract$_JsonContainer_$1080",
                 "typeString": "contract JsonContainer"
               }
             },
-            "id": 378,
+            "id": 366,
             "nodeType": "InheritanceSpecifier",
             "src": "192:13:4"
           }
         ],
         "contractDependencies": [
-          1092,
-          2951
+          1080,
+          2939
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 395,
+        "id": 383,
         "linearizedBaseContracts": [
-          395,
-          1092,
-          2951
+          383,
+          1080,
+          2939
         ],
         "name": "DAPP",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 380,
+            "id": 368,
             "name": "erc223",
             "nodeType": "VariableDeclaration",
-            "scope": 395,
+            "scope": 383,
             "src": "215:20:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ERC223_$558",
+              "typeIdentifier": "t_contract$_ERC223_$546",
               "typeString": "contract ERC223"
             },
             "typeName": {
               "contractScope": null,
-              "id": 379,
+              "id": 367,
               "name": "ERC223",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 558,
+              "referencedDeclaration": 546,
               "src": "215:6:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC223_$558",
+                "typeIdentifier": "t_contract$_ERC223_$546",
                 "typeString": "contract ERC223"
               }
             },
@@ -221,28 +221,28 @@
           },
           {
             "body": {
-              "id": 393,
+              "id": 381,
               "nodeType": "Block",
               "src": "302:47:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 391,
+                    "id": 379,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 387,
+                      "id": 375,
                       "name": "erc223",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 380,
+                      "referencedDeclaration": 368,
                       "src": "313:6:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC223_$558",
+                        "typeIdentifier": "t_contract$_ERC223_$546",
                         "typeString": "contract ERC223"
                       }
                     },
@@ -253,11 +253,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 389,
+                          "id": 377,
                           "name": "_erc223Addr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 382,
+                          "referencedDeclaration": 370,
                           "src": "329:11:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -272,18 +272,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 388,
+                        "id": 376,
                         "name": "ERC223",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 558,
+                        "referencedDeclaration": 546,
                         "src": "322:6:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_ERC223_$558_$",
+                          "typeIdentifier": "t_type$_t_contract$_ERC223_$546_$",
                           "typeString": "type(contract ERC223)"
                         }
                       },
-                      "id": 390,
+                      "id": 378,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -293,41 +293,41 @@
                       "nodeType": "FunctionCall",
                       "src": "322:19:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC223_$558",
+                        "typeIdentifier": "t_contract$_ERC223_$546",
                         "typeString": "contract ERC223"
                       }
                     },
                     "src": "313:28:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC223_$558",
+                      "typeIdentifier": "t_contract$_ERC223_$546",
                       "typeString": "contract ERC223"
                     }
                   },
-                  "id": 392,
+                  "id": 380,
                   "nodeType": "ExpressionStatement",
                   "src": "313:28:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 394,
+            "id": 382,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": [],
-                "id": 385,
+                "id": 373,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 384,
+                  "id": 372,
                   "name": "JsonContainer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1092,
+                  "referencedDeclaration": 1080,
                   "src": "279:13:4",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_JsonContainer_$1092_$",
+                    "typeIdentifier": "t_type$_t_contract$_JsonContainer_$1080_$",
                     "typeString": "type(contract JsonContainer)"
                   }
                 },
@@ -338,15 +338,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 383,
+              "id": 371,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 382,
+                  "id": 370,
                   "name": "_erc223Addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 394,
+                  "scope": 382,
                   "src": "258:19:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -355,7 +355,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 381,
+                    "id": 369,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "258:7:4",
@@ -372,19 +372,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 386,
+              "id": 374,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "302:0:4"
             },
-            "scope": 395,
+            "scope": 383,
             "src": "246:103:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 396,
+        "scope": 384,
         "src": "175:183:4"
       }
     ],
@@ -394,14 +394,14 @@
     "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/common/DAPP.sol",
     "exportedSymbols": {
       "DAPP": [
-        395
+        383
       ]
     },
-    "id": 396,
+    "id": 384,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 373,
+        "id": 361,
         "literals": [
           "solidity",
           "0.4",
@@ -411,7 +411,7 @@
         "src": "0:23:4"
       },
       {
-        "id": 374,
+        "id": 362,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -422,10 +422,10 @@
       {
         "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/node_modules/json-warehouse/contracts/JsonContainer.sol",
         "file": "../../../node_modules/json-warehouse/contracts/JsonContainer.sol",
-        "id": 375,
+        "id": 363,
         "nodeType": "ImportDirective",
-        "scope": 396,
-        "sourceUnit": 1093,
+        "scope": 384,
+        "sourceUnit": 1081,
         "src": "64:74:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -433,10 +433,10 @@
       {
         "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/token/ERC223.sol",
         "file": "../token/ERC223.sol",
-        "id": 376,
+        "id": 364,
         "nodeType": "ImportDirective",
-        "scope": 396,
-        "sourceUnit": 559,
+        "scope": 384,
+        "sourceUnit": 547,
         "src": "140:29:4",
         "symbolAliases": [],
         "unitAlias": ""
@@ -447,59 +447,59 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 377,
+              "id": 365,
               "name": "JsonContainer",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1092,
+              "referencedDeclaration": 1080,
               "src": "192:13:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_JsonContainer_$1092",
+                "typeIdentifier": "t_contract$_JsonContainer_$1080",
                 "typeString": "contract JsonContainer"
               }
             },
-            "id": 378,
+            "id": 366,
             "nodeType": "InheritanceSpecifier",
             "src": "192:13:4"
           }
         ],
         "contractDependencies": [
-          1092,
-          2951
+          1080,
+          2939
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 395,
+        "id": 383,
         "linearizedBaseContracts": [
-          395,
-          1092,
-          2951
+          383,
+          1080,
+          2939
         ],
         "name": "DAPP",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 380,
+            "id": 368,
             "name": "erc223",
             "nodeType": "VariableDeclaration",
-            "scope": 395,
+            "scope": 383,
             "src": "215:20:4",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_ERC223_$558",
+              "typeIdentifier": "t_contract$_ERC223_$546",
               "typeString": "contract ERC223"
             },
             "typeName": {
               "contractScope": null,
-              "id": 379,
+              "id": 367,
               "name": "ERC223",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 558,
+              "referencedDeclaration": 546,
               "src": "215:6:4",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ERC223_$558",
+                "typeIdentifier": "t_contract$_ERC223_$546",
                 "typeString": "contract ERC223"
               }
             },
@@ -508,28 +508,28 @@
           },
           {
             "body": {
-              "id": 393,
+              "id": 381,
               "nodeType": "Block",
               "src": "302:47:4",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 391,
+                    "id": 379,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 387,
+                      "id": 375,
                       "name": "erc223",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 380,
+                      "referencedDeclaration": 368,
                       "src": "313:6:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC223_$558",
+                        "typeIdentifier": "t_contract$_ERC223_$546",
                         "typeString": "contract ERC223"
                       }
                     },
@@ -540,11 +540,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 389,
+                          "id": 377,
                           "name": "_erc223Addr",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 382,
+                          "referencedDeclaration": 370,
                           "src": "329:11:4",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -559,18 +559,18 @@
                             "typeString": "address"
                           }
                         ],
-                        "id": 388,
+                        "id": 376,
                         "name": "ERC223",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 558,
+                        "referencedDeclaration": 546,
                         "src": "322:6:4",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_ERC223_$558_$",
+                          "typeIdentifier": "t_type$_t_contract$_ERC223_$546_$",
                           "typeString": "type(contract ERC223)"
                         }
                       },
-                      "id": 390,
+                      "id": 378,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -580,41 +580,41 @@
                       "nodeType": "FunctionCall",
                       "src": "322:19:4",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_ERC223_$558",
+                        "typeIdentifier": "t_contract$_ERC223_$546",
                         "typeString": "contract ERC223"
                       }
                     },
                     "src": "313:28:4",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ERC223_$558",
+                      "typeIdentifier": "t_contract$_ERC223_$546",
                       "typeString": "contract ERC223"
                     }
                   },
-                  "id": 392,
+                  "id": 380,
                   "nodeType": "ExpressionStatement",
                   "src": "313:28:4"
                 }
               ]
             },
             "documentation": null,
-            "id": 394,
+            "id": 382,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": [],
-                "id": 385,
+                "id": 373,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 384,
+                  "id": 372,
                   "name": "JsonContainer",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1092,
+                  "referencedDeclaration": 1080,
                   "src": "279:13:4",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_JsonContainer_$1092_$",
+                    "typeIdentifier": "t_type$_t_contract$_JsonContainer_$1080_$",
                     "typeString": "type(contract JsonContainer)"
                   }
                 },
@@ -625,15 +625,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 383,
+              "id": 371,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 382,
+                  "id": 370,
                   "name": "_erc223Addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 394,
+                  "scope": 382,
                   "src": "258:19:4",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -642,7 +642,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 381,
+                    "id": 369,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "258:7:4",
@@ -659,19 +659,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 386,
+              "id": 374,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "302:0:4"
             },
-            "scope": 395,
+            "scope": 383,
             "src": "246:103:4",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 396,
+        "scope": 384,
         "src": "175:183:4"
       }
     ],
@@ -683,5 +683,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-03T12:43:28.864Z"
+  "updatedAt": "2018-12-04T08:44:26.222Z"
 }

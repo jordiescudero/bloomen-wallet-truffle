@@ -107,14 +107,14 @@
     "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/dapp/DemoDAPP.sol",
     "exportedSymbols": {
       "DemoDAPP": [
-        433
+        421
       ]
     },
-    "id": 434,
+    "id": 422,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 419,
+        "id": 407,
         "literals": [
           "solidity",
           "0.4",
@@ -124,7 +124,7 @@
         "src": "0:23:6"
       },
       {
-        "id": 420,
+        "id": 408,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -135,10 +135,10 @@
       {
         "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/common/DAPP.sol",
         "file": "../common/DAPP.sol",
-        "id": 421,
+        "id": 409,
         "nodeType": "ImportDirective",
-        "scope": 434,
-        "sourceUnit": 396,
+        "scope": 422,
+        "sourceUnit": 384,
         "src": "62:28:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -149,48 +149,48 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 422,
+              "id": 410,
               "name": "DAPP",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 395,
+              "referencedDeclaration": 383,
               "src": "116:4:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_DAPP_$395",
+                "typeIdentifier": "t_contract$_DAPP_$383",
                 "typeString": "contract DAPP"
               }
             },
-            "id": 423,
+            "id": 411,
             "nodeType": "InheritanceSpecifier",
             "src": "116:4:6"
           }
         ],
         "contractDependencies": [
-          395,
-          1092,
-          2951
+          383,
+          1080,
+          2939
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 433,
+        "id": 421,
         "linearizedBaseContracts": [
-          433,
-          395,
-          1092,
-          2951
+          421,
+          383,
+          1080,
+          2939
         ],
         "name": "DemoDAPP",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 431,
+              "id": 419,
               "nodeType": "Block",
               "src": "187:8:6",
               "statements": []
             },
             "documentation": null,
-            "id": 432,
+            "id": 420,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -199,11 +199,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 428,
+                    "id": 416,
                     "name": "_erc223Addr",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 425,
+                    "referencedDeclaration": 413,
                     "src": "167:11:6",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -211,17 +211,17 @@
                     }
                   }
                 ],
-                "id": 429,
+                "id": 417,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 427,
+                  "id": 415,
                   "name": "DAPP",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 395,
+                  "referencedDeclaration": 383,
                   "src": "162:4:6",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_DAPP_$395_$",
+                    "typeIdentifier": "t_type$_t_contract$_DAPP_$383_$",
                     "typeString": "type(contract DAPP)"
                   }
                 },
@@ -232,15 +232,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 426,
+              "id": 414,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 425,
+                  "id": 413,
                   "name": "_erc223Addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 432,
+                  "scope": 420,
                   "src": "140:19:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -249,7 +249,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 424,
+                    "id": 412,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "140:7:6",
@@ -266,19 +266,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 430,
+              "id": 418,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "187:0:6"
             },
-            "scope": 433,
+            "scope": 421,
             "src": "128:67:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 434,
+        "scope": 422,
         "src": "95:103:6"
       }
     ],
@@ -288,14 +288,14 @@
     "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/dapp/DemoDAPP.sol",
     "exportedSymbols": {
       "DemoDAPP": [
-        433
+        421
       ]
     },
-    "id": 434,
+    "id": 422,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 419,
+        "id": 407,
         "literals": [
           "solidity",
           "0.4",
@@ -305,7 +305,7 @@
         "src": "0:23:6"
       },
       {
-        "id": 420,
+        "id": 408,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -316,10 +316,10 @@
       {
         "absolutePath": "/C/Users/a562145/git/bloomen-wallet-truffle/contracts/bloomen/common/DAPP.sol",
         "file": "../common/DAPP.sol",
-        "id": 421,
+        "id": 409,
         "nodeType": "ImportDirective",
-        "scope": 434,
-        "sourceUnit": 396,
+        "scope": 422,
+        "sourceUnit": 384,
         "src": "62:28:6",
         "symbolAliases": [],
         "unitAlias": ""
@@ -330,48 +330,48 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 422,
+              "id": 410,
               "name": "DAPP",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 395,
+              "referencedDeclaration": 383,
               "src": "116:4:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_DAPP_$395",
+                "typeIdentifier": "t_contract$_DAPP_$383",
                 "typeString": "contract DAPP"
               }
             },
-            "id": 423,
+            "id": 411,
             "nodeType": "InheritanceSpecifier",
             "src": "116:4:6"
           }
         ],
         "contractDependencies": [
-          395,
-          1092,
-          2951
+          383,
+          1080,
+          2939
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 433,
+        "id": 421,
         "linearizedBaseContracts": [
-          433,
-          395,
-          1092,
-          2951
+          421,
+          383,
+          1080,
+          2939
         ],
         "name": "DemoDAPP",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 431,
+              "id": 419,
               "nodeType": "Block",
               "src": "187:8:6",
               "statements": []
             },
             "documentation": null,
-            "id": 432,
+            "id": 420,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -380,11 +380,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 428,
+                    "id": 416,
                     "name": "_erc223Addr",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 425,
+                    "referencedDeclaration": 413,
                     "src": "167:11:6",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -392,17 +392,17 @@
                     }
                   }
                 ],
-                "id": 429,
+                "id": 417,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 427,
+                  "id": 415,
                   "name": "DAPP",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 395,
+                  "referencedDeclaration": 383,
                   "src": "162:4:6",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_type$_t_contract$_DAPP_$395_$",
+                    "typeIdentifier": "t_type$_t_contract$_DAPP_$383_$",
                     "typeString": "type(contract DAPP)"
                   }
                 },
@@ -413,15 +413,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 426,
+              "id": 414,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 425,
+                  "id": 413,
                   "name": "_erc223Addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 432,
+                  "scope": 420,
                   "src": "140:19:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -430,7 +430,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 424,
+                    "id": 412,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "140:7:6",
@@ -447,19 +447,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 430,
+              "id": 418,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "187:0:6"
             },
-            "scope": 433,
+            "scope": 421,
             "src": "128:67:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 434,
+        "scope": 422,
         "src": "95:103:6"
       }
     ],
@@ -471,5 +471,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-03T13:49:20.327Z"
+  "updatedAt": "2018-12-04T08:47:39.198Z"
 }
