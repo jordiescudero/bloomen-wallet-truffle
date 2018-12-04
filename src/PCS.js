@@ -32,15 +32,17 @@ const jsonPrintOptions = {
     noColor: false
 };
 
+const GAS = 4000000;
+
 const ownerTransactionObject = {
     from: cardOwnerAddress,
-    gas: 4000000,
+    gas: GAS,
     gasPrice: 0
 };
 
 const finalUserTransactionObject = {
     from: cardUserAddress,
-    gas: 4000000,
+    gas: GAS,
     gasPrice: 0
 };
 
@@ -74,7 +76,11 @@ async function cardCreation() {
     console.log('Create a prepaid card');
     let answer = await inquirer.prompt(questions);
     let randomId = getRandomId();
-    await ownerContractInstancePCM.methods.addCard(randomId, answer.amount, ownerWeb3.utils.keccak256(answer.secret)).send(ownerTransactionObject);
+    await ownerContractInstancePCM.methods.addCard(randomId, answer.amount, ownerWeb3.utils.keccak256(answer.secret)).send(ownerTransactionObject)
+        .then((tx) => {
+            console.log('Transaction sent.');
+            return checkTransaction(tx.transactionHash);
+        });
     let secrets = JSON.parse(fs.readFileSync('./data/secrets.json', 'utf8'));
     secrets.cards.push({ id: randomId, secret: answer.secret, active: false });
     fs.writeFileSync('./data/secrets.json', JSON.stringify(secrets), 'utf8');
@@ -98,7 +104,11 @@ async function cardActivation() {
     ];
     console.log('Activate prepaid card');
     let answer = await inquirer.prompt(questions);
-    await ownerContractInstancePCM.methods.activateCard(answer.id).send(ownerTransactionObject);
+    await ownerContractInstancePCM.methods.activateCard(answer.id).send(ownerTransactionObject)
+        .then((tx) => {
+            console.log('Transaction sent.');
+            return checkTransaction(tx.transactionHash);
+        });
     cards.cards.forEach(card => {
         if (card.id == answer.id) {
             card.active = true;
@@ -230,6 +240,32 @@ async function mainMenu() {
 function final() {
     ownerHDPprovider.engine.stop();
     finalUserHDPprovider.engine.stop();
+}
+
+function checkTransaction(tx) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            ownerWeb3.eth.getTransactionReceipt(tx,
+                function (err, status) {
+                    if (err) {
+                        console.log('KO');
+                        reject(err);
+                    }else if (!status) {
+                        console.log('Checking transaction ...');
+                        checkTransaction(tx);
+                    }
+                    else if (GAS == status.gasUsed) {
+                        //transaction error
+                        console.log('Out of gas.');
+                        reject();
+                    } else {
+                        console.log('Transaction mined.');
+                        resolve();
+                    }
+                }
+            );
+        }, 1000);
+    });
 }
 
 figlet.text('Prepaid Cards System', {
