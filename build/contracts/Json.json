@@ -54,14 +54,14 @@
     "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/common/Json.sol",
     "exportedSymbols": {
       "Json": [
-        545
+        533
       ]
     },
-    "id": 546,
+    "id": 534,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 505,
+        "id": 493,
         "literals": [
           "solidity",
           "^",
@@ -72,7 +72,7 @@
         "src": "0:24:6"
       },
       {
-        "id": 506,
+        "id": 494,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -86,23 +86,23 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 545,
+        "id": 533,
         "linearizedBaseContracts": [
-          545
+          533
         ],
         "name": "Json",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Json.PathValue",
-            "id": 511,
+            "id": 499,
             "members": [
               {
                 "constant": false,
-                "id": 508,
+                "id": 496,
                 "name": "path",
                 "nodeType": "VariableDeclaration",
-                "scope": 511,
+                "scope": 499,
                 "src": "102:11:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -111,7 +111,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 507,
+                  "id": 495,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "102:6:6",
@@ -125,10 +125,10 @@
               },
               {
                 "constant": false,
-                "id": 510,
+                "id": 498,
                 "name": "value",
                 "nodeType": "VariableDeclaration",
-                "scope": 511,
+                "scope": 499,
                 "src": "119:12:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -137,7 +137,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 509,
+                  "id": 497,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "119:6:6",
@@ -152,42 +152,42 @@
             ],
             "name": "PathValue",
             "nodeType": "StructDefinition",
-            "scope": 545,
+            "scope": 533,
             "src": "80:56:6",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 514,
+            "id": 502,
             "name": "data_",
             "nodeType": "VariableDeclaration",
-            "scope": 545,
+            "scope": 533,
             "src": "140:17:6",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_PathValue_$511_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_PathValue_$499_storage_$dyn_storage",
               "typeString": "struct Json.PathValue[]"
             },
             "typeName": {
               "baseType": {
                 "contractScope": null,
-                "id": 512,
+                "id": 500,
                 "name": "PathValue",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 511,
+                "referencedDeclaration": 499,
                 "src": "140:9:6",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_PathValue_$511_storage_ptr",
+                  "typeIdentifier": "t_struct$_PathValue_$499_storage_ptr",
                   "typeString": "struct Json.PathValue"
                 }
               },
-              "id": 513,
+              "id": 501,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "140:11:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_PathValue_$511_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_PathValue_$499_storage_$dyn_storage_ptr",
                 "typeString": "struct Json.PathValue[]"
               }
             },
@@ -196,33 +196,33 @@
           },
           {
             "body": {
-              "id": 522,
+              "id": 510,
               "nodeType": "Block",
               "src": "215:27:6",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 520,
+                    "id": 508,
                     "name": "data_",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 514,
+                    "referencedDeclaration": 502,
                     "src": "232:5:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_PathValue_$511_storage_$dyn_storage",
+                      "typeIdentifier": "t_array$_t_struct$_PathValue_$499_storage_$dyn_storage",
                       "typeString": "struct Json.PathValue storage ref[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 519,
-                  "id": 521,
+                  "functionReturnParameters": 507,
+                  "id": 509,
                   "nodeType": "Return",
                   "src": "225:12:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 523,
+            "id": 511,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -230,48 +230,48 @@
             "name": "getNodes",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 515,
+              "id": 503,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "179:2:6"
             },
             "payable": false,
             "returnParameters": {
-              "id": 519,
+              "id": 507,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 518,
+                  "id": 506,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 523,
+                  "scope": 511,
                   "src": "203:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_PathValue_$511_memory_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_PathValue_$499_memory_$dyn_memory_ptr",
                     "typeString": "struct Json.PathValue[]"
                   },
                   "typeName": {
                     "baseType": {
                       "contractScope": null,
-                      "id": 516,
+                      "id": 504,
                       "name": "PathValue",
                       "nodeType": "UserDefinedTypeName",
-                      "referencedDeclaration": 511,
+                      "referencedDeclaration": 499,
                       "src": "203:9:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_PathValue_$511_storage_ptr",
+                        "typeIdentifier": "t_struct$_PathValue_$499_storage_ptr",
                         "typeString": "struct Json.PathValue"
                       }
                     },
-                    "id": 517,
+                    "id": 505,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "203:11:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_PathValue_$511_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_PathValue_$499_storage_$dyn_storage_ptr",
                       "typeString": "struct Json.PathValue[]"
                     }
                   },
@@ -281,7 +281,7 @@
               ],
               "src": "202:13:6"
             },
-            "scope": 545,
+            "scope": 533,
             "src": "162:80:6",
             "stateMutability": "view",
             "superFunction": null,
@@ -289,37 +289,37 @@
           },
           {
             "body": {
-              "id": 543,
+              "id": 531,
               "nodeType": "Block",
               "src": "303:84:6",
               "statements": [
                 {
                   "assignments": [
-                    531
+                    519
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 531,
+                      "id": 519,
                       "name": "result",
                       "nodeType": "VariableDeclaration",
-                      "scope": 544,
+                      "scope": 532,
                       "src": "309:23:6",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_PathValue_$511_memory_ptr",
+                        "typeIdentifier": "t_struct$_PathValue_$499_memory_ptr",
                         "typeString": "struct Json.PathValue"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 530,
+                        "id": 518,
                         "name": "PathValue",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 511,
+                        "referencedDeclaration": 499,
                         "src": "309:9:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_PathValue_$511_storage_ptr",
+                          "typeIdentifier": "t_struct$_PathValue_$499_storage_ptr",
                           "typeString": "struct Json.PathValue"
                         }
                       },
@@ -327,17 +327,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 536,
+                  "id": 524,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 533,
+                        "id": 521,
                         "name": "_path",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 525,
+                        "referencedDeclaration": 513,
                         "src": "345:5:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -346,11 +346,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 534,
+                        "id": 522,
                         "name": "_data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 527,
+                        "referencedDeclaration": 515,
                         "src": "352:5:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -369,18 +369,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 532,
+                      "id": 520,
                       "name": "PathValue",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 511,
+                      "referencedDeclaration": 499,
                       "src": "335:9:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_struct$_PathValue_$511_storage_ptr_$",
+                        "typeIdentifier": "t_type$_t_struct$_PathValue_$499_storage_ptr_$",
                         "typeString": "type(struct Json.PathValue storage pointer)"
                       }
                     },
-                    "id": 535,
+                    "id": 523,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -390,7 +390,7 @@
                     "nodeType": "FunctionCall",
                     "src": "335:23:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_PathValue_$511_memory",
+                      "typeIdentifier": "t_struct$_PathValue_$499_memory",
                       "typeString": "struct Json.PathValue memory"
                     }
                   },
@@ -403,14 +403,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 540,
+                        "id": 528,
                         "name": "result",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 531,
+                        "referencedDeclaration": 519,
                         "src": "375:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_PathValue_$511_memory_ptr",
+                          "typeIdentifier": "t_struct$_PathValue_$499_memory_ptr",
                           "typeString": "struct Json.PathValue memory"
                         }
                       }
@@ -418,24 +418,24 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_struct$_PathValue_$511_memory_ptr",
+                          "typeIdentifier": "t_struct$_PathValue_$499_memory_ptr",
                           "typeString": "struct Json.PathValue memory"
                         }
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 537,
+                        "id": 525,
                         "name": "data_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 514,
+                        "referencedDeclaration": 502,
                         "src": "364:5:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_PathValue_$511_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_PathValue_$499_storage_$dyn_storage",
                           "typeString": "struct Json.PathValue storage ref[] storage ref"
                         }
                       },
-                      "id": 539,
+                      "id": 527,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -445,11 +445,11 @@
                       "referencedDeclaration": null,
                       "src": "364:10:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_PathValue_$511_storage_$returns$_t_uint256_$",
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_PathValue_$499_storage_$returns$_t_uint256_$",
                         "typeString": "function (struct Json.PathValue storage ref) returns (uint256)"
                       }
                     },
-                    "id": 541,
+                    "id": 529,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -463,14 +463,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 542,
+                  "id": 530,
                   "nodeType": "ExpressionStatement",
                   "src": "364:18:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 544,
+            "id": 532,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -478,15 +478,15 @@
             "name": "addPathData",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 528,
+              "id": 516,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 525,
+                  "id": 513,
                   "name": "_path",
                   "nodeType": "VariableDeclaration",
-                  "scope": 544,
+                  "scope": 532,
                   "src": "267:12:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -495,7 +495,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 524,
+                    "id": 512,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "267:6:6",
@@ -509,10 +509,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 527,
+                  "id": 515,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 544,
+                  "scope": 532,
                   "src": "281:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -521,7 +521,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 526,
+                    "id": 514,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "281:6:6",
@@ -538,19 +538,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 529,
+              "id": 517,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "303:0:6"
             },
-            "scope": 545,
+            "scope": 533,
             "src": "246:141:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 546,
+        "scope": 534,
         "src": "60:329:6"
       }
     ],
@@ -560,14 +560,14 @@
     "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/common/Json.sol",
     "exportedSymbols": {
       "Json": [
-        545
+        533
       ]
     },
-    "id": 546,
+    "id": 534,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 505,
+        "id": 493,
         "literals": [
           "solidity",
           "^",
@@ -578,7 +578,7 @@
         "src": "0:24:6"
       },
       {
-        "id": 506,
+        "id": 494,
         "literals": [
           "experimental",
           "ABIEncoderV2"
@@ -592,23 +592,23 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 545,
+        "id": 533,
         "linearizedBaseContracts": [
-          545
+          533
         ],
         "name": "Json",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "canonicalName": "Json.PathValue",
-            "id": 511,
+            "id": 499,
             "members": [
               {
                 "constant": false,
-                "id": 508,
+                "id": 496,
                 "name": "path",
                 "nodeType": "VariableDeclaration",
-                "scope": 511,
+                "scope": 499,
                 "src": "102:11:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -617,7 +617,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 507,
+                  "id": 495,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "102:6:6",
@@ -631,10 +631,10 @@
               },
               {
                 "constant": false,
-                "id": 510,
+                "id": 498,
                 "name": "value",
                 "nodeType": "VariableDeclaration",
-                "scope": 511,
+                "scope": 499,
                 "src": "119:12:6",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -643,7 +643,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 509,
+                  "id": 497,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "119:6:6",
@@ -658,42 +658,42 @@
             ],
             "name": "PathValue",
             "nodeType": "StructDefinition",
-            "scope": 545,
+            "scope": 533,
             "src": "80:56:6",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 514,
+            "id": 502,
             "name": "data_",
             "nodeType": "VariableDeclaration",
-            "scope": 545,
+            "scope": 533,
             "src": "140:17:6",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_array$_t_struct$_PathValue_$511_storage_$dyn_storage",
+              "typeIdentifier": "t_array$_t_struct$_PathValue_$499_storage_$dyn_storage",
               "typeString": "struct Json.PathValue[]"
             },
             "typeName": {
               "baseType": {
                 "contractScope": null,
-                "id": 512,
+                "id": 500,
                 "name": "PathValue",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 511,
+                "referencedDeclaration": 499,
                 "src": "140:9:6",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_PathValue_$511_storage_ptr",
+                  "typeIdentifier": "t_struct$_PathValue_$499_storage_ptr",
                   "typeString": "struct Json.PathValue"
                 }
               },
-              "id": 513,
+              "id": 501,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "140:11:6",
               "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_PathValue_$511_storage_$dyn_storage_ptr",
+                "typeIdentifier": "t_array$_t_struct$_PathValue_$499_storage_$dyn_storage_ptr",
                 "typeString": "struct Json.PathValue[]"
               }
             },
@@ -702,33 +702,33 @@
           },
           {
             "body": {
-              "id": 522,
+              "id": 510,
               "nodeType": "Block",
               "src": "215:27:6",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 520,
+                    "id": 508,
                     "name": "data_",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 514,
+                    "referencedDeclaration": 502,
                     "src": "232:5:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_PathValue_$511_storage_$dyn_storage",
+                      "typeIdentifier": "t_array$_t_struct$_PathValue_$499_storage_$dyn_storage",
                       "typeString": "struct Json.PathValue storage ref[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 519,
-                  "id": 521,
+                  "functionReturnParameters": 507,
+                  "id": 509,
                   "nodeType": "Return",
                   "src": "225:12:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 523,
+            "id": 511,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -736,48 +736,48 @@
             "name": "getNodes",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 515,
+              "id": 503,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "179:2:6"
             },
             "payable": false,
             "returnParameters": {
-              "id": 519,
+              "id": 507,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 518,
+                  "id": 506,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 523,
+                  "scope": 511,
                   "src": "203:11:6",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_PathValue_$511_memory_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_PathValue_$499_memory_$dyn_memory_ptr",
                     "typeString": "struct Json.PathValue[]"
                   },
                   "typeName": {
                     "baseType": {
                       "contractScope": null,
-                      "id": 516,
+                      "id": 504,
                       "name": "PathValue",
                       "nodeType": "UserDefinedTypeName",
-                      "referencedDeclaration": 511,
+                      "referencedDeclaration": 499,
                       "src": "203:9:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_PathValue_$511_storage_ptr",
+                        "typeIdentifier": "t_struct$_PathValue_$499_storage_ptr",
                         "typeString": "struct Json.PathValue"
                       }
                     },
-                    "id": 517,
+                    "id": 505,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "203:11:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_PathValue_$511_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_PathValue_$499_storage_$dyn_storage_ptr",
                       "typeString": "struct Json.PathValue[]"
                     }
                   },
@@ -787,7 +787,7 @@
               ],
               "src": "202:13:6"
             },
-            "scope": 545,
+            "scope": 533,
             "src": "162:80:6",
             "stateMutability": "view",
             "superFunction": null,
@@ -795,37 +795,37 @@
           },
           {
             "body": {
-              "id": 543,
+              "id": 531,
               "nodeType": "Block",
               "src": "303:84:6",
               "statements": [
                 {
                   "assignments": [
-                    531
+                    519
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 531,
+                      "id": 519,
                       "name": "result",
                       "nodeType": "VariableDeclaration",
-                      "scope": 544,
+                      "scope": 532,
                       "src": "309:23:6",
                       "stateVariable": false,
                       "storageLocation": "memory",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_PathValue_$511_memory_ptr",
+                        "typeIdentifier": "t_struct$_PathValue_$499_memory_ptr",
                         "typeString": "struct Json.PathValue"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 530,
+                        "id": 518,
                         "name": "PathValue",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 511,
+                        "referencedDeclaration": 499,
                         "src": "309:9:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_PathValue_$511_storage_ptr",
+                          "typeIdentifier": "t_struct$_PathValue_$499_storage_ptr",
                           "typeString": "struct Json.PathValue"
                         }
                       },
@@ -833,17 +833,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 536,
+                  "id": 524,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 533,
+                        "id": 521,
                         "name": "_path",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 525,
+                        "referencedDeclaration": 513,
                         "src": "345:5:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -852,11 +852,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 534,
+                        "id": 522,
                         "name": "_data",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 527,
+                        "referencedDeclaration": 515,
                         "src": "352:5:6",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -875,18 +875,18 @@
                           "typeString": "string memory"
                         }
                       ],
-                      "id": 532,
+                      "id": 520,
                       "name": "PathValue",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 511,
+                      "referencedDeclaration": 499,
                       "src": "335:9:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_type$_t_struct$_PathValue_$511_storage_ptr_$",
+                        "typeIdentifier": "t_type$_t_struct$_PathValue_$499_storage_ptr_$",
                         "typeString": "type(struct Json.PathValue storage pointer)"
                       }
                     },
-                    "id": 535,
+                    "id": 523,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -896,7 +896,7 @@
                     "nodeType": "FunctionCall",
                     "src": "335:23:6",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_PathValue_$511_memory",
+                      "typeIdentifier": "t_struct$_PathValue_$499_memory",
                       "typeString": "struct Json.PathValue memory"
                     }
                   },
@@ -909,14 +909,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 540,
+                        "id": 528,
                         "name": "result",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 531,
+                        "referencedDeclaration": 519,
                         "src": "375:6:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_PathValue_$511_memory_ptr",
+                          "typeIdentifier": "t_struct$_PathValue_$499_memory_ptr",
                           "typeString": "struct Json.PathValue memory"
                         }
                       }
@@ -924,24 +924,24 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_struct$_PathValue_$511_memory_ptr",
+                          "typeIdentifier": "t_struct$_PathValue_$499_memory_ptr",
                           "typeString": "struct Json.PathValue memory"
                         }
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 537,
+                        "id": 525,
                         "name": "data_",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 514,
+                        "referencedDeclaration": 502,
                         "src": "364:5:6",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_PathValue_$511_storage_$dyn_storage",
+                          "typeIdentifier": "t_array$_t_struct$_PathValue_$499_storage_$dyn_storage",
                           "typeString": "struct Json.PathValue storage ref[] storage ref"
                         }
                       },
-                      "id": 539,
+                      "id": 527,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -951,11 +951,11 @@
                       "referencedDeclaration": null,
                       "src": "364:10:6",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_PathValue_$511_storage_$returns$_t_uint256_$",
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_PathValue_$499_storage_$returns$_t_uint256_$",
                         "typeString": "function (struct Json.PathValue storage ref) returns (uint256)"
                       }
                     },
-                    "id": 541,
+                    "id": 529,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -969,14 +969,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 542,
+                  "id": 530,
                   "nodeType": "ExpressionStatement",
                   "src": "364:18:6"
                 }
               ]
             },
             "documentation": null,
-            "id": 544,
+            "id": 532,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -984,15 +984,15 @@
             "name": "addPathData",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 528,
+              "id": 516,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 525,
+                  "id": 513,
                   "name": "_path",
                   "nodeType": "VariableDeclaration",
-                  "scope": 544,
+                  "scope": 532,
                   "src": "267:12:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1001,7 +1001,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 524,
+                    "id": 512,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "267:6:6",
@@ -1015,10 +1015,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 527,
+                  "id": 515,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 544,
+                  "scope": 532,
                   "src": "281:13:6",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1027,7 +1027,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 526,
+                    "id": 514,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "281:6:6",
@@ -1044,19 +1044,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 529,
+              "id": 517,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "303:0:6"
             },
-            "scope": 545,
+            "scope": 533,
             "src": "246:141:6",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 546,
+        "scope": 534,
         "src": "60:329:6"
       }
     ],
@@ -1068,5 +1068,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-02T20:03:12.800Z"
+  "updatedAt": "2018-12-05T08:43:02.443Z"
 }
