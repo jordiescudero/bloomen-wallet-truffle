@@ -6,16 +6,4 @@ module.exports = function(deployer) {
   deployer.deploy(PrepaidCardManager);
 };
 
-// module.exports = function(deployer) {
-//   var _erc223, _prepaidCardManager;
-//   deployer.then(function (){
-//     return ERC223.deployed();
-//   }).then( function(instance){
-//     _erc223 = instance;
-//    // return deployer.deploy(PrepaidCardManager,_erc223.address);
-//     return deployer.deploy(PrepaidCardManager);
-//   }).then(function (instance){
-//     _prepaidCardManager=instance;
-//     return _erc223.addMinter(_prepaidCardManager.address);
-//   });
-// };
+

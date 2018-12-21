@@ -11,14 +11,14 @@
     "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Devices.sol",
     "exportedSymbols": {
       "Devices": [
-        131
+        126
       ]
     },
-    "id": 132,
+    "id": 127,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 130,
+        "id": 125,
         "literals": [
           "solidity",
           "^",
@@ -34,14 +34,14 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 131,
+        "id": 126,
         "linearizedBaseContracts": [
-          131
+          126
         ],
         "name": "Devices",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 132,
+        "scope": 127,
         "src": "26:26:3"
       }
     ],
@@ -51,14 +51,14 @@
     "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Devices.sol",
     "exportedSymbols": {
       "Devices": [
-        131
+        126
       ]
     },
-    "id": 132,
+    "id": 127,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 130,
+        "id": 125,
         "literals": [
           "solidity",
           "^",
@@ -74,14 +74,14 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 131,
+        "id": 126,
         "linearizedBaseContracts": [
-          131
+          126
         ],
         "name": "Devices",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 132,
+        "scope": 127,
         "src": "26:26:3"
       }
     ],
@@ -93,5 +93,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-05T08:43:32.255Z"
+  "updatedAt": "2018-12-21T07:02:10.753Z"
 }
