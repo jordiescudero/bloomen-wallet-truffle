@@ -1,0 +1,2 @@
+node src/contractUtilsBoomen.js add 0x24Af9351Eb5c8dD6b684861281657AB90A37d454
+node src/contractUtilsBoomen.js add 0x1309a2521cD0990dF7cD793fafAd204094efA8E8

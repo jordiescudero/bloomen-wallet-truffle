@@ -1,4 +1,5 @@
 pragma solidity ^0.4.24;
+pragma experimental ABIEncoderV2;
 
 import "../../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol";
 import "../../node_modules/openzeppelin-solidity/contracts/access/roles/SignerRole.sol";
