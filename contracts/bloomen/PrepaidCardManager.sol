@@ -5,9 +5,9 @@ import "../../node_modules/openzeppelin-solidity/contracts/math/SafeMath.sol";
 import "../../node_modules/openzeppelin-solidity/contracts/access/roles/SignerRole.sol";
 import "../../node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol";
 
-import "./token/ERC223.sol";
+import "./Devices.sol";
 
-contract PrepaidCardManager is SignerRole, Ownable ,ERC223("BloomenCoin","BLO",2) {
+contract PrepaidCardManager is SignerRole, Ownable , Devices {
   using SafeMath for uint256;
 
   event CardValidated(

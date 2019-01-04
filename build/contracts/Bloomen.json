@@ -130,24 +130,24 @@
       "type": "function"
     }
   ],
-  "bytecode": "0x6080604081905260008054600160a060020a0319163317808255600160a060020a0316917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a36104b5806100576000396000f30060806040526004361061008d5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166327b7ca5f81146100925780632baaed18146100b5578063715018a61461011a5780638da5cb5b1461012f5780638f32d59b14610160578063c930158514610189578063e247dea8146101ad578063f2fde38b146101c5575b600080fd5b34801561009e57600080fd5b506100b3600160a060020a03600435166101e6565b005b3480156100c157600080fd5b506100ca610257565b60408051602080825283518183015283519192839290830191858101910280838360005b838110156101065781810151838201526020016100ee565b505050509050019250505060405180910390f35b34801561012657600080fd5b506100b36102b9565b34801561013b57600080fd5b50610144610323565b60408051600160a060020a039092168252519081900360200190f35b34801561016c57600080fd5b50610175610332565b604080519115158252519081900360200190f35b34801561019557600080fd5b506100b3600435600160a060020a0360243516610343565b3480156101b957600080fd5b506100b3600435610398565b3480156101d157600080fd5b506100b3600160a060020a03600435166103ed565b6101ee610332565b15156101f957600080fd5b6001805480820182556000919091527fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf601805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b606060018054806020026020016040519081016040528092919081815260200182805480156102af57602002820191906000526020600020905b8154600160a060020a03168152600190910190602001808311610291575b5050505050905090565b6102c1610332565b15156102cc57600080fd5b60008054604051600160a060020a03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a36000805473ffffffffffffffffffffffffffffffffffffffff19169055565b600054600160a060020a031690565b600054600160a060020a0316331490565b61034b610332565b151561035657600080fd5b8060018381548110151561036657fe5b9060005260206000200160006101000a815481600160a060020a030219169083600160a060020a031602179055505050565b6103a0610332565b15156103ab57600080fd5b60006001828154811015156103bc57fe5b9060005260206000200160006101000a815481600160a060020a030219169083600160a060020a0316021790555050565b6103f5610332565b151561040057600080fd5b6104098161040c565b50565b600160a060020a038116151561042157600080fd5b60008054604051600160a060020a03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a723058208536906ca64e80e16e7dde3d6627b7536da6f0864c8d10504ecd92ce3afa0bd40029",
-  "deployedBytecode": "0x60806040526004361061008d5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166327b7ca5f81146100925780632baaed18146100b5578063715018a61461011a5780638da5cb5b1461012f5780638f32d59b14610160578063c930158514610189578063e247dea8146101ad578063f2fde38b146101c5575b600080fd5b34801561009e57600080fd5b506100b3600160a060020a03600435166101e6565b005b3480156100c157600080fd5b506100ca610257565b60408051602080825283518183015283519192839290830191858101910280838360005b838110156101065781810151838201526020016100ee565b505050509050019250505060405180910390f35b34801561012657600080fd5b506100b36102b9565b34801561013b57600080fd5b50610144610323565b60408051600160a060020a039092168252519081900360200190f35b34801561016c57600080fd5b50610175610332565b604080519115158252519081900360200190f35b34801561019557600080fd5b506100b3600435600160a060020a0360243516610343565b3480156101b957600080fd5b506100b3600435610398565b3480156101d157600080fd5b506100b3600160a060020a03600435166103ed565b6101ee610332565b15156101f957600080fd5b6001805480820182556000919091527fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf601805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b606060018054806020026020016040519081016040528092919081815260200182805480156102af57602002820191906000526020600020905b8154600160a060020a03168152600190910190602001808311610291575b5050505050905090565b6102c1610332565b15156102cc57600080fd5b60008054604051600160a060020a03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a36000805473ffffffffffffffffffffffffffffffffffffffff19169055565b600054600160a060020a031690565b600054600160a060020a0316331490565b61034b610332565b151561035657600080fd5b8060018381548110151561036657fe5b9060005260206000200160006101000a815481600160a060020a030219169083600160a060020a031602179055505050565b6103a0610332565b15156103ab57600080fd5b60006001828154811015156103bc57fe5b9060005260206000200160006101000a815481600160a060020a030219169083600160a060020a0316021790555050565b6103f5610332565b151561040057600080fd5b6104098161040c565b50565b600160a060020a038116151561042157600080fd5b60008054604051600160a060020a03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a723058208536906ca64e80e16e7dde3d6627b7536da6f0864c8d10504ecd92ce3afa0bd40029",
-  "sourceMap": "110:437:2:-;;;;;509:6:13;:19;;-1:-1:-1;;;;;;509:19:13;518:10;509:19;;;;-1:-1:-1;;;;;572:6:13;;539:40;;509:6;;539:40;110:437:2;;;;;;",
-  "deployedSourceMap": "110:437:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;172:92;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;172:92:2;-1:-1:-1;;;;;172:92:2;;;;;;;467:75;;8:9:-1;5:2;;;30:1;27;20:12;5:2;467:75:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;467:75:2;;;;;;;;;;;;;;;;;1273:127:13;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1273:127:13;;;;639:70;;8:9:-1;5:2;;;30:1;27;20:12;5:2;639:70:13;;;;;;;;-1:-1:-1;;;;;639:70:13;;;;;;;;;;;;;;926:83;;8:9:-1;5:2;;;30:1;27;20:12;5:2;926:83:13;;;;;;;;;;;;;;;;;;;;;;358:105:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;358:105:2;;;-1:-1:-1;;;;;358:105:2;;;;;268:86;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;268:86:2;;;;;1561:101:13;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1561:101:13;-1:-1:-1;;;;;1561:101:13;;;;;172:92:2;824:9:13;:7;:9::i;:::-;816:18;;;;;;;;234:6:2;27:10:-1;;23:18;;;45:23;;-1:-1;234:25:2;;;;;;;;-1:-1:-1;;234:25:2;-1:-1:-1;;;;;234:25:2;;;;;;;;;;172:92::o;467:75::-;507:9;531:6;524:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;524:13:2;;;;;;;;;;;;;;;;;;;;;;;467:75;:::o;1273:127:13:-;824:9;:7;:9::i;:::-;816:18;;;;;;;;1367:1;1351:6;;1330:40;;-1:-1:-1;;;;;1351:6:13;;;;1330:40;;1367:1;;1330:40;1393:1;1376:19;;-1:-1:-1;;1376:19:13;;;1273:127::o;639:70::-;676:7;698:6;-1:-1:-1;;;;;698:6:13;639:70;:::o;926:83::-;965:4;998:6;-1:-1:-1;;;;;998:6:13;984:10;:20;;926:83::o;358:105:2:-;824:9:13;:7;:9::i;:::-;816:18;;;;;;;;447:11:2;432:6;439;432:14;;;;;;;;;;;;;;;;;;:26;;;;;-1:-1:-1;;;;;432:26:2;;;;;-1:-1:-1;;;;;432:26:2;;;;;;358:105;;:::o;268:86::-;824:9:13;:7;:9::i;:::-;816:18;;;;;;;;347:1:2;324:6;331;324:14;;;;;;;;;;;;;;;;;;:25;;;;;-1:-1:-1;;;;;324:25:2;;;;;-1:-1:-1;;;;;324:25:2;;;;;;268:86;:::o;1561:101:13:-;824:9;:7;:9::i;:::-;816:18;;;;;;;;1629:28;1648:8;1629:18;:28::i;:::-;1561:101;:::o;1796:169::-;-1:-1:-1;;;;;1865:22:13;;;;1857:31;;;;;;1920:6;;;1899:38;;-1:-1:-1;;;;;1899:38:13;;;;1920:6;;;1899:38;;;1943:6;:17;;-1:-1:-1;;1943:17:13;-1:-1:-1;;;;;1943:17:13;;;;;;;;;;1796:169::o",
+  "bytecode": "0x6080604081905260008054600160a060020a0319163317808255600160a060020a0316917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908290a36104b5806100576000396000f30060806040526004361061008d5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166327b7ca5f81146100925780632baaed18146100b5578063715018a61461011a5780638da5cb5b1461012f5780638f32d59b14610160578063c930158514610189578063e247dea8146101ad578063f2fde38b146101c5575b600080fd5b34801561009e57600080fd5b506100b3600160a060020a03600435166101e6565b005b3480156100c157600080fd5b506100ca610257565b60408051602080825283518183015283519192839290830191858101910280838360005b838110156101065781810151838201526020016100ee565b505050509050019250505060405180910390f35b34801561012657600080fd5b506100b36102b9565b34801561013b57600080fd5b50610144610323565b60408051600160a060020a039092168252519081900360200190f35b34801561016c57600080fd5b50610175610332565b604080519115158252519081900360200190f35b34801561019557600080fd5b506100b3600435600160a060020a0360243516610343565b3480156101b957600080fd5b506100b3600435610398565b3480156101d157600080fd5b506100b3600160a060020a03600435166103ed565b6101ee610332565b15156101f957600080fd5b6001805480820182556000919091527fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf601805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b606060018054806020026020016040519081016040528092919081815260200182805480156102af57602002820191906000526020600020905b8154600160a060020a03168152600190910190602001808311610291575b5050505050905090565b6102c1610332565b15156102cc57600080fd5b60008054604051600160a060020a03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a36000805473ffffffffffffffffffffffffffffffffffffffff19169055565b600054600160a060020a031690565b600054600160a060020a0316331490565b61034b610332565b151561035657600080fd5b8060018381548110151561036657fe5b9060005260206000200160006101000a815481600160a060020a030219169083600160a060020a031602179055505050565b6103a0610332565b15156103ab57600080fd5b60006001828154811015156103bc57fe5b9060005260206000200160006101000a815481600160a060020a030219169083600160a060020a0316021790555050565b6103f5610332565b151561040057600080fd5b6104098161040c565b50565b600160a060020a038116151561042157600080fd5b60008054604051600160a060020a03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a723058205838b51e51fc68d69ee81f308fb191ecb94d64ef872b6a16e81f135d8035895c0029",
+  "deployedBytecode": "0x60806040526004361061008d5763ffffffff7c010000000000000000000000000000000000000000000000000000000060003504166327b7ca5f81146100925780632baaed18146100b5578063715018a61461011a5780638da5cb5b1461012f5780638f32d59b14610160578063c930158514610189578063e247dea8146101ad578063f2fde38b146101c5575b600080fd5b34801561009e57600080fd5b506100b3600160a060020a03600435166101e6565b005b3480156100c157600080fd5b506100ca610257565b60408051602080825283518183015283519192839290830191858101910280838360005b838110156101065781810151838201526020016100ee565b505050509050019250505060405180910390f35b34801561012657600080fd5b506100b36102b9565b34801561013b57600080fd5b50610144610323565b60408051600160a060020a039092168252519081900360200190f35b34801561016c57600080fd5b50610175610332565b604080519115158252519081900360200190f35b34801561019557600080fd5b506100b3600435600160a060020a0360243516610343565b3480156101b957600080fd5b506100b3600435610398565b3480156101d157600080fd5b506100b3600160a060020a03600435166103ed565b6101ee610332565b15156101f957600080fd5b6001805480820182556000919091527fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf601805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b606060018054806020026020016040519081016040528092919081815260200182805480156102af57602002820191906000526020600020905b8154600160a060020a03168152600190910190602001808311610291575b5050505050905090565b6102c1610332565b15156102cc57600080fd5b60008054604051600160a060020a03909116907f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0908390a36000805473ffffffffffffffffffffffffffffffffffffffff19169055565b600054600160a060020a031690565b600054600160a060020a0316331490565b61034b610332565b151561035657600080fd5b8060018381548110151561036657fe5b9060005260206000200160006101000a815481600160a060020a030219169083600160a060020a031602179055505050565b6103a0610332565b15156103ab57600080fd5b60006001828154811015156103bc57fe5b9060005260206000200160006101000a815481600160a060020a030219169083600160a060020a0316021790555050565b6103f5610332565b151561040057600080fd5b6104098161040c565b50565b600160a060020a038116151561042157600080fd5b60008054604051600160a060020a03808516939216917f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e091a36000805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a03929092169190911790555600a165627a7a723058205838b51e51fc68d69ee81f308fb191ecb94d64ef872b6a16e81f135d8035895c0029",
+  "sourceMap": "110:437:2:-;;;;;509:6:14;:19;;-1:-1:-1;;;;;;509:19:14;518:10;509:19;;;;-1:-1:-1;;;;;572:6:14;;539:40;;509:6;;539:40;110:437:2;;;;;;",
+  "deployedSourceMap": "110:437:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;172:92;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;172:92:2;-1:-1:-1;;;;;172:92:2;;;;;;;467:75;;8:9:-1;5:2;;;30:1;27;20:12;5:2;467:75:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:100:-1;33:3;30:1;27:10;8:100;;;90:11;;;84:18;71:11;;;64:39;52:2;45:10;8:100;;;12:14;467:75:2;;;;;;;;;;;;;;;;;1273:127:14;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1273:127:14;;;;639:70;;8:9:-1;5:2;;;30:1;27;20:12;5:2;639:70:14;;;;;;;;-1:-1:-1;;;;;639:70:14;;;;;;;;;;;;;;926:83;;8:9:-1;5:2;;;30:1;27;20:12;5:2;926:83:14;;;;;;;;;;;;;;;;;;;;;;358:105:2;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;358:105:2;;;-1:-1:-1;;;;;358:105:2;;;;;268:86;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;268:86:2;;;;;1561:101:14;;8:9:-1;5:2;;;30:1;27;20:12;5:2;-1:-1;1561:101:14;-1:-1:-1;;;;;1561:101:14;;;;;172:92:2;824:9:14;:7;:9::i;:::-;816:18;;;;;;;;234:6:2;27:10:-1;;23:18;;;45:23;;-1:-1;234:25:2;;;;;;;;-1:-1:-1;;234:25:2;-1:-1:-1;;;;;234:25:2;;;;;;;;;;172:92::o;467:75::-;507:9;531:6;524:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;524:13:2;;;;;;;;;;;;;;;;;;;;;;;467:75;:::o;1273:127:14:-;824:9;:7;:9::i;:::-;816:18;;;;;;;;1367:1;1351:6;;1330:40;;-1:-1:-1;;;;;1351:6:14;;;;1330:40;;1367:1;;1330:40;1393:1;1376:19;;-1:-1:-1;;1376:19:14;;;1273:127::o;639:70::-;676:7;698:6;-1:-1:-1;;;;;698:6:14;639:70;:::o;926:83::-;965:4;998:6;-1:-1:-1;;;;;998:6:14;984:10;:20;;926:83::o;358:105:2:-;824:9:14;:7;:9::i;:::-;816:18;;;;;;;;447:11:2;432:6;439;432:14;;;;;;;;;;;;;;;;;;:26;;;;;-1:-1:-1;;;;;432:26:2;;;;;-1:-1:-1;;;;;432:26:2;;;;;;358:105;;:::o;268:86::-;824:9:14;:7;:9::i;:::-;816:18;;;;;;;;347:1:2;324:6;331;324:14;;;;;;;;;;;;;;;;;;:25;;;;;-1:-1:-1;;;;;324:25:2;;;;;-1:-1:-1;;;;;324:25:2;;;;;;268:86;:::o;1561:101:14:-;824:9;:7;:9::i;:::-;816:18;;;;;;;;1629:28;1648:8;1629:18;:28::i;:::-;1561:101;:::o;1796:169::-;-1:-1:-1;;;;;1865:22:14;;;;1857:31;;;;;;1920:6;;;1899:38;;-1:-1:-1;;;;;1899:38:14;;;;1920:6;;;1899:38;;;1943:6;:17;;-1:-1:-1;;1943:17:14;-1:-1:-1;;;;;1943:17:14;;;;;;;;;;1796:169::o",
   "source": "pragma solidity ^0.4.23;\n\nimport \"../../node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol\";\n\ncontract Bloomen is Ownable{\n\n  address[] private _dapps;\n\n\n  function addDapp(address _dappAddress) onlyOwner public {\n    _dapps.push(_dappAddress);\n  }\n\n  function deleteDapp(uint _index) onlyOwner public {\n    _dapps[_index]=address(0);\n  }\n\n  function setDapp(uint _index, address _newAddress) onlyOwner public {\n    _dapps[_index]=_newAddress;\n  }\n\n  function getDapps() view public returns(address[]) {\n    return _dapps;\n  }\n\n\n\n}",
-  "sourcePath": "/Users/jordiescuderosubirana/ws/bloomen-wallet-truffle/contracts/bloomen/Bloomen.sol",
+  "sourcePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Bloomen.sol",
   "ast": {
-    "absolutePath": "/Users/jordiescuderosubirana/ws/bloomen-wallet-truffle/contracts/bloomen/Bloomen.sol",
+    "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Bloomen.sol",
     "exportedSymbols": {
       "Bloomen": [
-        123
+        387
       ]
     },
-    "id": 124,
+    "id": 388,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 61,
+        "id": 325,
         "literals": [
           "solidity",
           "^",
@@ -158,12 +158,12 @@
         "src": "0:24:2"
       },
       {
-        "absolutePath": "/Users/jordiescuderosubirana/ws/bloomen-wallet-truffle/node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol",
         "file": "../../node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol",
-        "id": 62,
+        "id": 326,
         "nodeType": "ImportDirective",
-        "scope": 124,
-        "sourceUnit": 1437,
+        "scope": 388,
+        "sourceUnit": 2227,
         "src": "26:82:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -174,41 +174,41 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 63,
+              "id": 327,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1436,
+              "referencedDeclaration": 2226,
               "src": "130:7:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$1436",
+                "typeIdentifier": "t_contract$_Ownable_$2226",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 64,
+            "id": 328,
             "nodeType": "InheritanceSpecifier",
             "src": "130:7:2"
           }
         ],
         "contractDependencies": [
-          1436
+          2226
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 123,
+        "id": 387,
         "linearizedBaseContracts": [
-          123,
-          1436
+          387,
+          2226
         ],
         "name": "Bloomen",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 67,
+            "id": 331,
             "name": "_dapps",
             "nodeType": "VariableDeclaration",
-            "scope": 123,
+            "scope": 387,
             "src": "142:24:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -218,7 +218,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 65,
+                "id": 329,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "142:7:2",
@@ -227,7 +227,7 @@
                   "typeString": "address"
                 }
               },
-              "id": 66,
+              "id": 330,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "142:9:2",
@@ -241,7 +241,7 @@
           },
           {
             "body": {
-              "id": 80,
+              "id": 344,
               "nodeType": "Block",
               "src": "228:36:2",
               "statements": [
@@ -251,11 +251,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 77,
+                        "id": 341,
                         "name": "_dappAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 69,
+                        "referencedDeclaration": 333,
                         "src": "246:12:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -272,18 +272,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 74,
+                        "id": 338,
                         "name": "_dapps",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 67,
+                        "referencedDeclaration": 331,
                         "src": "234:6:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 76,
+                      "id": 340,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -297,7 +297,7 @@
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 78,
+                    "id": 342,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -311,28 +311,28 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 79,
+                  "id": 343,
                   "nodeType": "ExpressionStatement",
                   "src": "234:25:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 81,
+            "id": 345,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 72,
+                "id": 336,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 71,
+                  "id": 335,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1370,
+                  "referencedDeclaration": 2160,
                   "src": "211:9:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -346,15 +346,15 @@
             "name": "addDapp",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 70,
+              "id": 334,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 69,
+                  "id": 333,
                   "name": "_dappAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 81,
+                  "scope": 345,
                   "src": "189:20:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -363,7 +363,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 68,
+                    "id": 332,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "189:7:2",
@@ -380,12 +380,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 73,
+              "id": 337,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "228:0:2"
             },
-            "scope": 123,
+            "scope": 387,
             "src": "172:92:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -393,14 +393,14 @@
           },
           {
             "body": {
-              "id": 96,
+              "id": 360,
               "nodeType": "Block",
               "src": "318:36:2",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 94,
+                    "id": 358,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -409,25 +409,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 88,
+                        "id": 352,
                         "name": "_dapps",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 67,
+                        "referencedDeclaration": 331,
                         "src": "324:6:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 90,
+                      "id": 354,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 89,
+                        "id": 353,
                         "name": "_index",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 83,
+                        "referencedDeclaration": 347,
                         "src": "331:6:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -453,7 +453,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 92,
+                          "id": 356,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -476,7 +476,7 @@
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 91,
+                        "id": 355,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -489,7 +489,7 @@
                         },
                         "typeName": "address"
                       },
-                      "id": 93,
+                      "id": 357,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -509,28 +509,28 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 95,
+                  "id": 359,
                   "nodeType": "ExpressionStatement",
                   "src": "324:25:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 97,
+            "id": 361,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 86,
+                "id": 350,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 85,
+                  "id": 349,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1370,
+                  "referencedDeclaration": 2160,
                   "src": "301:9:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -544,15 +544,15 @@
             "name": "deleteDapp",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 84,
+              "id": 348,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 83,
+                  "id": 347,
                   "name": "_index",
                   "nodeType": "VariableDeclaration",
-                  "scope": 97,
+                  "scope": 361,
                   "src": "288:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -561,7 +561,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 82,
+                    "id": 346,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "288:4:2",
@@ -578,12 +578,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 87,
+              "id": 351,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "318:0:2"
             },
-            "scope": 123,
+            "scope": 387,
             "src": "268:86:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -591,14 +591,14 @@
           },
           {
             "body": {
-              "id": 112,
+              "id": 376,
               "nodeType": "Block",
               "src": "426:37:2",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 110,
+                    "id": 374,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -607,25 +607,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 106,
+                        "id": 370,
                         "name": "_dapps",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 67,
+                        "referencedDeclaration": 331,
                         "src": "432:6:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 108,
+                      "id": 372,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 107,
+                        "id": 371,
                         "name": "_index",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 99,
+                        "referencedDeclaration": 363,
                         "src": "439:6:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -647,11 +647,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 109,
+                      "id": 373,
                       "name": "_newAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 101,
+                      "referencedDeclaration": 365,
                       "src": "447:11:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -664,28 +664,28 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 111,
+                  "id": 375,
                   "nodeType": "ExpressionStatement",
                   "src": "432:26:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 113,
+            "id": 377,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 104,
+                "id": 368,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 103,
+                  "id": 367,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1370,
+                  "referencedDeclaration": 2160,
                   "src": "409:9:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -699,15 +699,15 @@
             "name": "setDapp",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 102,
+              "id": 366,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 99,
+                  "id": 363,
                   "name": "_index",
                   "nodeType": "VariableDeclaration",
-                  "scope": 113,
+                  "scope": 377,
                   "src": "375:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -716,7 +716,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 98,
+                    "id": 362,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "375:4:2",
@@ -730,10 +730,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 101,
+                  "id": 365,
                   "name": "_newAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 113,
+                  "scope": 377,
                   "src": "388:19:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -742,7 +742,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 100,
+                    "id": 364,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "388:7:2",
@@ -759,12 +759,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 105,
+              "id": 369,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "426:0:2"
             },
-            "scope": 123,
+            "scope": 387,
             "src": "358:105:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -772,33 +772,33 @@
           },
           {
             "body": {
-              "id": 121,
+              "id": 385,
               "nodeType": "Block",
               "src": "518:24:2",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 119,
+                    "id": 383,
                     "name": "_dapps",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 67,
+                    "referencedDeclaration": 331,
                     "src": "531:6:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_address_$dyn_storage",
                       "typeString": "address[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 118,
-                  "id": 120,
+                  "functionReturnParameters": 382,
+                  "id": 384,
                   "nodeType": "Return",
                   "src": "524:13:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 122,
+            "id": 386,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -806,22 +806,22 @@
             "name": "getDapps",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 114,
+              "id": 378,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "484:2:2"
             },
             "payable": false,
             "returnParameters": {
-              "id": 118,
+              "id": 382,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 117,
+                  "id": 381,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 122,
+                  "scope": 386,
                   "src": "507:9:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -831,7 +831,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 115,
+                      "id": 379,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "507:7:2",
@@ -840,7 +840,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 116,
+                    "id": 380,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "507:9:2",
@@ -855,31 +855,31 @@
               ],
               "src": "506:11:2"
             },
-            "scope": 123,
+            "scope": 387,
             "src": "467:75:2",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 124,
+        "scope": 388,
         "src": "110:437:2"
       }
     ],
     "src": "0:547:2"
   },
   "legacyAST": {
-    "absolutePath": "/Users/jordiescuderosubirana/ws/bloomen-wallet-truffle/contracts/bloomen/Bloomen.sol",
+    "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/contracts/bloomen/Bloomen.sol",
     "exportedSymbols": {
       "Bloomen": [
-        123
+        387
       ]
     },
-    "id": 124,
+    "id": 388,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 61,
+        "id": 325,
         "literals": [
           "solidity",
           "^",
@@ -890,12 +890,12 @@
         "src": "0:24:2"
       },
       {
-        "absolutePath": "/Users/jordiescuderosubirana/ws/bloomen-wallet-truffle/node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol",
+        "absolutePath": "/home/jordi/ws/bloomen-wallet-truffle/node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol",
         "file": "../../node_modules/openzeppelin-solidity/contracts/ownership/Ownable.sol",
-        "id": 62,
+        "id": 326,
         "nodeType": "ImportDirective",
-        "scope": 124,
-        "sourceUnit": 1437,
+        "scope": 388,
+        "sourceUnit": 2227,
         "src": "26:82:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -906,41 +906,41 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 63,
+              "id": 327,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 1436,
+              "referencedDeclaration": 2226,
               "src": "130:7:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$1436",
+                "typeIdentifier": "t_contract$_Ownable_$2226",
                 "typeString": "contract Ownable"
               }
             },
-            "id": 64,
+            "id": 328,
             "nodeType": "InheritanceSpecifier",
             "src": "130:7:2"
           }
         ],
         "contractDependencies": [
-          1436
+          2226
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 123,
+        "id": 387,
         "linearizedBaseContracts": [
-          123,
-          1436
+          387,
+          2226
         ],
         "name": "Bloomen",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 67,
+            "id": 331,
             "name": "_dapps",
             "nodeType": "VariableDeclaration",
-            "scope": 123,
+            "scope": 387,
             "src": "142:24:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -950,7 +950,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 65,
+                "id": 329,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "142:7:2",
@@ -959,7 +959,7 @@
                   "typeString": "address"
                 }
               },
-              "id": 66,
+              "id": 330,
               "length": null,
               "nodeType": "ArrayTypeName",
               "src": "142:9:2",
@@ -973,7 +973,7 @@
           },
           {
             "body": {
-              "id": 80,
+              "id": 344,
               "nodeType": "Block",
               "src": "228:36:2",
               "statements": [
@@ -983,11 +983,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 77,
+                        "id": 341,
                         "name": "_dappAddress",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 69,
+                        "referencedDeclaration": 333,
                         "src": "246:12:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1004,18 +1004,18 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 74,
+                        "id": 338,
                         "name": "_dapps",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 67,
+                        "referencedDeclaration": 331,
                         "src": "234:6:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 76,
+                      "id": 340,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1029,7 +1029,7 @@
                         "typeString": "function (address) returns (uint256)"
                       }
                     },
-                    "id": 78,
+                    "id": 342,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1043,28 +1043,28 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 79,
+                  "id": 343,
                   "nodeType": "ExpressionStatement",
                   "src": "234:25:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 81,
+            "id": 345,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 72,
+                "id": 336,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 71,
+                  "id": 335,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1370,
+                  "referencedDeclaration": 2160,
                   "src": "211:9:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1078,15 +1078,15 @@
             "name": "addDapp",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 70,
+              "id": 334,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 69,
+                  "id": 333,
                   "name": "_dappAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 81,
+                  "scope": 345,
                   "src": "189:20:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1095,7 +1095,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 68,
+                    "id": 332,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "189:7:2",
@@ -1112,12 +1112,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 73,
+              "id": 337,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "228:0:2"
             },
-            "scope": 123,
+            "scope": 387,
             "src": "172:92:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1125,14 +1125,14 @@
           },
           {
             "body": {
-              "id": 96,
+              "id": 360,
               "nodeType": "Block",
               "src": "318:36:2",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 94,
+                    "id": 358,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1141,25 +1141,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 88,
+                        "id": 352,
                         "name": "_dapps",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 67,
+                        "referencedDeclaration": 331,
                         "src": "324:6:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 90,
+                      "id": 354,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 89,
+                        "id": 353,
                         "name": "_index",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 83,
+                        "referencedDeclaration": 347,
                         "src": "331:6:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1185,7 +1185,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 92,
+                          "id": 356,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1208,7 +1208,7 @@
                             "typeString": "int_const 0"
                           }
                         ],
-                        "id": 91,
+                        "id": 355,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1221,7 +1221,7 @@
                         },
                         "typeName": "address"
                       },
-                      "id": 93,
+                      "id": 357,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -1241,28 +1241,28 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 95,
+                  "id": 359,
                   "nodeType": "ExpressionStatement",
                   "src": "324:25:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 97,
+            "id": 361,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 86,
+                "id": 350,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 85,
+                  "id": 349,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1370,
+                  "referencedDeclaration": 2160,
                   "src": "301:9:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1276,15 +1276,15 @@
             "name": "deleteDapp",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 84,
+              "id": 348,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 83,
+                  "id": 347,
                   "name": "_index",
                   "nodeType": "VariableDeclaration",
-                  "scope": 97,
+                  "scope": 361,
                   "src": "288:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1293,7 +1293,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 82,
+                    "id": 346,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "288:4:2",
@@ -1310,12 +1310,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 87,
+              "id": 351,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "318:0:2"
             },
-            "scope": 123,
+            "scope": 387,
             "src": "268:86:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1323,14 +1323,14 @@
           },
           {
             "body": {
-              "id": 112,
+              "id": 376,
               "nodeType": "Block",
               "src": "426:37:2",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 110,
+                    "id": 374,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1339,25 +1339,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 106,
+                        "id": 370,
                         "name": "_dapps",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 67,
+                        "referencedDeclaration": 331,
                         "src": "432:6:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_array$_t_address_$dyn_storage",
                           "typeString": "address[] storage ref"
                         }
                       },
-                      "id": 108,
+                      "id": 372,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 107,
+                        "id": 371,
                         "name": "_index",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 99,
+                        "referencedDeclaration": 363,
                         "src": "439:6:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1379,11 +1379,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 109,
+                      "id": 373,
                       "name": "_newAddress",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 101,
+                      "referencedDeclaration": 365,
                       "src": "447:11:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -1396,28 +1396,28 @@
                       "typeString": "address"
                     }
                   },
-                  "id": 111,
+                  "id": 375,
                   "nodeType": "ExpressionStatement",
                   "src": "432:26:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 113,
+            "id": 377,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 104,
+                "id": 368,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 103,
+                  "id": 367,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 1370,
+                  "referencedDeclaration": 2160,
                   "src": "409:9:2",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1431,15 +1431,15 @@
             "name": "setDapp",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 102,
+              "id": 366,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 99,
+                  "id": 363,
                   "name": "_index",
                   "nodeType": "VariableDeclaration",
-                  "scope": 113,
+                  "scope": 377,
                   "src": "375:11:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1448,7 +1448,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 98,
+                    "id": 362,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "375:4:2",
@@ -1462,10 +1462,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 101,
+                  "id": 365,
                   "name": "_newAddress",
                   "nodeType": "VariableDeclaration",
-                  "scope": 113,
+                  "scope": 377,
                   "src": "388:19:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1474,7 +1474,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 100,
+                    "id": 364,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "388:7:2",
@@ -1491,12 +1491,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 105,
+              "id": 369,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "426:0:2"
             },
-            "scope": 123,
+            "scope": 387,
             "src": "358:105:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1504,33 +1504,33 @@
           },
           {
             "body": {
-              "id": 121,
+              "id": 385,
               "nodeType": "Block",
               "src": "518:24:2",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 119,
+                    "id": 383,
                     "name": "_dapps",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 67,
+                    "referencedDeclaration": 331,
                     "src": "531:6:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_array$_t_address_$dyn_storage",
                       "typeString": "address[] storage ref"
                     }
                   },
-                  "functionReturnParameters": 118,
-                  "id": 120,
+                  "functionReturnParameters": 382,
+                  "id": 384,
                   "nodeType": "Return",
                   "src": "524:13:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 122,
+            "id": 386,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1538,22 +1538,22 @@
             "name": "getDapps",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 114,
+              "id": 378,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "484:2:2"
             },
             "payable": false,
             "returnParameters": {
-              "id": 118,
+              "id": 382,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 117,
+                  "id": 381,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 122,
+                  "scope": 386,
                   "src": "507:9:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1563,7 +1563,7 @@
                   },
                   "typeName": {
                     "baseType": {
-                      "id": 115,
+                      "id": 379,
                       "name": "address",
                       "nodeType": "ElementaryTypeName",
                       "src": "507:7:2",
@@ -1572,7 +1572,7 @@
                         "typeString": "address"
                       }
                     },
-                    "id": 116,
+                    "id": 380,
                     "length": null,
                     "nodeType": "ArrayTypeName",
                     "src": "507:9:2",
@@ -1587,14 +1587,14 @@
               ],
               "src": "506:11:2"
             },
-            "scope": 123,
+            "scope": 387,
             "src": "467:75:2",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 124,
+        "scope": 388,
         "src": "110:437:2"
       }
     ],
@@ -1608,10 +1608,10 @@
     "82584648528": {
       "events": {},
       "links": {},
-      "address": "0x8466cd71109fc4ea359fb72c464a0625401529ac",
-      "transactionHash": "0x363d6e07b59fb2133dae72065eadce2bd888968ffd87f573c789751051beb4e4"
+      "address": "0x039b9fb7173dbc23073c284c0d6fdbd93f910e5d",
+      "transactionHash": "0x364cbb7064db371fb1823ee98a856313e542f49df9d82dc34c458abcc26fbf60"
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-25T21:45:32.613Z"
+  "updatedAt": "2019-01-04T17:24:47.306Z"
 }
