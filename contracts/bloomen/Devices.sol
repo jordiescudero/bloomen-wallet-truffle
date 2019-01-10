@@ -16,6 +16,8 @@ contract Devices  is Assets {
     string dappId;
   }
 
+  uint256 constant private PAGE_SIZE = 10;
+
   mapping (address => UserDevices) private userDevices_;
 
   mapping (bytes32 => address) private deviceHashes_;
@@ -25,8 +27,26 @@ contract Devices  is Assets {
     return allowed;
   }
 
+  function isAllowedForAddress(address _target, bytes32 _deviceHash) public view returns (bool) {
+    bool allowed =  (deviceHashes_[_deviceHash] == _target) && (isAllowed(_deviceHash));
+    return allowed;
+  }
+
+  function getDevices(uint256 _page) public view returns (Device[] memory) {
+    Device[] memory devicesPage = new Device[](PAGE_SIZE); 
+    return devicesPage;
+  }
+ 
+  function getAddress(bytes32 _deviceHash) public view returns (address) {
+    bool allowed = isAllowed(_deviceHash);
+    if (allowed) {
+      return deviceHashes_[_deviceHash];
+    } else {
+       return address(0);
+    }
+  }
+
   function handshake(bytes32 _deviceHash, uint256 _assetId, uint256 _schemaId, uint256 _lifeTime, string _dappId) public {
-    
     _handshake(msg.sender, _deviceHash, _assetId, _schemaId, _lifeTime, _dappId);
   }
 

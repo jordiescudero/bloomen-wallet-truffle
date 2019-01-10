@@ -61,9 +61,12 @@ contract  Assets is Schemas, ERC223ReceivingContract, ERC223("BloomenCoin","BLO"
     Schema memory schema = Schemas.getSchema(_schemaId);
     require(schema.amount == _amount, "incorrect amount");    
     require(!_checkOwnership(_user, _assetId, _schemaId), "duplicated");
-    
-    ERC223.transfer(this, _amount, _schemaId);
 
+    if (_amount >0 ){
+      // avoid money transfer on free assets
+      ERC223.transfer(this, _amount, _schemaId);
+    }
+  
     // registrar la compra
     userAssets_[_user].assets.push(Asset(now + schema.assetLifeTime , _assetId, _schemaId, _dappId));
   }
