@@ -7,6 +7,7 @@ contract Devices  is Assets {
 
   struct UserDevices {   
     mapping (bytes32 => Device) devices;
+    bytes32[] deviceArray;
   } 
 
   struct Device {   
@@ -31,19 +32,38 @@ contract Devices  is Assets {
     bool allowed =  (deviceHashes_[_deviceHash] == _target) && (isAllowed(_deviceHash));
     return allowed;
   }
+   
+  function getDevicesPageCount() public view returns (uint256) {
+    return userDevices_[msg.sender].deviceArray.length % PAGE_SIZE;
+  }
 
   function getDevices(uint256 _page) public view returns (Device[] memory) {
     Device[] memory devicesPage = new Device[](PAGE_SIZE); 
+    uint256 transferIndex = PAGE_SIZE * _page - PAGE_SIZE;
+    bytes32[] memory devices = userDevices_[msg.sender].deviceArray;
+
+    if (devices.length == 0 || transferIndex > devices.length - 1) {
+      return;
+    }
+   
+    uint256 returnCounter = 0;
+
+    for (transferIndex; transferIndex < PAGE_SIZE * _page; transferIndex++) {
+      if (transferIndex < devices.length) {
+        devicesPage[returnCounter] = userDevices_[msg.sender].devices[devices[transferIndex]];
+      }
+      returnCounter++;
+    }
     return devicesPage;
   }
- 
+
   function getAddress(bytes32 _deviceHash) public view returns (address) {
     bool allowed = isAllowed(_deviceHash);
+    address ownerAddress;
     if (allowed) {
-      return deviceHashes_[_deviceHash];
-    } else {
-       return address(0);
-    }
+      ownerAddress = deviceHashes_[_deviceHash];
+    } 
+    return ownerAddress;
   }
 
   function handshake(bytes32 _deviceHash, uint256 _assetId, uint256 _schemaId, uint256 _lifeTime, string _dappId) public {
@@ -65,12 +85,23 @@ contract Devices  is Assets {
     require(deviceHashes_[_deviceHash] == address(0), "duplicated hash");
     deviceHashes_[_deviceHash] = _owner; 
     userDevices_[_owner].devices[_deviceHash] =  Device(_lifeTime, _assetId, _schemaId, _dappId);
+    userDevices_[_owner].deviceArray.push(_deviceHash);
   }
 
   function _removeDevice(address _owner, bytes32 _deviceHash) internal {
     require(deviceHashes_[_deviceHash] == _owner, "same owner");
     delete deviceHashes_[_deviceHash];
     delete userDevices_[_owner].devices[_deviceHash];
+    bool found=false;
+    for (uint i = 0; i < userDevices_[_owner].deviceArray.length;i++){
+      if(found){
+        userDevices_[_owner].deviceArray[i] = userDevices_[_owner].deviceArray[i+1];
+      } else {
+        found = userDevices_[_owner].deviceArray[i] == _deviceHash;
+      }
+    }
+    delete userDevices_[_owner].deviceArray[userDevices_[_owner].deviceArray.length-1];
+    userDevices_[_owner].deviceArray.length--;
   }
 
 }

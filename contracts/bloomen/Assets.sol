@@ -31,8 +31,16 @@ contract  Assets is Schemas, ERC223ReceivingContract, ERC223("BloomenCoin","BLO"
     return _checkOwnership(msg.sender, _assetId, _schemaId);  
   }
 
+  function checkOwnershipForAddress(address _target, uint256 _assetId, uint256 _schemaId) public view returns (bool) {
+    return _checkOwnership(_target, _assetId, _schemaId);  
+  }
+
   function buy(uint256 _assetId, uint256 _schemaId, uint256 _amount, string _dappId) public  {
     _buy(msg.sender, _assetId, _schemaId, _amount, _dappId);  
+  }
+
+  function getAssetsPageCount() public view returns (uint256) {
+    return userAssets_[msg.sender].assets.length % PAGE_SIZE;
   }
 
   function getAssets(uint256 _page) public view returns (Asset[] memory) {

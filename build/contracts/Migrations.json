@@ -1378,10 +1378,10 @@
     "82584648528": {
       "events": {},
       "links": {},
-      "address": "0xfbc6592796ac7b49a5571ba8357663fb8ca6ac06",
-      "transactionHash": "0x5c0cf2914b109c689a6c33ce0356a4f8998d6affd1fd692eeeb8642d00c82d4a"
+      "address": "0xcf04182869f4efff39b3ed79a45dfe14faaa0943",
+      "transactionHash": "0xd3acda4ea18ad7bae57421292dc77c941e185039aa59c13e6600ae3d851e3070"
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2019-01-04T17:24:47.306Z"
+  "updatedAt": "2019-01-10T15:08:05.282Z"
 }
