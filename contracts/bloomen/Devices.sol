@@ -93,7 +93,7 @@ contract Devices  is Assets {
     delete deviceHashes_[_deviceHash];
     delete userDevices_[_owner].devices[_deviceHash];
     bool found=false;
-    for (uint i = 0; i < userDevices_[_owner].deviceArray.length;i++){
+    for (uint i = 0; i < userDevices_[_owner].deviceArray.length-1;i++){
       if(found){
         userDevices_[_owner].deviceArray[i] = userDevices_[_owner].deviceArray[i+1];
       } else {

@@ -12,7 +12,10 @@ contract Bloomen is Ownable{
   }
 
   function deleteDapp(uint _index) onlyOwner public {
-    _dapps[_index]=address(0);
+    for (uint i = _index; i < _dapps.length-1;i++){
+      _dapps[i] = _dapps[i+1];
+    }
+    _dapps.length--;
   }
 
   function setDapp(uint _index, address _newAddress) onlyOwner public {
