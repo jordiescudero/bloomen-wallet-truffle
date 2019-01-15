@@ -73,12 +73,13 @@ contract Devices  is Assets {
   function removeDevice(bytes32 _deviceHash) public {
     _removeDevice(msg.sender, _deviceHash);
   }
+
     
   function _handshake(address _owner, bytes32 _deviceHash, uint256 _assetId, uint256 _schemaId, uint256 _lifeTime, string _dappId) internal {
 
     require(Assets._checkOwnership(_owner, _assetId, _schemaId),"not allowed");
 
-    if ((deviceHashes_[_deviceHash] == address(0)) && (!isAllowed(_deviceHash))) {
+    if ((deviceHashes_[_deviceHash] != address(0)) && (!isAllowed(_deviceHash))) {
       _removeDevice(deviceHashes_[_deviceHash], _deviceHash);
     }
 

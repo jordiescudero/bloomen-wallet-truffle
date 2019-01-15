@@ -7,7 +7,7 @@ var mnemonic =process.env.ALASTRIA_MNEMONIC;
 
 var fs = require('fs');
 var contractJSON = JSON.parse(fs.readFileSync('./build/contracts/PrepaidCardManager.json', 'utf8'));
-const GAS = 999999999999999;
+const GAS = 9999999;
 
 const Web3 = require('web3');
 

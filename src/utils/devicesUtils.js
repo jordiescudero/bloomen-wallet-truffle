@@ -26,6 +26,8 @@ hdprovider.engine.start();
 
 const web3 = new Web3(hdprovider);
 
+console.log('addr:' + hdprovider.getAddress(0));
+
 const transactionObject = {
     from: hdprovider.getAddress(0),
     gas: GAS,
@@ -52,19 +54,35 @@ function doStuff() {
 function get(){ 
     
     contractInstance.methods
-    .isAllowed(web3.utils.keccak256('este es el hash'))
+    //.isAllowed(web3.utils.keccak256('este es el hash'))
+    //.isOwner(web3.utils.keccak256('xxxOOOO'),20,1)
+    //.toRemove(web3.utils.keccak256('xxxOOOO'))
+    //.isDuplicated(web3.utils.keccak256('xxxOOOO'))
+    //.sameOwner(web3.utils.keccak256('xxxOOOO'))
+    //.isAllowed(web3.utils.keccak256('xxxOOOO2'))
+    
+    //.getExpirationDate(web3.utils.keccak256('xxxOOOO6'))
+    //.getNow()
+    //.getDevicesPageCount()
+    .getDevices(1)
     .call(transactionObject).then(
         (result) => {
             console.log('GET:',result)
         });
+
+        
 }
 
 function add(){
     //handshake(bytes32 _deviceHash, uint256 _assetId, uint256 _schemaId, uint256 _lifeTime, string _dappId)
     
-    let n =  Date.now();
-    n += 60*60*24; //one day 
-    contractInstance.methods.handshake(web3.utils.keccak256('este es el hash'),1,1,n,"dummy dapp").send(transactionObject)
+    let n =  Date.now() ;
+    console.log('date:',n); 
+    n = n / 1000;
+    n += 60; //one day 
+    n = Math.trunc(n);
+    console.log('date:',n);    
+    contractInstance.methods.handshake(web3.utils.keccak256('xxxOOOO7'),20,1,n,"dummy dapp").send(transactionObject)
     .then((tx) => {
         console.log('Transaction sent.',tx.transactionHash);
         return checkTransaction(tx.transactionHash);

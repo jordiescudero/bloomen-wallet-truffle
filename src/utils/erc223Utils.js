@@ -51,30 +51,18 @@ function doStuff() {
 
 async function get(){
 
-    await contractInstance.methods.balanceOf('0xc33ddf117d4dbe85a76600a1a79873380cfba2ad').call(transactionObject).then(
+    await contractInstance.methods.balanceOf('0x40660a97ac1c0809599f50f4fd2c1413e776bb4c').call(transactionObject).then(
         (result) => {
             console.log('ME:',result)
         });
 
-    await contractInstance.methods.balanceOf('0xc3d47824ddbd528fca680bc56ffdf7036b3e60fb').call(transactionObject).then(
-        (result) => {
-            console.log('Distributor:',result)
-        });
-    await contractInstance.methods.balanceOf('0xae474b24632289fa7844b351f8d1e045b2461d35').call(transactionObject).then(
-        (result) => {
-            console.log('Service:',result)
-        }); 
-    await contractInstance.methods.balanceOf('0x933892ae13417ca965ceb29b40d52e10e0f21bb7').call(transactionObject).then(
-        (result) => {
-            console.log('TAX:',result)
-        });   
         
         
 }
 
 function add(){
   
-    contractInstance.methods.mint("0xc33ddf117d4dbe85a76600a1a79873380cfba2ad",1000).send(transactionObject)
+    contractInstance.methods.mint("0x40660a97ac1c0809599f50f4fd2c1413e776bb4c",1000).send(transactionObject)
     .then((tx) => {
         console.log('Transaction sent.',tx.transactionHash);
         return checkTransaction(tx.transactionHash);
