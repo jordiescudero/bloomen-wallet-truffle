@@ -62,7 +62,9 @@ function add(){
     const pathValues = [];
     const schemaId=1;
     let n =  Date.now();
-    n += 60*60*24*365; // schema valid for one year 
+    n = n / 1000;
+    n += 60*60*24*365; // schema valid for one year     
+    n = Math.trunc(n);
     pathValues.push(n); // schema expiration date
     pathValues.push(schemaId); // id
 
