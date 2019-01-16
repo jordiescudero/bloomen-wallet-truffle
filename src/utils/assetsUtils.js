@@ -59,7 +59,7 @@ function get(){
 function add(){
     //buy(uint256 _assetId, uint256 _schemaId, uint256 _amount, string _dappId)
     
-    contractInstance.methods.buy(2,1,100,'dummyDapp').send(transactionObject)
+    contractInstance.methods.buy(20,1,100,'dummyDapp').send(transactionObject)
     .then((tx) => {
         console.log('Transaction sent.',tx.transactionHash);
         return checkTransaction(tx.transactionHash);

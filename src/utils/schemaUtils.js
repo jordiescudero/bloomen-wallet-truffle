@@ -7,7 +7,7 @@ var mnemonic =process.env.ALASTRIA_MNEMONIC;
 
 var fs = require('fs');
 var contractJSON = JSON.parse(fs.readFileSync('./build/contracts/PrepaidCardManager.json', 'utf8'));
-const GAS = 999999999999999;
+const GAS = 9999999;
 
 const Web3 = require('web3');
 
@@ -62,7 +62,9 @@ function add(){
     const pathValues = [];
     const schemaId=1;
     let n =  Date.now();
-    n += 60*60*24*365; // schema valid for one year 
+    n = n / 1000;
+    n += 60*60*24*365; // schema valid for one year     
+    n = Math.trunc(n);
     pathValues.push(n); // schema expiration date
     pathValues.push(schemaId); // id
 
