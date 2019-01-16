@@ -37,10 +37,10 @@ const transactionObject = {
 function doStuff() {
     switch(process.argv[2]){
         case 'get':
-            get();
+            get(process.argv[3]);
             break;
         case 'add':
-            add();
+            add(process.argv[3]);
             break;
         default:
             console.log('no command... get|add')
@@ -49,32 +49,17 @@ function doStuff() {
    hdprovider.engine.stop();
 }
 
-async function get(){
+async function get(address){
 
-    await contractInstance.methods.balanceOf('0xc33ddf117d4dbe85a76600a1a79873380cfba2ad').call(transactionObject).then(
+    await contractInstance.methods.balanceOf(address).call(transactionObject).then(
         (result) => {
             console.log('ME:',result)
-        });
-
-    await contractInstance.methods.balanceOf('0xc3d47824ddbd528fca680bc56ffdf7036b3e60fb').call(transactionObject).then(
-        (result) => {
-            console.log('Distributor:',result)
-        });
-    await contractInstance.methods.balanceOf('0xae474b24632289fa7844b351f8d1e045b2461d35').call(transactionObject).then(
-        (result) => {
-            console.log('Service:',result)
-        }); 
-    await contractInstance.methods.balanceOf('0x933892ae13417ca965ceb29b40d52e10e0f21bb7').call(transactionObject).then(
-        (result) => {
-            console.log('TAX:',result)
-        });   
-        
-        
+        });        
 }
 
-function add(){
+function add(address){
   
-    contractInstance.methods.mint("0xc33ddf117d4dbe85a76600a1a79873380cfba2ad",1000).send(transactionObject)
+    contractInstance.methods.mint(address,1000).send(transactionObject)
     .then((tx) => {
         console.log('Transaction sent.',tx.transactionHash);
         return checkTransaction(tx.transactionHash);
