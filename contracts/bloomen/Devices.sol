@@ -15,6 +15,7 @@ contract Devices  is Assets {
     uint256 assetId;
     uint256 schemaId;
     string dappId;
+    string description;
   }
 
   uint256 constant private PAGE_SIZE = 10;
@@ -67,7 +68,11 @@ contract Devices  is Assets {
   }
 
   function handshake(bytes32 _deviceHash, uint256 _assetId, uint256 _schemaId, uint256 _lifeTime, string _dappId) public {
-    _handshake(msg.sender, _deviceHash, _assetId, _schemaId, _lifeTime, _dappId);
+    _handshake(msg.sender, _deviceHash, _assetId, _schemaId, _lifeTime, _dappId, "");
+  }
+
+  function handshake(bytes32 _deviceHash, uint256 _assetId, uint256 _schemaId, uint256 _lifeTime, string _dappId, string _description) public {
+    _handshake(msg.sender, _deviceHash, _assetId, _schemaId, _lifeTime, _dappId, _description);
   }
 
   function removeDevice(bytes32 _deviceHash) public {
@@ -75,7 +80,7 @@ contract Devices  is Assets {
   }
 
     
-  function _handshake(address _owner, bytes32 _deviceHash, uint256 _assetId, uint256 _schemaId, uint256 _lifeTime, string _dappId) internal {
+  function _handshake(address _owner, bytes32 _deviceHash, uint256 _assetId, uint256 _schemaId, uint256 _lifeTime, string _dappId, string _description) internal {
 
     require(Assets._checkOwnership(_owner, _assetId, _schemaId),"not allowed");
 
@@ -85,7 +90,7 @@ contract Devices  is Assets {
 
     require(deviceHashes_[_deviceHash] == address(0), "duplicated hash");
     deviceHashes_[_deviceHash] = _owner; 
-    userDevices_[_owner].devices[_deviceHash] =  Device(_lifeTime, _assetId, _schemaId, _dappId);
+    userDevices_[_owner].devices[_deviceHash] =  Device(_lifeTime, _assetId, _schemaId, _dappId, _description);
     userDevices_[_owner].deviceArray.push(_deviceHash);
   }
 

@@ -19,6 +19,7 @@ contract  Assets is Schemas, ERC223ReceivingContract, ERC223("BloomenCoin","BLO"
     uint256 assetId;
     uint256 schemaId;
     string dappId;
+    string description;
   }
 
   uint256 constant private PAGE_SIZE = 10;
@@ -36,7 +37,11 @@ contract  Assets is Schemas, ERC223ReceivingContract, ERC223("BloomenCoin","BLO"
   }
 
   function buy(uint256 _assetId, uint256 _schemaId, uint256 _amount, string _dappId) public  {
-    _buy(msg.sender, _assetId, _schemaId, _amount, _dappId);  
+    _buy(msg.sender, _assetId, _schemaId, _amount, _dappId, "");  
+  }
+
+  function buy(uint256 _assetId, uint256 _schemaId, uint256 _amount, string _dappId, string _description) public  {
+    _buy(msg.sender, _assetId, _schemaId, _amount, _dappId, _description);  
   }
 
   function getAssetsPageCount() public view returns (uint256) {
@@ -65,7 +70,7 @@ contract  Assets is Schemas, ERC223ReceivingContract, ERC223("BloomenCoin","BLO"
     return (assetsPage);
   }
 
-  function _buy(address _user, uint256 _assetId, uint256 _schemaId, uint256 _amount, string _dappId) internal  {
+  function _buy(address _user, uint256 _assetId, uint256 _schemaId, uint256 _amount, string _dappId, string _description) internal  {
     Schema memory schema = Schemas.getSchema(_schemaId);
     require(schema.amount == _amount, "incorrect amount");    
     require(!_checkOwnership(_user, _assetId, _schemaId), "duplicated");
@@ -76,7 +81,7 @@ contract  Assets is Schemas, ERC223ReceivingContract, ERC223("BloomenCoin","BLO"
     }
   
     // registrar la compra
-    userAssets_[_user].assets.push(Asset(now + schema.assetLifeTime , _assetId, _schemaId, _dappId));
+    userAssets_[_user].assets.push(Asset(now + schema.assetLifeTime , _assetId, _schemaId, _dappId, _description));
   }
 
   function _checkOwnership(address _owner, uint256 _assetId, uint256 _schemaId) internal view returns (bool) {
